@@ -1,0 +1,171 @@
+<div class="portfolio-lending">
+    <h2 class="h2-general">$xCREDI LP</h2>
+</div>
+
+<div class="container-box">
+    <div class="module-x-wrapper">
+        <div class="module-x-down-wrapper">
+            <div class="module-x-down">
+                <mat-icon
+                    matPrefix
+                    class="mat-icon-48"
+                    svgIcon="tvl"
+                >
+                </mat-icon>
+                <div class="module-x-down-inner">
+                    <h4 class="h4-stake">{{ tvl() | number:'1.2-6'}} xCREDI</h4>
+                    <p class="p-stake-bigger ml16"></p>
+                </div>
+            </div>
+
+            <div class="module-x-down">
+                <mat-icon
+                    matPrefix
+                    class="mat-icon-48"
+                    svgIcon="stakePercent"
+                >
+                </mat-icon>
+                <div class="module-x-down-inner">
+                    <h4 class="h4-stake">0.00 xCREDI</h4>
+                    <p class="p-stake-bigger ml16">USDT reward pool</p>
+                </div>
+            </div>
+        </div>
+
+        <form
+            [formGroup]="form"
+            (ngSubmit)="onSubmit()"
+        >
+            <div class="stake-wrapper">
+
+                <div class="stake-unstake-inner">
+                    <button
+                        class="button-stake"
+                        mat-button
+                        disabled="true"
+
+                    >
+                        Stake
+                    </button>
+                    <button
+                        class="button-unstake"
+                        mat-button
+                        (click)="onClaim()"
+                    >
+                        Unstake
+                    </button>
+                </div>
+
+
+                <mat-form-field class="credi-outline white">
+                    <mat-icon
+                        matPrefix
+                        class="prefix gray"
+                        svgIcon="currency-outline"
+                    >
+                    </mat-icon>
+                    <input
+                        matInput
+                        autocomplete
+                        type="number"
+                        formControlName="amount"
+                        placeholder="Enter the amount"
+                    >
+                    <button
+                        class="max image-button"
+                        matRipple
+                        type="button"
+                        (click)="setMax()"
+                    >
+                        MAX
+                    </button>
+                    <mat-error *ngFor="let error of form.get('amount') | error | slice:0:1">
+                        {{ error }}
+                    </mat-error>
+                </mat-form-field>
+                <div class="stake-available">
+                    <span class="mr12">
+                        Available to stake:
+                        <span class="value">{{ balance() | number:'1.6-6' }} </span>
+                        <span class="credi">xCREDI LP</span>
+                    </span>
+                    <!-- <span>
+                    Staked amount:
+                    <span class="value">
+                        123,322
+                    </span>
+                    <span class="credi">
+                        CREDI LP
+                    </span>
+                </span> -->
+                </div>
+                <button
+                    class="button-primary"
+                    matRipple
+                    [disabled]="!canStake() || isSubmit()"
+                    >
+                    Stake $xCREDI LP
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+    <div class="info">
+        <h3 class="h3-style">What is $xCREDI LP staking?</h3>
+        <div class="module-x-down">
+            <mat-icon
+                matPrefix
+                class="large"
+                svgIcon="moduleGreen"
+            >
+            </mat-icon>
+            <div class="module-x-down-inner">
+                <h4 class="h4-stake">Add liquidity</h4>
+                <p class="p-stake-bigger ml16">
+                    Access 200000 xCredi, navigate to the 'V2 Liquidity Pool', and add your desired liquidity.
+                </p>
+            </div>
+        </div>
+        <div class="module-x-down">
+            <mat-icon
+                matPrefix
+                class="large"
+                svgIcon="moduleBrown"
+            >
+            </mat-icon>
+            <div class="module-x-down-inner">
+                <h4 class="h4-stake">
+                    Stake your LPs
+                </h4>
+                <p class="p-stake-bigger ml16">
+                    Go to our staking module and stake your acquired LP tokens to earn rewards.
+                </p>
+            </div>
+        </div>
+        <div class="module-x-down">
+            <mat-icon
+                matPrefix
+                class="large"
+                svgIcon="moduleRed"
+            >
+            </mat-icon>
+            <div class="module-x-down-inner">
+                <h4 class="h4-stake">Get rewards</h4>
+                <p class="p-stake-bigger ml16">After a 6-month staking period, you can claim both your staked LP tokens
+                    and accumulated rewards.</p>
+            </div>
+        </div>
+        <div class="info-box">
+
+            Staking grants you <strong>xCREDI</strong>, your passport to amplified <strong>APY</strong>, enhanced
+            security, and a direct stake in the <strong>platform's profit-sharing.</strong>
+            <lazy-image
+                class="background"
+                src="/assets/images/staking.png"
+            >
+
+            </lazy-image>
+        </div>
+    </div>
+</div>

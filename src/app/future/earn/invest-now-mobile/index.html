@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="back">
+        <mat-icon
+            matPrefix
+            class="mat-icon-size-50-only"
+            svgIcon="arrowBack"
+            routerLink="/earn/autonomous-earning" 
+        >
+        </mat-icon>
+        <h2 class="h2-style">Invest now</h2>
+
+    </div>
+    <div class="invest">
+        <div class="wrap">
+            <form
+                class="invest-form"
+            >
+                <div class="">
+                    <mat-form-field appearance="fill">
+                        <mat-icon
+                            matPrefix
+                            class="mat-icon-size-50"
+                            svgIcon="blankCircle"
+                        >
+                            <mat-icon
+                                class="mat-icon-email"
+                                svgIcon="userInvest"
+                            ></mat-icon>
+                        </mat-icon>
+                        <input
+                            matInput
+                            placeholder="Full name"
+                        />
+                    </mat-form-field>
+                    <br/>
+                    <mat-form-field
+                        appearance="fill"
+                        subscriptSizing="dynamic"
+                    >
+                        <mat-icon
+                            matPrefix
+                            class="mat-icon-size-50"
+                            svgIcon="blankCircle"
+                        >
+                            <mat-icon
+                                class="mat-icon-email"
+                                svgIcon="potInvest"
+                            ></mat-icon>
+                        </mat-icon>
+                        <input
+                            matInput
+                            placeholder="Enter amount"
+                            formControlName="amount"
+                        />
+                    </mat-form-field>
+                    <div class="h-12-style available">
+                        Available 50,000 USDT
+                    </div>
+                    <div class="dropDown">
+                        <mat-select
+                            disableOptionCentering
+                            placeholder="Select period"
+                            panelClass="myPanelClass"
+                            class="mySelectClass"
+                            formControlName="period"
+                        >
+                            <mat-option
+                            >days</mat-option>
+                        </mat-select>
+                        <mat-icon
+                            matPrefix
+                            class="mat-icon-size-50-only blankCircle"
+                            svgIcon="blankCircle"
+                        >
+                            <mat-icon
+                                class="mat-icon-email mat-icon-calendar"
+                                svgIcon="calendarInvest"
+                            ></mat-icon>
+                        </mat-icon>
+                    </div>
+                    <div class="h-12-style available">
+                        APY %
+                    </div>
+                    <button
+                        class="button-invest"
+                        [disabled]=""
+                        mat-button
+                    >
+                        {{'Invest'}}
+                    </button>
+                    <div class="consent">
+                        By entering my name and clicking "Supply" below, I hereby agree and acknowledge that (i) I
+                        am electronically signing and becoming a party to the Loan Agreement for this pool, and (ii)
+                        my name and transaction information may be shared with the borrower
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

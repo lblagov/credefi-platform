@@ -1,0 +1,47 @@
+<div class="header">
+    Sign transaction
+    <button
+        mat-icon-button
+        (click)="ref.close()"
+    >
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+>
+    <mat-form-field class="credi-outline">
+        <mat-icon
+            matPrefix
+            class="prefix"
+            svgIcon="password"
+        >
+        </mat-icon>
+        <mat-icon
+            matSuffix
+            class="mat-icon-size-22"
+            svgIcon="hide"
+        >
+        </mat-icon>
+        <input
+            matInput
+            autocomplete
+            type="password"
+            placeholder="Wallet password"
+            formControlName="password"
+        >
+        <mat-error *ngFor="let error of form.get('password') | error | slice:0:1">
+            {{ error }}
+        </mat-error>
+    </mat-form-field>
+
+    <button
+        class="button-login"
+        mat-button
+        [disabled]="isSubmit"
+    >
+        {{ isSubmit ? 'Loading...' : 'Submit' }}
+    </button>
+</form>

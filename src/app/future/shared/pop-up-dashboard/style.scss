@@ -1,0 +1,61 @@
+.h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    color: #11121C;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+
+.p {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #11121C;
+    margin: 0px;
+
+}
+
+.inner {
+    padding-left: 170px;
+    margin-top: 25px;
+}
+
+.p-light {
+    font-family: 'Mulish';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    padding-top: 15px;
+    color: rgba(7, 7, 7, 0.4);
+}
+
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+    width: '372px' !important;
+    height: '136px' !important;
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+    padding-left: 24px !important;
+    padding-top: 24px !important;
+    padding-right: 24px !important;
+    padding-bottom: 24px !important;
+}
+
+.div-modal {
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard-pop-up {
+    padding-left: 24px;
+    padding-top: 24px
+}

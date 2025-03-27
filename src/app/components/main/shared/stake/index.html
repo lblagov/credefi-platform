@@ -1,0 +1,41 @@
+<div class="header">
+    Stake LP Tokens
+    <button
+        mat-icon-button
+        (click)="ref.close()"
+    >
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+>
+
+    <mat-form-field class="credi-outline">
+        <mat-icon
+            matPrefix
+            svgIcon="currency"
+        >
+        </mat-icon>
+        <input
+            matInput
+            autocomplete
+            type="number"
+            placeholder="Amount"
+            formControlName="amount"
+        >
+        <mat-error *ngFor="let error of form.get('amount') | error | slice:0:1">
+            {{ error }}
+        </mat-error>
+    </mat-form-field>
+
+    <button
+        class="button-login"
+        mat-button
+        [disabled]="isSubmit()"
+    >
+        {{ isSubmit() ? 'Loading...' : 'Submit'}}
+    </button>
+</form>

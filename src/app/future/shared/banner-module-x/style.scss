@@ -1,0 +1,43 @@
+.module-x-left{
+    box-sizing: border-box;
+    padding-left: 24px;
+    padding-top: 24px;
+    position: relative;
+    height: 318px;
+    width: 312px;
+    border-radius: 20px;
+  }
+
+  .h5-banner{
+    color: #070707;
+/* Text style/Heading/H5 */
+
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 140%;
+width: 264px;
+margin-top: 0px;
+
+  }
+  .span-banner{
+    color: rgba(7, 7, 7, 0.5);
+  }
+
+  .mat-icon-banner {
+    height: 116px;
+    width: 132px;
+}
+.svg-images{
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    height: 20px;
+    width: 110px;
+}
+
+.images{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }

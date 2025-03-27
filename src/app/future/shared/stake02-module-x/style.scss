@@ -1,0 +1,48 @@
+
+
+.module-x-left{
+    box-sizing: border-box;
+    padding-left: 24px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: inherit;
+    height: 141px;
+    width: 312px;
+    background-color: white;
+    border-radius: 20px;
+  }
+
+.h5-stake{
+    color: var(--color-styles-light-version-black, #11121C);
+    /* Text style/Heading/H5 */
+    
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    padding-left: 24px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+  
+  }
+
+  .p-module{
+    color: var(--color-styles-light-version-body, rgba(7, 7, 7, 0.40));
+    /* Text style/14px/Regular */
+    
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    width: 190px;
+    padding-left: 24px;
+    padding-top: 8px;
+    margin-top: 0px;
+  
+  }
+
+  mat-icon.mat-icon-module {
+    height: 93px;
+    width: 50px;
+  }

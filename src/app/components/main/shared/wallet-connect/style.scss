@@ -1,0 +1,53 @@
+h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:  2px 2px 0 12px;
+}
+
+div.small-scroll {
+    width: 300px;
+    max-height: 350px;
+    overflow: auto;
+    background-color: #FFF;
+
+    button.wallet {
+        border: none;
+        outline: none;
+        padding: 15px 32px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: black;
+        transition: ease 200ms;
+        width: calc(100% - 8px);
+        margin: 4px 0 4px 4px;
+        border-radius: 16px;
+        overflow: hidden;
+        cursor: pointer;
+        background-color: transparent;
+        min-height: 65px;
+
+        mat-icon, img {
+            margin-right: 8px;
+        }
+
+        &:hover {
+            background-color: #d6d7e1;
+        }
+
+        div.inner {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            width: 180px;
+
+            span.address {
+                font-size: 12px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+}

@@ -1,0 +1,133 @@
+<div class="left">
+  <div class="container-left">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+    >
+      <mat-icon
+        class="mat-icon-logo-mobile"
+        svgIcon="logoMobile"
+      >
+      </mat-icon>
+
+      <hr class="top" />
+
+      <div class="align-center">
+        <h1 class="h1-form">Authentication</h1>
+        <p class="p-form padding-top">Please enter the 6-digit code, sent to your email.</p>
+
+      </div>
+
+      <div>
+        <mat-form-field class="credi-outline">
+          <mat-icon
+            matPrefix
+            class="prefix"
+            svgIcon="password"
+          >
+          </mat-icon>
+          <input
+            matInput
+            placeholder="Google Authenticator code"
+            autocomplete
+            type="text"
+            formControlName="code"
+          />
+          <mat-error *ngFor="let error of form.get('code') | error | slice:0:1">
+            {{ error }}
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="credi-outline">
+          <mat-icon
+            matPrefix
+            class="prefix"
+            svgIcon="password"
+          >
+          </mat-icon>
+          <input
+            matInput
+            placeholder="Token"
+            autocomplete
+            type="text"
+            formControlName="token"
+          />
+          <mat-error *ngFor="let error of form.get('token') | error | slice:0:1">
+            {{ error }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <button
+        class="button-form button-primary"
+        mat-button
+        matRipple
+        [disabled]="isSubmit()"
+      >
+        Continue
+      </button>
+      <p class="additional-paragrah">Please check the <span class="boldAndBack"> spam directory</span> if
+        you do not recieve a verification email.</p>
+    </form>
+
+    <div>
+      <hr />
+      <footer>
+        <span>@2023 Credefi</span>
+        <span>All rights reserved</span>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="container-right">
+
+    <mat-icon
+      class="mat-icon-logo"
+      svgIcon="logo"
+    >
+    </mat-icon>
+
+    <mat-icon
+      class="mat-icon-ellipse"
+      svgIcon="ellipse01"
+    >
+    </mat-icon>
+
+    <mat-icon
+      class="mat-icon-ellipse-2"
+      svgIcon="ellipse02"
+    >
+    </mat-icon>
+
+    <mat-icon
+      class="mat-icon-ellipse-3"
+      svgIcon="ellipse03"
+    >
+    </mat-icon>
+
+    <div class="did-you-know">
+      <h1>
+        We offer stable and predictable returns
+      </h1>
+      <p>
+        Credefi offers stable and predictable returns that are not affected by crypto market volatility. This is
+        possible because we provide liquidity to real-world businesses with real assets, cash flows, and repayment
+        schedules
+      </p>
+
+      <mat-icon
+        class="step1of3"
+        svgIcon="step"
+      >
+      </mat-icon>
+
+      <lazy-image
+        src="./assets/images/Steps.png"
+      />
+
+    </div>
+
+  </div>
+</div>

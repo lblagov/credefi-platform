@@ -1,0 +1,121 @@
+.logo{
+    border: none;
+    background-color:  #F6F5F8;
+  }
+  
+  mat-icon.mat-icon-size-arrow {
+    /* height: 7px; */
+    width: 9px;
+    padding-left: 14.4px;
+    /* padding-bottom: 15px; */
+    /* padding-left: 5rem; */
+  }
+  input.mat-mdc-input-element.mat-mdc-form-field-input-control {
+    width: 412px;
+  }
+
+
+  .did-you-know .step1of3-lend {
+    height: 60px;
+    width: 60px;
+    /* position: absolute; */
+    bottom: 0px;
+    left: 0px;
+    /* z-index: 300; */
+  }
+
+  .container-left-lend .h1-login {
+    margin-top: 64px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 140%;
+    text-align: left;
+    vertical-align: middle;
+    color: #11121C;
+    fill:#11121C;
+  }
+
+  input::placeholder {
+    color: #11121C;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    
+  }
+  input.fill-field::placeholder {
+    color: rgba(7,7,7,0.4);
+  }
+
+  span.span-back{
+    color: #11121C;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    display: inline-flex;
+    height: 60px;
+    align-items: center;
+  }
+  .div-bot{
+    display: flex;
+    justify-content: space-between;
+    width: 570px;
+  }
+
+  .did-you-know h1.lend-header span{
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .div-button-login{
+    margin: 0;
+  }
+
+  .h1-login-borrow{
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 140%;
+    text-align: left;
+    vertical-align: middle;
+    color: #11121C;
+    fill:#11121C;
+  }
+
+
+@media (min-width: 700px) {
+
+    mat-icon.mat-icon-logo-mobile {
+      display: none;
+    }
+
+    .mat-mdc-form-field{
+        width: 570px;
+      }
+
+      .mat-mdc-form-field-smaller{
+        width: 280px;
+      }
+    
+    
+  }
+
+  .go-back{
+    font-size: 16px;
+    color: #11121C;
+    display: flex;
+    font-weight: bold;
+    padding-left: 170px;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 700px) {
+    .go-back{
+        font-size: 16px;
+        color: #11121C;
+        display: flex;
+        font-weight: bold;
+        padding-left: 130px;
+        justify-content: start;
+      }
+   
+  }
+

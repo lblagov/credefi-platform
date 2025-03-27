@@ -1,0 +1,40 @@
+:host{
+  max-width: 33%;
+}
+
+div.wallet-body {
+    border-radius: 20px;
+    background-color: #F3F4FA;
+    padding: 12px;
+    div.align {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div.coin {
+        display: flex;
+        align-items: center;
+
+        mat-icon {
+            margin-right: 8px;
+        }
+    }
+
+    div.values {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        div {
+            text-align: right;
+        }
+    }
+}
+
+
+@media (max-width: 870px) {
+  :host {
+    max-width: 100% !important;
+  }
+}

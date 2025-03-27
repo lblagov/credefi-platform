@@ -1,0 +1,105 @@
+.graph .content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 713px;
+    transform: translate(0px, -428px) rotate(270deg);
+
+}
+
+    /* .graph .content span{
+        font-family: 'Roboto';
+        font-size: 13px;
+        color: #707070;
+    } */
+
+.graph .line{
+    background-color: #CCCCCC;
+    width: 100%;
+    height: 1px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.graph .legends{
+    display: flex;
+    flex-direction: row;
+    color: #707070;
+    font-family: 'Roboto';
+    font-size: 12px;
+    text-align: center;
+}
+
+.graph .legends span{
+    width: 40px;
+    margin:0 15px;
+}
+
+.graph .bars{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.graph .bar{
+    width: 40px;
+    min-height: 311px;
+    margin:0 15px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    /* background-image: linear-gradient(to bottom, #7D77FF , rgba(128, 123, 255, 0)); */
+    /* transform: translate(0px, 0px) rotate(180deg); */
+
+    /* background-color: linear-gradient(, ); */
+    
+
+}
+
+.graph .bar:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.20);
+}
+.span-value{
+    font-size: 12px;
+    line-height: 17px;
+    color: rgba(7, 7, 7, 0.4);
+    transform: translate(0px, 0px) rotate(90deg);
+    height: 20px;
+    margin: 0px;
+  
+    position: absolute;
+    /* top: 10px; */
+
+    /* padding-bottom: 50px;
+    padding-right: 35px; */
+}
+
+.span-name{
+    /* padding-top: 45px;
+    padding-right: 25px; */
+    /* position: absolute;
+    top: 50px; */
+   
+
+    font-size: 12px;
+    line-height: 17px;
+    color: #11121C;
+    transform: translate(0px, 0px) rotate(90deg);
+    height: 20px;
+    
+}
+.bar-image{
+    height: 40px;
+    width: 8px;
+    transform: translate(0px, -20px) rotate(90deg);
+}
+.div-wrapper{
+    padding-bottom: 30px;
+    /* height: 80px;
+    width: 40px; */
+    display: flex;
+    flex-direction: row;
+}

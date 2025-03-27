@@ -1,0 +1,40 @@
+.div-banner {
+  background: linear-gradient(144deg, rgba(163, 188, 84, 0.60) 0%, rgba(221, 245, 144, 0.60) 100%), linear-gradient(135deg, #D9D9D9 0%, #FFF 100%);
+  border-radius: 20px;
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  padding: 24px 24px 140px 24px;
+
+  button.button-overview {
+    color: var(--color-styles-light-version-white, #FCFDFD);
+    font-size: 16px;
+    font-weight: 700;
+    background: rgba(17, 18, 28, 1);
+    border-radius: 96px;
+    height: 50px;
+    width: 173px;
+    z-index: 3;
+  }
+
+  .h3-custom {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #070707;
+    margin: 0px
+  }
+
+  .p-custom {
+    color: var(--color-styles-text-body-40, rgba(7, 7, 7, 0.50));
+    font-size: 14px;
+    margin: 24px 0;
+  }
+
+  .images {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    z-index: 2;
+  }
+}

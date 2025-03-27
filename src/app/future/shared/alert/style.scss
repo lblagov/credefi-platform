@@ -1,0 +1,41 @@
+:host {
+    width: 360px;
+    display: block;
+}
+
+div.header {
+    display: flex;
+    margin: 4px;
+    border-radius: 12px;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 600;
+    align-items: center;
+    padding: 8px 4px 8px 12px;
+}
+
+div.deposit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8px;
+}
+
+p.text {
+    color: black;
+    font-size: 16px;
+}
+
+.button-login {
+    height: 55px;
+    width: calc( 100% - 24px );
+    border-radius: 100px;
+    background-color: #5C68FF;
+    border-width: 0px;
+    color: white;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: bold;
+    text-align: middle;
+    margin: 12px;
+}

@@ -1,0 +1,76 @@
+<div class="wallet-wrapper">
+    <div class="wallets">
+        <div class="wallet-head">
+            <div class="wallet-logo">
+                <mat-icon
+                    class="mat-icon-size-56 large"
+                    svgIcon="{{walletLogo}}"
+                ></mat-icon>
+                <h3 [ngSwitch]="wallet.wallet()?.type">
+                    <ng-container *ngSwitchCase="WalletTypes.metamask">
+                        Metamask
+                    </ng-container>
+                    <ng-container *ngSwitchCase="WalletTypes.credi">
+                        {{ wallet.wallet().data.name }}
+                    </ng-container>
+
+                    
+                    <ng-container *ngSwitchDefault>
+                        Credi
+                    </ng-container>
+                </h3>
+                <span class="copy">
+                    <span [copy]="wallet.address()">{{ wallet.address() ? (wallet.address() | address) : "0x0000...0000" }} </span>
+                </span>
+            </div>
+
+      
+    </div>
+
+    <div class="wallet-buttons">
+        <button
+            class="button-withdraw"
+            mat-button
+            (click)="transfer()"
+        >
+            <span>Transfer</span> <mat-icon
+                class="mat-icon-button-key"
+                svgIcon="arrowCircleDown"
+            ></mat-icon>
+        </button>
+        <button
+            class="button-deposit"
+            mat-button
+            (click)="deposit()"
+        >
+            <span>Deposit</span> <mat-icon
+                class="mat-icon-button-key"
+                svgIcon="arrowCircleUp"
+            ></mat-icon>
+        </button>
+        <button
+            class="button-key"
+            mat-button
+            (click)="decrypt()"
+        >
+            <span>Key</span> <mat-icon
+                class="mat-icon-button-key"
+                svgIcon="iconKey"
+            ></mat-icon>
+        </button>
+    </div>
+        <div class="wallet-grid">
+
+            <app-wallet-portfolio-body-mobile
+            *ngFor="let item of data; trackBy: track('walletBodyCoin')"
+                [walletBodyCoin]="item.walletBodyCoin"
+                [walletBodyCrypto]="item.walletBodyCrypto"
+                [walletBodyLong]="item.walletBodyLong"
+                [walletBodyValue]="item.walletBodyValue()"
+                [walletBodyCurrency]="item.walletBodyCurrency()"
+            >
+            </app-wallet-portfolio-body-mobile>
+
+        </div>
+    </div>
+</div>

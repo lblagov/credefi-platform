@@ -1,0 +1,61 @@
+<div class="small-scroll">
+    <h3>
+        Select a wallet
+        <button
+            mat-icon-button
+            (click)="ref.close()"
+        >
+            <mat-icon>close</mat-icon>
+        </button>
+    </h3>
+    <button
+        *ngIf="!isMobile"
+        (click)="connectMetamask()"
+        mat-ripple
+        class="wallet"
+    >
+        <mat-icon svgIcon="MetaMask_Fox"></mat-icon>
+        <div id="whitelist-inner">
+            <span>Metamask</span>
+        </div>
+    </button>
+    <button
+        *ngIf="!isMobile"
+        (click)="connectOKX()"
+        mat-ripple
+        class="wallet"
+    >
+        <img
+            src="/assets/okx.png"
+            width="24"
+        />
+        <div id="whitelist-inner">
+            <span>OKX wallet</span>
+        </div>
+    </button>
+    <button
+        (click)="walletConnect()"
+        mat-ripple
+        class="wallet"
+    >
+        <img
+            src="/assets/svg/walletconnect.svg"
+            width="24"
+        />
+        <div id="whitelist-inner">
+            <span>WalletConnect</span>
+        </div>
+    </button>
+    <button
+        *ngFor="let item of data; let i = index; trackBy: track('_id')"
+        (click)="connect(i)"
+        mat-ripple
+        class="wallet"
+    >
+        <mat-icon svgIcon="wallet"></mat-icon>
+        <div class="inner">
+            <span>{{ item.name }}</span>
+            <span class="address">0x{{ item.address }}</span>
+        </div>
+    </button>
+</div>

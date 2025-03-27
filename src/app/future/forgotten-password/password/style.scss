@@ -1,0 +1,202 @@
+@media (min-width: 700px) {
+
+
+  mat-icon.mat-icon-size-50 {
+    // position: absolute;
+    padding-top: 33px;
+    left: 10px;
+    
+    height: 50px ;
+    width: 50px ;
+  }
+
+
+  
+
+  
+
+  .container-right {
+    padding-top: 64px;
+    padding-left: 64px;
+    height: 100%;
+    position: relative;
+  }
+
+
+  .did-you-know h1 {
+    width: 430px;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 140%;
+    margin-bottom: 16px;
+    margin-top: 0px;
+  }
+  
+  .did-you-know p {
+    width: 420px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+  }
+  
+  .did-you-know .step1of3 {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 100;
+  }
+  
+  .did-you-know .step1of3-lend {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 300;
+  }
+  
+  .did-you-know img {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .input{
+    padding-top: 24px;
+  }
+  .send-code{
+    margin-top: 44px;
+  }
+
+
+    mat-icon.mat-icon-logo {
+      width: 85px;
+      height: 52px;
+      margin-bottom: 64px;
+    }
+    .go-back{
+      font-size: 16px;
+      color: #11121C;
+      display: flex;
+      font-weight: bold;
+      padding-left: 170px;
+      padding-top: 25px;
+      justify-content: flex-start;
+    }
+
+    mat-icon.mat-icon-logo-mobile {
+      display: none;
+    }
+  }
+
+
+
+  @media (max-width: 700px) {
+
+
+
+ #container {
+      width: 360px;
+      height: 800px;
+      grid-template-columns: 360px;
+
+    }
+  
+    .container-left {
+      margin-left: 24px;
+      grid-template-rows: 732px 68px;
+    }
+  
+    .container-right {
+      display: none;
+    }
+  
+    .app-sidebar {
+      display: none;
+    }
+    .button-login {
+      height: 50px;
+      width: 312px;
+      border-radius: 100px;
+      background-color: #5C68FF;
+      border-width: 0px;
+      color: white;
+      font-size: 16px;
+      line-height: 140%;
+      font-weight: bold;
+      text-align: middle;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+  
+  
+  
+  
+    .align-center {
+      transform: translateX(-12px);
+    }
+  
+    .h1-login {
+      display: flex;
+      justify-content: center;
+      font-weight: bold;  
+      font-size: 24px;
+      line-height: 34px;
+      color: #11121C;
+      fill: #11121C;
+    }
+  
+    .p-login {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      line-height: 140%;
+      text-align: center;
+      vertical-align: middle;
+      color: #07070766;
+  
+    }
+
+    .password{
+      font-size: 14px;
+      color: #11121C;
+      display: flex;
+      padding-left: 100px;
+      justify-content: space-around;
+    }
+    .h1-login{
+      padding-right: 60px;
+    }
+
+    .p-additioanl{
+      padding-left: 38px;
+    }
+    .input{
+      padding-top: 24px;
+    }
+    .send-code{
+      margin-top: 44px;
+    }
+    .boldAndBack {
+      font-weight: bold;
+      color: #11121C;
+      text-decoration: none;
+
+    }
+
+
+    
+
+    footer {
+      height: 68px;
+      background-color: rgb(246, 245, 248);
+      width: 360px;
+    }
+
+    .button-login{
+      width: 312px;
+    }
+
+   
+  }

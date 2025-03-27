@@ -1,0 +1,87 @@
+<div class="heading">
+    <h3>All Transactions</h3>
+    <!-- <button
+        class="button-filter"
+        mat-button
+    >
+        <span>Filter</span>
+        <mat-icon svgIcon="buttonFilter">
+        </mat-icon>
+    </button> -->
+</div>
+<div class="trans-wrapper">
+    <div class="table-head">
+        <span>Tx</span>
+        <span>Wallet</span>
+        <span>Status</span>
+        <span>Receiver</span>
+        <span>Block</span>
+        <span>Action</span>
+    </div>
+    <div
+        class="table-body"
+        *ngFor="let tx of items(); trackBy: track('hash')"
+    >
+        <a [copy]="tx.hash">
+            {{ tx.hash | address }}
+        </a>
+        <div class="wallet">
+            <mat-icon
+                class="mat-icon-size-22-only"
+                svgIcon="transactionsCircle"
+            ></mat-icon>
+            <span [copy]="tx.from">
+                {{ tx.from | address }}
+            </span>
+        </div>
+        <span>
+            <button
+                matRipple
+                class="button-trans-confirm image-button"
+            >
+                Confirmed
+            </button>
+        </span>
+        <span
+            class="confirm"
+            [copy]="tx.to"
+            *ngIf="tx.to.toLowerCase() == owner"
+        >
+            Autonomous earning
+        </span>
+
+        <span
+            [copy]="tx.to"
+            *ngIf="tx.to.toLowerCase() != owner"
+        >
+            {{ tx.to | address }}
+        </span>
+        
+        <span>{{ tx.blockNum | hextodec }}</span>
+        <a
+            href="{{exporer}}/{{tx.hash}}"
+            target="_blank"
+        >
+            <span class="action">
+                <span>Tx</span>
+                <mat-icon
+                    class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight"
+                >
+                </mat-icon>
+            </span>
+        </a>
+    </div>
+    <div
+        class="actions"
+        *ngIf="!loaded()"
+    >
+        <button
+            class="button-primary connect"
+            mat-ripple
+            (click)="wallet.address() ? loadTransactions() : connect()"
+        >
+            {{ wallet.address() ? "Show 10 more transactions" : "Connect wallet" }}
+        </button>
+    </div>
+</div>

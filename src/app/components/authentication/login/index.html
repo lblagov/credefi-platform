@@ -1,0 +1,156 @@
+<div class="left">
+  <div class="container-left">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="onSubmit()"
+    >
+      <mat-icon
+        class="mat-icon-logo-mobile"
+        svgIcon="logoMobile"
+      >
+      </mat-icon>
+
+      <hr class="top" />
+
+      <div class="align-center">
+        <h1 class="h1-form">Welcome on board!</h1>
+        <p class="p-form">
+          Please enter your login information below
+        </p>
+      </div>
+
+      <div>
+        <mat-form-field class="credi-outline">
+          <mat-icon
+            matPrefix
+            class="prefix"
+            svgIcon="email"
+          >
+          </mat-icon>
+          <input
+            matInput
+            placeholder="Email"
+            autocomplete
+            type="email"
+            formControlName="email"
+          />
+          <mat-error *ngFor="let error of form.get('email') | error | slice:0:1">
+            {{ error }}
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <mat-form-field class="credi-outline">
+        <mat-icon
+          matPrefix
+          class="prefix"
+          svgIcon="password"
+        >
+        </mat-icon>
+        <mat-icon
+          matSuffix
+          class="mat-icon-size-22"
+          svgIcon="hide"
+          [password]="passwordInput"
+        >
+        </mat-icon>
+        <input
+          #passwordInput
+          matInput
+          autocomplete
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        >
+        <mat-error *ngFor="let error of form.get('password') | error | slice:0:1">
+          {{ error }}
+        </mat-error>
+      </mat-form-field>
+
+      <section>
+        <a
+          routerLink="/authentication/forgotten-password"
+          class="link"
+        >
+          Forgot your password?
+        </a>
+      </section>
+
+      <button
+        class="button-form button-primary"
+        matRipple
+        [disabled]="isSubmit()"
+      >
+        Sign in
+      </button>
+
+      <p class="additional-paragrah">Don't have an account yet?
+        <a
+          class="boldAndBack"
+          routerLink="/authentication/registration"
+        >
+          Sign up
+        </a>
+      </p>
+
+    </form>
+
+    <div>
+      <hr />
+      <footer>
+        <span>@2024 Credefi</span>
+        <span>All rights reserved</span>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<div class="right">
+  <div class="container-right">
+
+    <mat-icon
+      class="mat-icon-logo"
+      svgIcon="logo"
+    >
+    </mat-icon>
+
+    <mat-icon
+      class="mat-icon-ellipse"
+      svgIcon="ellipse01"
+    >
+    </mat-icon>
+    <mat-icon
+      class="mat-icon-ellipse-2"
+      svgIcon="ellipse02"
+    >
+    </mat-icon>
+    <mat-icon
+      class="mat-icon-ellipse-3"
+      svgIcon="ellipse03"
+    >
+    </mat-icon>
+
+    <div class="did-you-know">
+      <h1>
+        Is my money safe with Credefi?
+      </h1>
+      <p>
+        By accepting real-world collateral and using Experian's credit risk scoring, we provide lenders with the
+        highest level of security. Real-world collateral is less volatile than crypto collateral, resulting in a lower
+        risk of non-repayment.
+      </p>
+
+      <mat-icon
+        class="step1of3"
+        svgIcon="step"
+      >
+      </mat-icon>
+
+      <lazy-image
+        class="images"
+        src="./assets/images/Steps.png"
+      />
+    </div>
+
+  </div>
+</div>

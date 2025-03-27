@@ -1,0 +1,631 @@
+<div class="wrapper">
+    <div class="background-first-column">
+
+    </div>
+ 
+    <div class="container">
+        <div class="banner-wrapper">
+            <app-banner
+                [title]="title"
+                [titleColor]="titleColor"
+                [description]="description"
+                [descriptionColor]="descriptionColor"
+                [image]="image"
+                [imgProps]="imgProps"
+                [linearGradient]="linearGradient"
+            ></app-banner>
+        </div>
+
+        <div class="mobile-wrapper">
+                <h3 class="h3-general">P2P lending</h3>
+
+                <div class="banner-wrapper-mobile">
+                    <div class="banner-wrapper-mobile">
+                        <app-banner-mobile-lend
+                            [title]="title"
+                            [titleColor]="titleColorMobile"
+                            [description]="descriptionMobile"
+                            [descriptionColor]="descriptionColor"
+                            [image]="imageMobile"
+                            [imgProps]="imgPropsMobile"
+                            [linearGradient]="linearGradientMobile"
+                        ></app-banner-mobile-lend>
+                    </div>
+                </div>
+
+      </div>
+
+
+        <div class="heading">
+            <div>
+                <a
+                    class="remove-underline-link"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}"
+                    routerLink="/earn/p2p"
+                >
+                    <button
+                        class="button-filter-catalogue"
+                        mat-button
+                    > Project catalogue</button>
+                </a>
+                <a
+                    class="remove-underline-link"
+                    routerLinkActive="active"
+                    routerLink="/earn/p2p02"
+                >
+                    <button
+                        class="button-filter-project"
+                        mat-button
+                    > My projects</button>
+                </a>
+            </div>
+            <button
+                class="button-filter"
+                mat-button
+            >
+                <span class="h-16-style-bold">Filter</span> <mat-icon
+                    class="mat-icon-button-filter"
+                    svgIcon="buttonFilterEllipse"
+                ></mat-icon>
+            </button>
+        </div>
+
+        <div class="heading-mobile">
+            <div>
+                <a
+                    class="remove-underline-link"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}"
+                    routerLink="/earn/p2p"
+                >
+                    <button
+                        class="button-filter-catalogue"
+                        mat-button
+                    > Project catalogue</button>
+                </a>
+                <a
+                    class="remove-underline-link"
+                    routerLinkActive="active"
+                    routerLink="/earn/p2p02"
+                >
+                    <button
+                        class="button-filter-project"
+                        mat-button
+                    > My projects</button>
+                </a>
+            </div>
+            <button
+                class="button-filter"
+                mat-button
+            >
+                <span class="h-16-style-bold">Filter</span> <mat-icon
+                    class="mat-icon-button-filter"
+                    svgIcon="buttonFilterEllipseMobile"
+                ></mat-icon>
+            </button>
+        </div>
+
+        <div class="app-porfolio">
+            <app-bonds-portfolio-mobile
+                [portfolioImage]="portfolioImage"
+                [portfolioName]="portfolioName"
+                [coinValue]="coinValue"
+                [openClose]="open"
+                [investNow]="investNow"
+                [changeImage]="changeImage1"
+                [iconArrow] = "iconArrow"
+                [p2pId1]="p2pId1"
+            ></app-bonds-portfolio-mobile>
+            <app-bonds-portfolio-mobile
+                [portfolioImage]="portfolioImage2"
+                [portfolioName]="portfolioName"
+                [coinValue]="coinValue"
+                [openClose]="close"
+                [investNow]="investNow"
+                [changeImage]="changeImage2"
+                [iconArrow] = "iconArrow"
+                [p2pId1]="p2pId2"
+                [openCloseColor]="openCloseColor"
+                [investNowColor] = "investNowColor"
+            ></app-bonds-portfolio-mobile>
+            <app-bonds-portfolio-mobile
+                [portfolioImage]="portfolioImage3"
+                [portfolioName]="portfolioName"
+                [coinValue]="coinValue"
+                [openClose]="open"
+                [investNow]="investNow"
+                [changeImage]="changeImage1"
+                [iconArrow] = "iconArrow"
+                [p2pId1]="p2pId1"
+            ></app-bonds-portfolio-mobile>
+            <app-bonds-portfolio-mobile
+                [portfolioImage]="portfolioImage4"
+                [portfolioName]="portfolioName"
+                [coinValue]="coinValue"
+                [openClose]="open"
+                [investNow]="investNow"
+                [changeImage]="changeImage1"
+                [iconArrow] = "iconArrow"
+                [p2pId1]="p2pId1"
+            ></app-bonds-portfolio-mobile>
+            <app-bonds-portfolio-mobile
+                [portfolioImage]="portfolioImage5"
+                [portfolioName]="portfolioName"
+                [coinValue]="coinValue"
+                [openClose]="open"
+                [investNow]="investNow"
+                [changeImage]="changeImage1"
+                [iconArrow] = "iconArrow"
+                [p2pId1]="p2pId1"
+            ></app-bonds-portfolio-mobile>
+            <app-bonds-portfolio-mobile
+                [portfolioImage]="portfolioImage6"
+                [portfolioName]="portfolioName"
+                [coinValue]="coinValue"
+                [openClose]="open"
+                [investNow]="investNow"
+                [changeImage]="changeImage1"
+                [iconArrow] = "iconArrow"
+                [p2pId1]="p2pId1"
+            ></app-bonds-portfolio-mobile>
+            <app-bonds-portfolio-mobile
+            [portfolioImage]="portfolioImage7"
+            [portfolioName]="portfolioName"
+            [coinValue]="coinValue"
+            [openClose]="open"
+            [investNow]="investNow"
+            [changeImage]="changeImage1"
+            [iconArrow] = "iconArrow"
+            [p2pId1]="p2pId1"
+        ></app-bonds-portfolio-mobile>
+        <app-bonds-portfolio-mobile
+            [portfolioImage]="portfolioImage8"
+            [portfolioName]="portfolioName"
+            [coinValue]="coinValue"
+            [openClose]="open"
+            [investNow]="investNow"
+            [changeImage]="changeImage1"
+            [iconArrow] = "iconArrow"
+            [p2pId1]="p2pId1"
+        ></app-bonds-portfolio-mobile>
+        <app-bonds-portfolio-mobile
+            [portfolioImage]="portfolioImage9"
+            [portfolioName]="portfolioName"
+            [coinValue]="coinValue"
+            [openClose]="open"
+            [investNow]="investNow"
+            [changeImage]="changeImage1"
+            [iconArrow] = "iconArrow"
+            [p2pId1]="p2pId1"
+        ></app-bonds-portfolio-mobile>
+        <app-bonds-portfolio-mobile
+            [portfolioImage]="portfolioImage10"
+            [portfolioName]="portfolioName"
+            [coinValue]="coinValue"
+            [openClose]="open"
+            [investNow]="investNow"
+            [changeImage]="changeImage1"
+            [iconArrow] = "iconArrow"
+            [p2pId1]="p2pId1"
+        ></app-bonds-portfolio-mobile>
+       
+        </div>
+
+        <div class="bonds">
+        <div>
+            <div
+                id="bonds-id1"
+                (click)="changeBackground1()"
+                class="chart-table first-row"
+            >
+                <div class="first-column">
+                    <mat-icon
+                        class="mat-icon-size-50-only"
+                        svgIcon="google50"
+                    ></mat-icon>
+                    <div class="cell-no-border">
+                        <div>Name of bond</div>
+                        <span>Discription</span>
+                    </div>
+                    <div class="cell">
+                        <div>???</div>
+                        <span>Total Loan Size</span>
+                    </div>
+                    <div class="cell">
+                        <div>5 000 000</div>
+                        <span>Outstanding</span>
+                    </div>
+                    <div class="cell">
+                        <div>12.15% USDC</div>
+                        <span>APY</span>
+                    </div>
+                    <div class="cell-no-border">
+                        <div>???</div>
+                        <span>Maturity</span>
+                    </div>
+                    <div class="table-buttons">
+                        <button class="button-chart-open">
+                            Open
+                        </button>
+                        <button class="button-chart-invest">
+                            Invest now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="bonds-id2"
+                (click)="changeBackground2()"
+                class="chart-table first-row"
+            >
+                <div class="first-column">
+                    <mat-icon
+                        class="mat-icon-size-50-only"
+                        svgIcon="apple50"
+                    ></mat-icon>
+                    <div class="cell-no-border">
+                        <div>Name of bond</div>
+                        <span>Discription</span>
+                    </div>
+                    <div class="cell">
+                        <div>???</div>
+                        <span>Total Loan Size</span>
+                    </div>
+                    <div class="cell">
+                        <div>5 000 000</div>
+                        <span>Outstanding</span>
+                    </div>
+                    <div class="cell">
+                        <div>12.15% USDC</div>
+                        <span>APY</span>
+                    </div>
+                    <div class="cell-no-border">
+                        <div>???</div>
+                        <span>Maturity</span>
+                    </div>
+                    <div class="table-buttons">
+                        <button class="button-chart-close">
+                            Close
+                        </button>
+                        <button class="button-chart-invest-white">
+                            Invest now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="bonds-id3"
+                (click)="changeBackground3()"
+                class="chart-table first-row"
+            >
+                <div class="first-column">
+                    <mat-icon
+                        class="mat-icon-size-50-only"
+                        svgIcon="microsoft50"
+                    ></mat-icon>
+                    <div class="cell-no-border">
+                        <div>Name of bond</div>
+                        <span>Discription</span>
+                    </div>
+                    <div class="cell">
+                        <div>???</div>
+                        <span>Total Loan Size</span>
+                    </div>
+                    <div class="cell">
+                        <div>5 000 000</div>
+                        <span>Outstanding</span>
+                    </div>
+                    <div class="cell">
+                        <div>12.15% USDC</div>
+                        <span>APY</span>
+                    </div>
+                    <div class="cell-no-border">
+                        <div>???</div>
+                        <span>Maturity</span>
+                    </div>
+                    <div class="table-buttons">
+                        <button class="button-chart-open">
+                            Open
+                        </button>
+                        <button class="button-chart-invest">
+                            Invest now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="bonds-id4"
+                (click)="changeBackground4()"
+                class="chart-table first-row"
+            >
+                <div class="first-column">
+                    <mat-icon
+                        class="mat-icon-size-50-only"
+                        svgIcon="tesla50"
+                    ></mat-icon>
+                    <div class="cell-no-border">
+                        <div>Name of bond</div>
+                        <span>Discription</span>
+                    </div>
+                    <div class="cell">
+                        <div>???</div>
+                        <span>Total Loan Size</span>
+                    </div>
+                    <div class="cell">
+                        <div>5 000 000</div>
+                        <span>Outstanding</span>
+                    </div>
+                    <div class="cell">
+                        <div>12.15% USDC</div>
+                        <span>APY</span>
+                    </div>
+                    <div class="cell-no-border">
+                        <div>???</div>
+                        <span>Maturity</span>
+                    </div>
+                    <div class="table-buttons">
+                        <button class="button-chart-close">
+                            Close
+                        </button>
+                        <button class="button-chart-invest-white">
+                            Invest now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="bonds-id5"
+                (click)="changeBackground5()"
+                class="chart-table first-row"
+            >
+                <div class="first-column">
+                    <mat-icon
+                        class="mat-icon-size-50-only"
+                        svgIcon="facebook50"
+                    ></mat-icon>
+                    <div class="cell-no-border">
+                        <div>Name of bond</div>
+                        <span>Discription</span>
+                    </div>
+                    <div class="cell">
+                        <div>???</div>
+                        <span>Total Loan Size</span>
+                    </div>
+                    <div class="cell">
+                        <div>5 000 000</div>
+                        <span>Outstanding</span>
+                    </div>
+                    <div class="cell">
+                        <div>12.15% USDC</div>
+                        <span>APY</span>
+                    </div>
+                    <div class="cell-no-border">
+                        <div>???</div>
+                        <span>Maturity</span>
+                    </div>
+                    <div class="table-buttons">
+                        <button class="button-chart-open">
+                            Open
+                        </button>
+                        <button class="button-chart-invest">
+                            Invest now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="bonds-id6"
+                (click)="changeBackground6()"
+                class="chart-table first-row"
+            >
+                <div class="first-column">
+                    <mat-icon
+                        class="mat-icon-size-50-only"
+                        svgIcon="twitter50"
+                    ></mat-icon>
+                    <div class="cell-no-border">
+                        <div>Name of bond</div>
+                        <span>Discription</span>
+                    </div>
+                    <div class="cell">
+                        <div>???</div>
+                        <span>Total Loan Size</span>
+                    </div>
+                    <div class="cell">
+                        <div>5 000 000</div>
+                        <span>Outstanding</span>
+                    </div>
+                    <div class="cell">
+                        <div>12.15% USDC</div>
+                        <span>APY</span>
+                    </div>
+                    <div class="cell-no-border">
+                        <div>???</div>
+                        <span>Maturity</span>
+                    </div>
+                    <div class="table-buttons">
+                        <button class="button-chart-open">
+                            Open
+                        </button>
+                        <button class="button-chart-invest">
+                            Invest now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="bonds-id7"
+                (click)="changeBackground7()"
+                class="chart-table first-row"
+            >
+                <div class="first-column">
+                    <mat-icon
+                        class="mat-icon-size-50-only"
+                        svgIcon="nike50"
+                    ></mat-icon>
+                    <div class="cell-no-border">
+                        <div>Name of bond</div>
+                        <span>Discription</span>
+                    </div>
+                    <div class="cell">
+                        <div>???</div>
+                        <span>Total Loan Size</span>
+                    </div>
+                    <div class="cell">
+                        <div>5 000 000</div>
+                        <span>Outstanding</span>
+                    </div>
+                    <div class="cell">
+                        <div>12.15% USDC</div>
+                        <span>APY</span>
+                    </div>
+                    <div class="cell-no-border">
+                        <div>???</div>
+                        <span>Maturity</span>
+                    </div>
+                    <div class="table-buttons">
+                        <button class="button-chart-open">
+                            Open
+                        </button>
+                        <button class="button-chart-invest">
+                            Invest now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="bonds-id8"
+                (click)="changeBackground8()"
+                class="chart-table first-row"
+            >
+                <div class="first-column">
+                    <mat-icon
+                        class="mat-icon-size-50-only"
+                        svgIcon="pepsi50"
+                    ></mat-icon>
+                    <div class="cell-no-border">
+                        <div>Name of bond</div>
+                        <span>Discription</span>
+                    </div>
+                    <div class="cell">
+                        <div>???</div>
+                        <span>Total Loan Size</span>
+                    </div>
+                    <div class="cell">
+                        <div>5 000 000</div>
+                        <span>Outstanding</span>
+                    </div>
+                    <div class="cell">
+                        <div>12.15% USDC</div>
+                        <span>APY</span>
+                    </div>
+                    <div class="cell-no-border">
+                        <div>???</div>
+                        <span>Maturity</span>
+                    </div>
+                    <div class="table-buttons">
+                        <button class="button-chart-open">
+                            Open
+                        </button>
+                        <button class="button-chart-invest">
+                            Invest now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="bonds-id9"
+                (click)="changeBackground9()"
+                class="chart-table first-row"
+            >
+                <div class="first-column">
+                    <mat-icon
+                        class="mat-icon-size-50-only"
+                        svgIcon="adidas50"
+                    ></mat-icon>
+                    <div class="cell-no-border">
+                        <div>Name of bond</div>
+                        <span>Discription</span>
+                    </div>
+                    <div class="cell">
+                        <div>???</div>
+                        <span>Total Loan Size</span>
+                    </div>
+                    <div class="cell">
+                        <div>5 000 000</div>
+                        <span>Outstanding</span>
+                    </div>
+                    <div class="cell">
+                        <div>12.15% USDC</div>
+                        <span>APY</span>
+                    </div>
+                    <div class="cell-no-border">
+                        <div>???</div>
+                        <span>Maturity</span>
+                    </div>
+                    <div class="table-buttons">
+                        <button class="button-chart-open">
+                            Open
+                        </button>
+                        <button class="button-chart-invest">
+                            Invest now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                id="bonds-id10"
+                (click)="changeBackground10()"
+                class="chart-table first-row"
+            >
+                <div class="first-column">
+                    <mat-icon
+                        class="mat-icon-size-50-only"
+                        svgIcon="xbox50"
+                    ></mat-icon>
+                    <div class="cell-no-border">
+                        <div>Name of bond</div>
+                        <span>Discription</span>
+                    </div>
+                    <div class="cell">
+                        <div>???</div>
+                        <span>Total Loan Size</span>
+                    </div>
+                    <div class="cell">
+                        <div>5 000 000</div>
+                        <span>Outstanding</span>
+                    </div>
+                    <div class="cell">
+                        <div>12.15% USDC</div>
+                        <span>APY</span>
+                    </div>
+                    <div class="cell-no-border">
+                        <div>???</div>
+                        <span>Maturity</span>
+                    </div>
+                    <div class="table-buttons">
+                        <button class="button-chart-open">
+                            Open
+                        </button>
+                        <button class="button-chart-invest">
+                            Invest now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+</div>

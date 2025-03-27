@@ -1,0 +1,225 @@
+<div class="upload-photo-wrapper">
+    <div
+        class="photo-wrapper"
+        (click)="loadInput()"
+    >
+        <mat-icon
+            class="mat-icon-user-details"
+            svgIcon="photoPlus"
+        ></mat-icon>
+        <div class="h-12-style box">Upload your photo
+            <span class="light">(max 10MB)</span>
+        </div>
+    </div>
+    <div class="name-wrapper">
+        <div class="h-18-style">
+        </div>
+        <div class="h-16-style">
+            {{ userData().email }}
+        </div>
+        <div
+            *ngIf="userData().kycActivation else notVerified"
+            class="verified h-16-style"
+        ><span>Verified</span></div>
+        <ng-template #notVerified>
+            <div class="verify h-16-style"><span>Not verified</span></div>
+        </ng-template>
+    </div>
+    <div class="dots-vertical">
+        <mat-icon
+            class="mat-icon-user-details"
+            svgIcon="dotsVertical"
+        ></mat-icon>
+    </div>
+</div>
+
+<div class="google">
+    <div class="heading">
+        Two-factor autenthication
+    </div>
+    <p>
+        Two-factor authentication (2FA) adds an extra layer of protection on your Credefi account. By enabling this
+        security feature, you protect your account by requiring more than just a password to perform actions like
+        logging in and withdrawing funds.
+    </p>
+    <button
+        *ngIf="userData().gaEnabled else gaDisabled"
+        class="button-primary"
+        (click)="disableDialog()"
+    >
+
+        Disable 2FA
+    </button>
+    <ng-template #gaDisabled>
+        <button
+            class="button-primary"
+            (click)="opne2faDialog()"
+        >
+            Enable 2FA
+        </button>
+    </ng-template>
+</div>
+
+<div class="google">
+    <div class="heading">
+        Tier levels
+    </div>
+    <p>
+        Tier levels description
+    </p>
+    <h4>Tier level 1 <ng-container *ngIf="tierLevel() == 1">&#10004;</ng-container></h4>
+    <p>
+        This is the entry-level tier, where users can enjoy an Instant Return On Investment (ROI) for the first year. 
+        This benefit is specifically tailored to cover the initial period, providing an immediate incentive for new users.
+    </p>
+    <h4>Tier level 2 <ng-container *ngIf="tierLevel() == 2">&#10004;</ng-container></h4>
+    <p>
+        Building upon the foundation of Tier 1, Tier 2 enhances the benefits package by not only offering an Instant ROI but also an Extra Interest of +2%. This tier is designed for users looking to increase their returns beyond the instant benefits, rewarding them for their continued engagement with the platform.
+    </p>
+    <h4>Tier level 3 <ng-container *ngIf="tierLevel() == 3">&#10004;</ng-container></h4>
+    <p>
+        The highest tier in the Credefi platform, Tier 3, includes all the benefits of the previous tiers—Instant ROI and an Extra Interest of +2%—and introduces Insurance Included. This additional feature offers a layer of protection for the users' investments, providing peace of mind and enhancing the overall value of being part of this tier.
+    </p>
+</div>
+
+
+<form
+    #formChild="ngForm"
+    class="login-form"
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+>
+    <div class="heading">
+        Password
+    </div>
+
+    <div>
+        <mat-form-field class="credi-outline">
+            <mat-icon
+                class="prefix"
+                matPrefix
+                svgIcon="password"
+            >
+
+            </mat-icon>
+            <input
+                matInput
+                autocomplete
+                type="password"
+                placeholder="Old password"
+                formControlName="currentPassword"
+            />
+            <mat-error *ngFor="let error of form.get('currentPassword') | error | slice:0:1">
+                {{ error }}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="credi-outline">
+            <mat-icon
+                class="prefix"
+                matPrefix
+                svgIcon="password"
+            >
+
+            </mat-icon>
+            <input
+                matInput
+                autocomplete
+                type="password"
+                placeholder="New password"
+                formControlName="password"
+            />
+            <mat-error *ngFor="let error of form.get('password') | error | slice:0:1">
+                {{ error }}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="credi-outline">
+            <mat-icon
+                class="prefix"
+                matPrefix
+                svgIcon="password"
+            >
+
+            </mat-icon>
+            <input
+                matInput
+                autocomplete
+                type="password"
+                placeholder="Re-enter the new password"
+                formControlName="passwordConfirm"
+            />
+            <mat-error *ngFor="let error of form.get('passwordConfirm') | error | slice:0:1">
+                {{ error }}
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <button
+        class="button-primary"
+        [disabled]="isSubmit()"
+    >
+        Submit
+    </button>
+</form>
+
+<form
+    #companyFormChild="ngForm"
+    class="login-form"
+    [formGroup]="companyForm"
+    (ngSubmit)="onSubmitCorporate()"
+>
+    <div class="heading">
+        Corporate account application
+    </div>
+
+    <div>
+        <mat-form-field class="credi-outline">
+            <mat-icon
+                class="prefix"
+                matPrefix
+                svgIcon="email"
+            >
+
+            </mat-icon>
+            <input
+                matInput
+                autocomplete
+                type="text"
+                placeholder="Email"
+                formControlName="email"
+            />
+            <mat-error *ngFor="let error of companyForm.get('email') | error | slice:0:1">
+                {{ error }}
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="credi-outline">
+            <mat-icon
+                class="prefix"
+                matPrefix
+                svgIcon="phone"
+            >
+
+            </mat-icon>
+            <input
+                matInput
+                autocomplete
+                type="text"
+                placeholder="Phone"
+                formControlName="phone"
+            />
+            <mat-error *ngFor="let error of companyForm.get('phone') | error | slice:0:1">
+                {{ error }}
+            </mat-error>
+        </mat-form-field>
+        <p>
+            If you wish to apply for a corporate account, please submit a request below. Our team will be in touch
+            shrotly.
+        </p>
+    </div>
+
+    <button
+        class="button-primary"
+        [disabled]="isSubmit()"
+    >
+        Apply
+    </button>
+</form>

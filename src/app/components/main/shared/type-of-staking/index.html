@@ -1,0 +1,82 @@
+<div class="staking-type">
+    <div class="title-img">
+        <mat-icon
+            class="mat-icon-size-logo"
+            [svgIcon]="logoMobile"
+        >
+        </mat-icon>
+    </div>
+    <div class="staking-body">
+        <div class="body">
+            <div class="open">
+                <h6>{{stakingTitle}}</h6>
+                <div class="button-open">Pancakeswap V2</div>
+            </div>
+            <div class="boxes">
+                <div class="one">
+                    <mat-icon
+                        class="mat-icon-size-coinsStacked"
+                        svgIcon="coinsStacked04"
+                    >
+                    </mat-icon>
+                    <div class="info">
+                        <span class="small">TVL</span>
+                        <div class="small">{{ balance | number:'1.2-6' }} USD</div>
+                    </div>
+                </div>
+                <div class="one">
+                    <mat-icon
+                        class="mat-icon-size-coinsStacked"
+                        svgIcon="percent"
+                    >
+                    </mat-icon>
+                    <div class="info">
+                        <span class="small">Reward pool</span>
+                        <div class="small">20,000.00 USDT</div>
+                    </div>
+                </div>
+                <div class="one">
+                    <mat-icon
+                        class="mat-icon-size-coinsStacked"
+                        svgIcon="coinsStacked04"
+                    >
+                    </mat-icon>
+                    <div class="info">
+                        <span class="small">Averege daily return</span>
+                        <div class="small">0.055%</div>
+                    </div>
+                </div>
+                <div class="one">
+                    <mat-icon
+                        class="mat-icon-size-coinsStacked"
+                        svgIcon="globe"
+                    >
+                    </mat-icon>
+                    <div class="info">
+                        <span class="small">Network</span>
+                        <div class="small">BEP20</div>
+                    </div>
+                </div>
+                <div class="one">
+                  <mat-icon
+                      class="mat-icon-size-coinsStacked"
+                      svgIcon="globe"
+                  >
+                  </mat-icon>
+                  <div class="info">
+                      <span class="small">Stake period</span>
+                      <div class="small">180</div>
+                  </div>
+              </div>
+            </div>
+            <div class="bttn">
+                <a
+                    class="button-primary"
+                    routerLink="/stake"
+                >
+                    Stake Now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

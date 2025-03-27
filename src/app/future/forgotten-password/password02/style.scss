@@ -1,0 +1,101 @@
+@media (min-width: 700px) {
+  .container-right {
+    padding-top: 64px;
+    padding-left: 64px;
+    height: 100%;
+    position: relative;
+  }
+
+
+  .did-you-know h1 {
+    width: 430px;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 140%;
+    margin-bottom: 16px;
+    margin-top: 0px;
+  }
+  
+  .did-you-know p {
+    width: 420px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    font-style: normal;
+  }
+  
+  .did-you-know .step1of3 {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 100;
+  }
+  
+  .did-you-know .step1of3-lend {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 300;
+  }
+  
+  .did-you-know img {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+    mat-icon.mat-icon-logo {
+      width: 85px;
+      height: 52px;
+      margin-bottom: 64px;
+    }
+    .go-back{
+      font-size: 16px;
+      color: #11121C;
+      display: flex;
+      font-weight: bold;
+      padding-left: 170px;
+      padding-top: 25px;
+      justify-content: flex-start;
+    }
+
+    mat-icon.mat-icon-logo-mobile {
+      display: none;
+    }
+
+    .enter-code{
+      padding-bottom: 12px;
+    }
+    .p-login {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      line-height: 140%;
+      text-align: left;
+      vertical-align: middle;
+      color: #07070766;
+      padding-bottom: 32px;
+    }
+
+
+
+  }
+
+
+
+  @media (max-width: 700px) {
+    .go-back{
+        font-size: 16px;
+        color: #11121C;
+        display: flex;
+        font-weight: bold;
+        padding-left: 130px;
+        justify-content: flex-start
+      }
+
+      .button-login{
+        width: 312px;
+      }
+   
+  }

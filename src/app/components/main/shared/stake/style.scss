@@ -1,0 +1,57 @@
+:host {
+    min-width: 240px;
+    display: block;
+}
+
+div.header {
+    display: flex;
+    background-color: #F3F4FA;
+    margin: 4px;
+    border-radius: 12px;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 600;
+    align-items: center;
+    padding: 8px 4px 8px 12px;
+}
+
+form {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.button-login {
+    height: 70px;
+    width: 100%;
+    border-radius: 100px;
+    background-color: #5C68FF;
+    border-width: 0px;
+    color: white;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: bold;
+    text-align: middle;
+    margin: 0px 0px 12px 0;
+    color: white !important;
+}
+
+mat-icon.wallet{
+    height: 30px;
+}
+
+.dropDown {
+    border-radius: 100px;
+    border: 1px solid rgba(7, 7, 7, 0.1);
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    padding-right: 24px;
+    position: relative;
+    margin-bottom: 22px;
+    background: whitesmoke;
+    height: 64px;
+    mat-select{
+        padding-left: 16px;
+    }
+}

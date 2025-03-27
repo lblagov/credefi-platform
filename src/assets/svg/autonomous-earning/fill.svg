@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 86 26">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: #77ce9f;
+      }
+
+      .cls-4 {
+        fill: rgba(7, 7, 7, .1);
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect id="Rectangle_1448-2" data-name="Rectangle 1448" class="cls-1" width="86" height="26"/>
+    </clipPath>
+  </defs>
+  <rect id="Rectangle_1448" data-name="Rectangle 1448" class="cls-3" width="86" height="26"/>
+  <g class="cls-2">
+    <rect id="Rectangle_4496" data-name="Rectangle 4496" class="cls-4" x="-4.74" y="-12.04" width="5" height="40" transform="translate(-2.14 -.31) rotate(-15)"/>
+    <rect id="Rectangle_4496-2" data-name="Rectangle 4496" class="cls-4" x="3.87" y="-12.04" width="5" height="40" transform="translate(-1.84 1.92) rotate(-15)"/>
+    <rect id="Rectangle_4496-3" data-name="Rectangle 4496" class="cls-4" x="12.48" y="-12.04" width="5" height="40" transform="translate(-1.55 4.15) rotate(-15)"/>
+    <rect id="Rectangle_4496-4" data-name="Rectangle 4496" class="cls-4" x="21.08" y="-12.04" width="5" height="40" transform="translate(-1.26 6.37) rotate(-15)"/>
+    <rect id="Rectangle_4496-5" data-name="Rectangle 4496" class="cls-4" x="29.69" y="-12.04" width="5" height="40" transform="translate(-.96 8.6) rotate(-15)"/>
+    <rect id="Rectangle_4496-6" data-name="Rectangle 4496" class="cls-4" x="38.29" y="-12.04" width="5" height="40" transform="translate(-.67 10.83) rotate(-15)"/>
+    <rect id="Rectangle_4496-7" data-name="Rectangle 4496" class="cls-4" x="46.9" y="-12.04" width="5" height="40" transform="translate(-.38 13.06) rotate(-15)"/>
+    <rect id="Rectangle_4496-8" data-name="Rectangle 4496" class="cls-4" x="55.5" y="-12.04" width="5" height="40" transform="translate(-.08 15.28) rotate(-15)"/>
+    <rect id="Rectangle_4496-9" data-name="Rectangle 4496" class="cls-4" x="64.11" y="-12.04" width="5" height="40" transform="translate(.21 17.51) rotate(-15)"/>
+    <rect id="Rectangle_4496-10" data-name="Rectangle 4496" class="cls-4" x="72.71" y="-12.04" width="5" height="40" transform="translate(.5 19.74) rotate(-15)"/>
+    <rect id="Rectangle_4496-11" data-name="Rectangle 4496" class="cls-4" x="81.32" y="-12.04" width="5" height="40" transform="translate(.79 21.97) rotate(-15)"/>
+  </g>
+</svg>

@@ -1,0 +1,91 @@
+:host {
+  max-width: 920px;
+  padding: 32px 0 0 32px;
+}
+.demo-header{
+  color: #C41E3A;
+  margin-bottom: 20px;
+}
+
+.div-banner {
+  display: flex;
+  width: 100%;
+  border-radius: 20px;
+  background-color: rgba(92, 104, 255, 1);
+  align-items: center;
+  padding: 28px 18px;
+
+  p {
+    color: var(--color-styles-primary-white, #FFF);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0px;
+    max-width: 345px;
+  }
+
+  img {
+    padding-left: 42px;
+  }
+
+  a {
+    border-radius: 24px;
+    background-color: white;
+    color: var(--color-styles-light-version-black, #11121C);
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 16px;
+    padding: 24px 12px;
+  }
+}
+
+.portfolio-lending {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 24px 0;
+
+  button {
+    border-radius: 24px;
+    background-color: var(--blue-background);
+    ;
+    color: var(--white, #11121C);
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 16px;
+    padding: 24px 12px;
+  }
+}
+
+
+app-transactions {
+  display: block;
+  margin-top: 24px;
+}
+
+@media (max-width: 870px) {
+  :host {
+    padding: 6px !important;
+  }
+
+  div.div-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px !important;
+
+    img {
+      padding-left: 0 !important;
+      margin: 0 0 24px 0;
+    }
+
+    a,
+    p {
+      margin: 0 0 8px 0 !important;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+
+}

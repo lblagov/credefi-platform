@@ -1,0 +1,56 @@
+<div class="demo-header">
+  This is a demo account. Please do not attempt to deposit any fiat or cryptocurrency, as such transactions will not be processed and may result in the loss of funds.
+</div>
+<div class="div-banner">
+
+    <p>Buy and exchange over 100+ popular tokens in our platform</p>
+
+    <img src="/assets/svg/wallet/walletBanner.svg" />
+    <a
+        target="_blank"
+        href="https://exchange.mercuryo.io/?widget_id=2ce492bc-be4c-4a3f-be3b-0667c0019c8f&type=buy&currency=USDT&fiat_currency=USD&lang=en&merchant_transaction_id=64ce4485e04b24d8126a363d"
+        mat-button
+    >
+        Buy crypto
+    </a>
+    <a
+        target="_blank"
+        href="https://www.kucoin.com/trade/CREDI-USDT"
+        mat-button
+    >
+        Exchange crypto
+    </a>
+</div>
+
+<div class="portfolio-lending">
+    <h2 class="h2-general">My wallets</h2>
+    <div>
+      <!-- <button
+      mat-button
+  >
+      Add IBAN
+  </button> -->
+    <button
+        mat-button
+        (click)="onCreateWallet()"
+    >
+        Create custodial wallet
+    </button>
+    </div>
+</div>
+
+<app-portfolio-wallet
+    [transactions]="appTransactions"
+>
+</app-portfolio-wallet>
+<app-portfolio-custodial>
+
+</app-portfolio-custodial>
+<app-portfolio-iban-usd>
+
+</app-portfolio-iban-usd>
+<app-portfolio-iban-eur>
+
+</app-portfolio-iban-eur>
+
+<app-transactions #appTransactions></app-transactions>

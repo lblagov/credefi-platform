@@ -1,0 +1,67 @@
+<div class="trans-wrapper">
+    <div class="trans-container">
+        <div class="top-header">
+            <span class="recent-transactions">Recent Transactions</span>
+            <!-- Recent Transactions -->
+            <a
+                routerLink="/transactions"
+                class="button-dash-130"
+                mat-button
+            >View All</a>
+            <!-- View all -->
+        </div>
+        <div class="table-head" [class.empty]="items().length == 0">
+            <span>Tx</span>
+            <span>Wallet</span>
+            <span>Status</span>
+            <span>To</span>
+            <span>Block</span>
+            <span>Action</span>
+        </div>
+        <div
+            class="table-body"
+            *ngFor="let item of items(); trackBy: track"
+        >
+            <a
+                href="{{exporer}}/{{item.tx.hash}}"
+                target="_blank"
+            >
+                {{ item.tx.hash | address }}
+            </a>
+            <div class="wallet">
+                <mat-icon
+                    class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle"
+                ></mat-icon>
+                <span [copy]="item.tx.Account">
+                    {{ item.tx.Account | address }}
+                </span>
+            </div>
+            <span><button
+                    class="button-trans-confirm"
+                    mat-button
+                >
+                    Confirmed
+                </button>
+            </span>
+            <span [copy]="item.tx.to">{{ item.tx.Destination | address }}</span>
+            <span>{{ item.tx.date | hextodec }}</span>
+            <span class="action"><span>Tx</span> <mat-icon
+                    class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight"
+                ></mat-icon></span>
+        </div>
+        <div
+            class="actions"
+            *ngIf="!wallet.address()"
+        >
+            <button
+                class="button-dash-300"
+                mat-button
+                (click)="connect()"
+            >
+                Connect wallet
+            </button>
+        </div>
+    </div>
+</div>

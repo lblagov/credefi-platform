@@ -1,0 +1,28 @@
+<div
+    [style]="linearGradient"
+    class="div-banner"
+>
+
+    <div class="fl-left">
+        <p
+            [style]="titleColor"
+            class="p3-banner"
+        >{{title}}</p>
+        <p
+            [style]="descriptionColor"
+            class="p-banner"
+        >{{description}}</p>
+        <mat-icon
+            *ngIf="showCarosel"
+            class="mat-icon-button-filter"
+            svgIcon="slider"
+        ></mat-icon>
+
+
+    </div>
+    <img
+        class="images"
+        [style]="imgProps"
+        [src]="image"
+    />
+</div>

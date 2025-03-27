@@ -1,0 +1,58 @@
+:host {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+lazy-image-component {
+    flex: 1;
+    max-width: 40%;
+}
+
+.message-box {
+    flex: 1;
+    max-width: 40%;
+    font-family: Roboto;
+    font-weight: 300;
+    p,
+    h1 {
+        color: black;
+    }
+    h1 {
+        font-size: 60px;
+        line-height: 46px;
+        margin-bottom: 40px;
+    }
+}
+
+div.actions {
+    a {
+        background: var(--blue-background);
+        text-decoration: none;
+        color: white;
+        margin: 5px;
+        padding: 8px;
+        border-radius: 18px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width: 500px) {
+    lazy-image-component {
+        position: absolute;
+        max-width: 100%;
+        left: 0;
+        bottom: 25%;
+        z-index: 2;
+    }
+    .message-box {
+        max-width: 100% !important;
+        left: unset !important;
+        text-align: center;
+        z-index: 3;
+    }
+    div.actions {
+        justify-content: center;
+    }
+}

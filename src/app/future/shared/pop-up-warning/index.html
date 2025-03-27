@@ -1,0 +1,19 @@
+
+<div class="div-modal">
+    <div class="outer">
+        <div class="inner">
+            <img class="image-style" src="./assets/images/warning.png"/>
+            <!-- <mat-icon class="mat-icon-congratulations" svgIcon="warning"></mat-icon>   -->
+            <h3 class="h3" >Warning</h3>
+            <p class="p">In case of exit from the investment - you <br>will lose your profit, do you want that?</p>
+        </div>
+        <div class="div-buttons">
+            <button 
+            (click) = "confirm()"
+            class="button-warning-cancel div-button-login" mat-button>Cancel</button>   
+            <button 
+            (click) = "confirm()"
+            class="button-warning-confirm div-button-login" mat-button>Confirm</button>    
+        </div>
+    </div>
+</div>

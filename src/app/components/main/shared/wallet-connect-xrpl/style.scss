@@ -1,0 +1,50 @@
+div.small-scroll {
+    width: 300px;
+    max-height: 350px;
+    overflow: auto;
+
+    button {
+        background-color: #F3F4FA;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        color: black;
+        transition: ease 200ms;
+        width: 100%;
+        overflow: hidden;
+        cursor: pointer;
+
+        mat-icon {
+            margin-right: 8px;
+            width: 42px;
+            height: 42px;
+        }
+        
+        .xumm{
+            width: 42px;
+            margin-right: 8px ;
+        }
+
+        &:hover {
+            background-color: #d6d7e1;
+        }
+
+        div.inner {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            width: 180px;
+
+            span.address {
+                font-size: 12px;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+}

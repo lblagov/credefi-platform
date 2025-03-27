@@ -1,0 +1,48 @@
+<div class="chart-table">
+    <mat-icon
+        class="mat-icon-size-50"
+        [svgIcon]="portfolioImage"
+    >
+    </mat-icon>
+    <div class="cell">
+        <div class="larger">$CREDI LP</div>
+        <!-- <span>{{ data.start | date:'dd MMM yyyy' }}</span> -->
+    </div>
+    <div class="cell border">
+        <div class="flex">
+            <mat-icon
+                class="mat-icon-size-20"
+                svgIcon="staking"
+            >
+            </mat-icon>
+            <div class="flex">
+                {{ data.amount | number:'1.2-2' }}
+                <p>&#160;LP</p>
+            </div>
+        </div>
+        <span>Staked amount</span>
+    </div>
+    <div class="cell border">
+        <div>ERC20</div>
+        <span>Network</span>
+    </div>
+    <div class="cell credi border">
+        <div class="p-bold flex">{{ data.rewards | number:'1.2-2' }}
+            <p>&#160;xCREDI</p>
+        </div>
+        <span>Accrued rewards</span>
+    </div>
+    <div class="cell">
+        <div>{{ data.end | date:'dd MMM yyyy' }}</div>
+        <span>End date</span>
+    </div>
+    <div class="table-buttons">
+        <button
+            class="button-primary"
+            matRipple
+            (click)="alert()"
+        >
+            Claim Rewards
+        </button>
+    </div>
+</div>

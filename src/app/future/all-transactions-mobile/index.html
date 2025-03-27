@@ -1,0 +1,202 @@
+<div class="heading">
+    <h3>All Transactions</h3>
+</div>
+<button
+    class="button-filter"
+    mat-button
+>
+    <span>Filter</span> <mat-icon
+        class="mat-icon-button-filter"
+        svgIcon="buttonFilter"
+    ></mat-icon>
+</button>
+<div class="trans-wrapper">
+    <div class="trans-container">
+        
+        <div class="chart-table">
+            <div class="first-column">
+                <div class="cell secondary-green">
+                    <div>Plain Vanilla</div>
+                    <span>+$1,000.00 USDC</span>
+                </div>
+                
+                <div>
+                    <mat-icon class="mat-icon-size-42-only"
+                              svgIcon="chartTableArrowDown"></mat-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-table">
+            <div class="first-column">
+                <div class="cell secondary-green">
+                    <div>Balanced</div>
+                    <span>+$1,000.00 USDC</span>
+                </div>
+                
+                <div>
+                    <mat-icon class="mat-icon-size-42-only"
+                              svgIcon="chartTableArrowDown"></mat-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-table">
+            <div class="first-column">
+                <div class="cell secondary-red">
+                    <div>Agressive</div>
+                    <span>-$250.00 USDC</span>
+                </div>
+                
+                <div>
+                    <mat-icon class="mat-icon-size-42-only"
+                              svgIcon="chartTableArrowDown"></mat-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-table">
+            <div class="first-column">
+                <div class="cell secondary-red">
+                    <div>Venture</div>
+                    <span>-$250.00 USDC</span>
+                </div>
+                
+                <div>
+                    <mat-icon class="mat-icon-size-42-only"
+                              svgIcon="chartTableArrowDown"></mat-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-table">
+            <div class="first-column">
+                <div class="cell secondary-red">
+                    <div>Venture</div>
+                    <span>-$250.00 USDC</span>
+                </div>
+                
+                <div>
+                    <mat-icon class="mat-icon-size-42-only"
+                              svgIcon="chartTableArrowDown"></mat-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-table">
+            <div class="first-column">
+                <div class="cell secondary-red">
+                    <div>Venture</div>
+                    <span>-$250.00 USDC</span>
+                </div>
+                
+                <div>
+                    <mat-icon class="mat-icon-size-42-only"
+                              svgIcon="chartTableArrowDown"></mat-icon>
+                </div>
+            </div>
+        </div>
+        <div id="all-transactions-id7">
+        <div class="chart-table">
+            <div class="first-column">
+                <div class="cell secondary-red">
+                    <div>Venture</div>
+                    <span>-$250.00 USDC</span>
+                </div>
+                
+                <div>
+                    <mat-icon class="mat-icon-size-42-only"
+                              svgIcon={{iconArrow}}
+                              (click)="this.slideAllTransactionsMobileTable7($event)"></mat-icon>
+                </div>
+            </div>
+        </div>
+        
+        <!-- *ngFor="let tx of items(); trackBy: track('hash')" -->
+        <div
+            class="table-body hide expanded"
+        >
+        <div class="Tx">
+            <span>Tx</span>
+            <!-- href="{{exporer}}/{{tx.hash}}" -->
+            <a
+                target="_blank"
+            >
+                0000000000
+                <!-- {{ tx.hash | address }} -->
+            </a>
+        </div>
+            <div class="Wallet">
+                <span>
+                    Wallet
+                </span>
+                <mat-icon
+                    class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle"
+                ></mat-icon>
+                <!-- [copy]="tx.from" -->
+                <span >
+                    0x70c6...4b54
+                    <!-- {{ tx.from | address }} -->
+                </span>
+            </div>
+            <div class="Status">
+                <span>
+                    Status
+                </span>
+                <span><button
+                        class="button-trans-confirm"
+                        mat-button
+                    >
+                        Confirmed
+                    </button>
+                </span>
+            </div>
+
+            <!-- <span class="confirm" [copy]="tx.to" *ngIf="tx.to.toLowerCase() == '0xda4087f7ab6075fe4599871cd7f464859923a0dd'">Autonomous earning</span> -->
+            <div class="To">
+                <span>
+                    To
+                </span>
+                <!-- [copy]="tx.to" *ngIf="tx.to.toLowerCase() != '0xda4087f7ab6075fe4599871cd7f464859923a0dd'" -->
+                <span>
+                    0x000000000
+                    <!-- {{ tx.to | address }} -->
+                </span>
+            </div>
+            <div class="Block">
+                <span>
+                    Block
+                </span>
+                <span>
+                    000000000
+                    <!-- {{ tx.blockNum | hextodec }} -->
+                </span>
+            </div>
+
+            <div class="Action">
+                <span>
+                    Action
+                </span>
+                <!-- href="{{exporer}}/{{tx.hash}}" -->
+                <a
+                target="_blank"
+                > 
+                    <span class="action"><span>Tx</span> <mat-icon
+                        class="header-icon arrow-up-right"
+                        svgIcon="arrowUpRight"
+                    ></mat-icon></span>
+                </a>
+            </div>
+        </div>
+        <button
+            *ngIf="!loaded()"
+            class="button-dash-300"
+            mat-button
+            (click)="wallet.address() ? loadTransactions() : connect()"
+        >
+            {{ wallet.address() ? "Show 10 more transactions" : "Connect wallet" }}
+        </button>
+        </div>
+    </div>
+</div>

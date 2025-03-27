@@ -1,0 +1,19 @@
+<app-header></app-header>
+
+<div class="main">
+    <app-sidebar> </app-sidebar>
+
+    <div
+        class="container"
+        [@fadeAnimation]="outlet.isActivated ? outlet.activatedRoute : ''"
+    >
+        <router-outlet #outlet="outlet"></router-outlet>
+        <footer>
+            <span>@2024 Credefi</span>
+            <span class="fl-right">
+                <span>Powered by &nbsp;<u>Experian</u></span>
+                <span>All rights reserved</span>
+            </span>
+        </footer>
+    </div>
+</div>

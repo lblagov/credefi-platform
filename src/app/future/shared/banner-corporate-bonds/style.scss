@@ -1,0 +1,101 @@
+
+.div-banner{
+    /* padding-left: 24px; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    width: 312px;
+    height: 308px;
+    background: linear-gradient(138deg, #ECE9DC 0%, #EAE4CB 100%), linear-gradient(120deg, #FFD9C9 0%, #FFD5AE 100%);
+    border-radius: 20px;
+    /* display: flow-root; */
+    /* margin: 0 auto; */
+    /* padding-left: 32px; */
+    /* padding-top: 32px; */
+    position: relative;
+ 
+}
+
+
+
+mat-icon.mat-icon-banner {
+    height: 166px;
+    width: 360px;
+    /* position: absolute; */
+    left:671px;
+    top: 0px;
+    float: right;
+}
+
+.span-banner-filled{
+    background-color: white;
+    height: 4px;
+    width: 32px;
+}
+
+
+.span-banner-half{
+    background-color: white;
+    height: 4px;
+    width: 11px;
+}
+
+
+.span-banner-empty{
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 4px;
+    width: 32px;
+}
+
+button.button-overview{
+    color: var(--color-styles-light-version-white, #FCFDFD);
+    font-size: 16px;
+    
+    font-weight: 700;
+    line-height: 140%;  
+    background: rgba(17, 18, 28, 1);
+    border-radius: 96px;
+    height: 50px;
+    width: 173px;
+    letter-spacing: normal;
+}
+
+.h3-custom{
+    width: 435px;
+    height: 34px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    /* Color styles/Primary/Black */
+    color: #070707;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin:0px
+  }
+
+  .p-custom{
+    color: var(--color-styles-text-body-40, rgba(7, 7, 7, 0.50));
+    /* Text style/14px/Regular */
+    font-size: 14px;
+    
+    line-height: 140%;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    padding-top: 30px;
+  }
+  
+  .images{
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .inner-padding {
+    padding: 32px;
+    z-index: 101;
+    position: sticky
+  }

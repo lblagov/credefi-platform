@@ -1,0 +1,63 @@
+<div class="trans-wrapper">
+  <div class="table-header">
+    <span class="recent-transactions">Recent Crypto Transactions</span>
+    <a routerLink="/transactions" class="button-accent" mat-ripple>
+      View All
+    </a>
+  </div>
+  <div class="table-head">
+    <span>Tx</span>
+    <span>Wallet</span>
+    <span>Status</span>
+    <span>To</span>
+    <span>Block</span>
+    <span>Action</span>
+  </div>
+
+  <div class="table-body" *ngFor="let tx of items(); trackBy: track('hash')">
+    <a [copy]="tx.hash"> {{ tx.hash | address }} </a>
+
+    <div class="wallet">
+      <mat-icon
+        class="mat-icon-size-22-only"
+        svgIcon="transactionsCircle"
+      ></mat-icon>
+      <span [copy]="tx.from"> {{ tx.from | address }} </span>
+    </div>
+    <span>
+      <button matRipple class="button-trans-confirm image-button">
+        Confirmed
+      </button>
+    </span>
+    <span [copy]="tx.to">{{ tx.to | address }}</span>
+    <span>{{ tx.blockNum | hextodec }}</span>
+    <a class="action" href="{{exporer}}/{{tx.hash}}" target="_blank">
+      <span>Tx</span>
+      <mat-icon class="header-icon arrow-up-right" svgIcon="arrowUpRight">
+      </mat-icon>
+    </a>
+  </div>
+  <div class="actions" *ngIf="!wallet.address()">
+    <button class="button-primary connect" mat-ripple (click)="connect()">
+      Connect wallet
+    </button>
+  </div>
+</div>
+<div class="trans-wrapper">
+  <div class="table-header">
+    <span class="recent-transactions">Recent Bank Transactions</span>
+  </div>
+  <div class="table-head">
+    <span>Method</span>
+    <span>Reciver</span>
+    <span>Amount</span>
+    <span>Currency</span>
+  </div>
+
+  <div class="table-body" *ngFor="let his of bank;">
+    <span>{{ his.method  }}</span>
+    <span>{{ his.iban  }}</span>
+    <span>{{ his.amount  }}</span>
+    <span>{{ his.currency  }}</span>
+  </div>
+</div>

@@ -1,0 +1,89 @@
+<div class="wallet-wrapper">
+    <div class="wallet-head">
+        <div class="wallet-logo">
+            <mat-icon
+                class="mat-icon-size-56"
+                svgIcon="credefiLogo"
+            >
+            </mat-icon>
+            <div>
+                <h3 [ngSwitch]="wallet.wallet()?.type">
+                    <ng-container *ngSwitchCase="WalletTypes.metamask">
+                        Wallet
+                    </ng-container>
+                    <ng-container *ngSwitchCase="WalletTypes.credi">
+                        {{ wallet.wallet().data.name }}
+                    </ng-container>
+                    <ng-container *ngSwitchDefault>
+                        Credefi
+                    </ng-container>
+                </h3>
+                <span
+                    *ngIf="wallet.address()"
+                    class="copy"
+                    matRipple
+                >
+                    <span [copy]="wallet.address()">
+                        {{ wallet.address() | address }}
+                    </span>
+                    <mat-icon
+                        class="mat-icon-size-16"
+                        svgIcon="iconCopy"
+                        [copy]="wallet.address()"
+                    >
+                    </mat-icon>
+                </span>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button
+                mat-button
+                (click)="transfer()"
+            >
+                <span>Transfer</span>
+                <mat-icon
+                    class="mat-icon-button-key"
+                    svgIcon="arrowCircleDown"
+                >
+                </mat-icon>
+            </button>
+
+            <button
+                mat-button
+                (click)="deposit()"
+            >
+                <span>Deposit</span> <mat-icon
+                    class="mat-icon-button-key"
+                    svgIcon="arrowCircleUp"
+                >
+                </mat-icon>
+            </button>
+
+            <button
+                mat-button
+                (click)="decrypt()"
+            >
+                <span>Key</span> <mat-icon
+                    class="mat-icon-button-key"
+                    svgIcon="iconKey"
+                >
+                </mat-icon>
+            </button>
+        </div>
+
+    </div>
+    <div class="wallet-grid">
+
+        <app-wallet-portfolio-body
+            *ngFor="let item of data; trackBy: track('walletBodyCoin')"
+            [walletBodyCoin]="item.walletBodyCoin"
+            [walletBodyCrypto]="item.walletBodyCrypto"
+            [walletBodyLong]="item.walletBodyLong"
+            [walletBodyValue]="item.walletBodyValue()"
+            [walletBodyCurrency]="item.walletBodyCurrency()"
+        >
+        </app-wallet-portfolio-body>
+
+    </div>
+</div>

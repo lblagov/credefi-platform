@@ -1,0 +1,56 @@
+<div class="header">
+    Private key
+    <button
+        mat-icon-button
+        (click)="ref.close()"
+    >
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+>
+    <mat-form-field class="credi-outline">
+        <mat-icon
+            matPrefix
+            class="prefix"
+            svgIcon="password"
+        >
+        </mat-icon>
+        <mat-icon
+            matSuffix
+            class="mat-icon-size-22"
+            svgIcon="hide"
+            [password]="passwordInput"
+        >
+        </mat-icon>
+        <input
+            matInput
+            autocomplete
+            type="password"
+            placeholder="Wallet password"
+            formControlName="password"
+            #passwordInput
+        >
+        <mat-error *ngFor="let error of form.get('password') | error | slice:0:1">
+            {{ error }}
+        </mat-error>
+    </mat-form-field>
+
+    <p
+        *ngIf="privateKey().length > 0"
+        class="private-key"
+    >
+        {{ privateKey() }}
+    </p>
+
+    <button
+        class="button-login"
+        mat-button
+        [disabled]="isSubmit()"
+    >
+        Submit
+    </button>
+</form>

@@ -1,0 +1,278 @@
+<h2 class="h2-style">Genesis bond</h2>
+
+<div class="container-box">
+    <div class="info">
+        <div class="wrapper-dash">
+            <div class="container-dash">
+                <div class="box-dash">
+                    <mat-icon class="mat-icon-size-48-only" svgIcon="wallet50">
+                    </mat-icon>
+                    <div class="box-dash-inner">
+                        <div class="box-usd">
+                            <h3>
+                                10 000 000
+                            </h3>
+                            <span class="span-line">/</span>
+                            <span class="span-currency">USDT</span>
+                        </div>
+                        <p class="p-style">Emission Amount</p>
+                    </div>
+                </div>
+
+                <div class="box-dash">
+                    <mat-icon class="mat-icon-size-48-only bond-icon" svgIcon="calendar"></mat-icon>
+                    <div class="box-dash-inner">
+                        <div class="box-usd">
+                            <h3>
+                                Quarterly
+                            </h3>
+                        </div>
+                        <p class="p-style">Payment frequency</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-dash">
+                <div class="box-dash">
+                    <mat-icon class="mat-icon-size-48-only bond-icon" svgIcon="star">
+                    </mat-icon>
+                    <div class="box-dash-inner">
+                        <h3>AAA</h3>
+                        <p class="p-style">Rating</p>
+                    </div>
+                </div>
+
+                <div class="box-dash">
+                    <mat-icon class="mat-icon-size-48-only" svgIcon="percent50">
+                    </mat-icon>
+                    <div class="box-dash-inner">
+                        <h3>12%</h3>
+                        <p class="p-style">Coupon Rate</p>
+                    </div>
+                </div>
+
+                <div class="box-dash">
+                    <mat-icon class="mat-icon-size-48-only" svgIcon="calendar">
+                    </mat-icon>
+                    <div class="box-dash-inner">
+                        <h3>3 Years</h3>
+                        <p class="p-style">Maturity</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="outer-chart-wrapper">
+            <h3 class="h3-general">Bond progress bar</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" [ngStyle]="{'width': '5.6%'}">
+                </div>
+            </div>
+            <div class="chart-supplied">
+                <div class="new-line">
+                    <p class="p-styled">Supplied::</p>
+                    <span class="span-styled">${{ 0 | number:'1.2-2'}}</span>
+                </div>
+                <div class="new-line">
+                    <p class="p-styled">Goal:</p>
+                    <span class="span-styled">${{ 10000000 | number:'1.2-2'}}</span>
+                </div>
+            </div>
+            <!-- <button mat-button class="navigation" (click)="showTVL()" [class.active]="buttonActive() == views.tvl">
+                Yeld
+            </button>
+            <button mat-button class="navigation" (click)="showAPY()" [class.active]="buttonActive() == views.apy">
+                Price
+            </button>
+            <button mat-button class="navigation" (click)="showURate()" [class.active]="buttonActive() == views.rate">
+                Balance
+            </button> -->
+        </div>
+
+        <div class="below-chart-wrapper">
+            <div class="below-chart-wrapper-inner">
+                <button class="button-overview" mat-button (click)="loadDeal()"
+                    [class.active]="infoActive() == views.tvl">
+                    Product summary
+                    <mat-icon class="mat-icon-size-50-only mobile22" svgIcon="bondArrowDown">
+                    </mat-icon>
+                </button>
+
+                <button class="button-overview" mat-button (click)="loadParams()"
+                    [class.active]="infoActive() == views.apy">
+                    Deal overview
+                </button>
+                <button class="button-overview" mat-button (click)="loadRecent()">
+                    Emittent Overview
+                </button>
+                <div *ngIf="info() == views.tvl">
+                    <div class="div-flex-row">
+                        <mat-icon class="mat-icon-size-50-only" svgIcon="credefiLogo">
+                        </mat-icon>
+                        <h4 class="h4-padding">
+                            NFT Corporate Bonds
+                        </h4>
+                    </div>
+                    <p class="p-ae">
+                        NFT Corporate Bonds represent an innovative financial instrument combining the traditional
+                        features of corporate bonds with the cutting-edge technology of non-fungible tokens (NFTs).
+                        Designed primarily for financial institutions, these plain vanilla bonds leverage existing
+                        portfolios as collateral, securing the debt and providing an added layer of security for
+                        investors.
+                    </p>
+                    <p class="p-ae">
+                        Key Features:
+                    </p>
+                    <ul class="ul-highlights">
+                        <li>
+                            Blockchain Integration: By utilizing NFT technology, each bond is uniquely represented on
+                            the blockchain, ensuring transparency, security, and immutability of ownership records.
+                        </li>
+                        <li>
+                            Collateral-Backed Security: Financial institutions can secure their debt obligations using
+                            their existing portfolio as collateral, offering an additional layer of confidence to
+                            investors.
+                        </li>
+                        <li>
+                            Accessibility and Liquidity: The use of NFTs potentially increases the liquidity of these
+                            bonds, allowing for easier trading and transferability on digital platforms.
+                        </li>
+                    </ul>
+                    <p class="p-ae">
+                        Benefits for Investors:
+                    </p>
+                    <ul class="ul-highlights">
+                        <li>
+                            Enhanced Security: The collateralization of bonds with existing portfolios reduces the risk
+                            of default, providing a safer investment option. </li>
+                        <li>
+                            Regular Income: Quarterly interest payments offer a predictable income, appealing to
+                            investors seeking stability in their investment portfolios.
+                        </li>
+                        <li>
+                            Innovative Investment: Participation in a cutting-edge financial product combining
+                            traditional bond markets with blockchain technology.
+                        </li>
+                        <li>
+                            Elimination of Intermediaries: By leveraging blockchain technology and the NFT framework,
+                            these corporate bonds remove the need for traditional middlemen, such as brokerage firms.
+                            This simplification of the investment process can lead to reduced costs, increased
+                            efficiency, and direct ownership transfer, enhancing the investment experience.
+                        </li>
+                    </ul>
+                </div>
+                <div *ngIf="info() == views.apy">
+                    <div class="deal-overview">
+                        <p>Emission amount <span>10 000 000</span></p>
+                        <p>Coupon rate <span>12.00%</span></p>
+                        <p>Payment frequency <span>Quarterly</span></p>
+                        <p>Opening date <span>15.03.2024</span></p>
+                        <p>Contract address <span>0xda4087f7ab6075fe4599871cd7f464859923a0dd</span></p>
+                    </div>
+                </div>
+                <div *ngIf="info() == views.rate">
+                    <div class="trans-wrapper">
+                        <h3>Emittent Overview</h3>
+                        <p class="p-ae">Credit Plus, an EU-licensed financial institution, specializes in retail real
+                            estate mortgage loans, offering loans with amounts up to $350,000.
+                        </p>
+                        <p class="p-ae">
+                            The institution manages a portfolio comprising around 75 exposures, with an average loan
+                            value of $165,000, culminating in a total portfolio value of $12.375 million.
+                            Credit Plus exclusively issues collateralized mortgage credits. Currently, the institution
+                            aims to secure $10 million through a bond issuance, offering an annual interest
+                            rate of 12% over a period of 36 months.</p>
+                        <p class="p-ae"> With a probability of default (PD) set at 18%, the bond structure is designed
+                            to include a maturity of 36 months, a yield of 12%,
+                            a nominal value of $10 million, and collateral valued at $12 million, leading to a total
+                            expected return of $3.6 million.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="actions-container">
+        <div class="invest" *ngIf="!active()">
+            <div class="wrap">
+                <h3 class="h3-style">Invest now</h3>
+                <h3 class="h3-style">(1 Bond = 0.1 USDT)</h3>
+                <form class="invest-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div>
+                        <mat-form-field class="credi">
+                            <mat-icon matPrefix class="prefix" svgIcon="userInvest">
+                            </mat-icon>
+                            <input matInput placeholder="Full name" />
+                        </mat-form-field>
+                        <br />
+                        <mat-form-field class="credi">
+                            <mat-icon matPrefix class="prefix" svgIcon="potInvest">
+
+                            </mat-icon>
+                            <input matInput placeholder="Enter amount USDT" formControlName="amount" />
+                        </mat-form-field>
+                        <div class="h-12-style available">
+                            Available {{balance()}} USDT
+                        </div>
+
+                        <button *ngIf="userData().kycActivation else validate" class="button-invest" [disabled]="load()"
+                            mat-button>
+                            {{ load() ? 'Loading...' : 'Invest' }}
+                        </button>
+
+                        <ng-template #validate>
+
+                            <button mat-ripple class="button-secondary" (click)="validateKyc()">
+                                Pass KYC
+                            </button>
+
+                        </ng-template>
+
+                        <div class="consent">
+                            By entering my name and clicking "Supply" below, I hereby agree and acknowledge that (i) I
+                            am electronically signing and becoming a party to the Loan Agreement for this pool, and (ii)
+                            my name and transaction information may be shared with the borrower
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="banner-autonomous-earning" *ngIf="!active()">
+            <app-banner-autonomous-earning></app-banner-autonomous-earning>
+        </div>
+
+        <div class="awards" *ngIf="active()">
+            <div class="wrap">
+                <h3 class="h3-style">Available to withdraw</h3>
+                <p class="white">* Next payments: June 2024</p>
+                <span class="amount">$0.00</span>
+                <span class="currency"> / USDT</span>
+                <form class="invest-form" [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <div class="">
+                        <mat-form-field class="credi">
+                            <mat-icon matPrefix class="prefix" svgIcon="stakedInvest">
+                            </mat-icon>
+                            <input matInput placeholder="Amount" />
+                        </mat-form-field>
+
+                        <button class="button-invest" [disabled]="load()" mat-button>
+                            Withdraw
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="remaining" *ngIf="active()">
+            <h3 class="h3-style">Bonds balance</h3>
+            <div class="rcontent">
+                <p>Bonds held: <span>{{ balance() | number:'1.2-2' }}({{ balance() | number:'1.2-2'}}$)</span></p>
+                <p>Interest (36 month) <span>${{(balance() * 0.36) | number:'1.2-2'}}</span></p>
+                <p>ROI <span>36%</span></p>
+            </div>
+        </div>
+
+    </div>
+
+</div>

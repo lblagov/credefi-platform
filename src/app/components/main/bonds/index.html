@@ -1,0 +1,411 @@
+<div class="portfolio-lending">
+  <h2 class="h2-general">Corporate bonds</h2>
+</div>
+<div class="banner">
+
+  <div>
+    <h3>
+      Autonomous Earning is live!
+    </h3>
+    <p>
+      Unlock the power of your stablecoins and earn interest on autopilot!
+    </p>
+    <!-- <mat-icon
+            class="mat-icon-button-filter"
+            svgIcon="slider"
+        >
+        </mat-icon> -->
+  </div>
+  <lazy-image height="100%"
+              objectFit="contain"
+              src="/assets/banner.png" />
+</div>
+<div>
+  <button class="button-overview"
+          mat-button
+          [class.active]="infoActive() == views.catalogue"
+          (click)="setInfo(views.catalogue)">
+    Bonds Catalogue
+  </button>
+
+  <button class="button-overview"
+          mat-button
+          *ngIf="balance() > 0n"
+          [class.active]="infoActive() == views.myBonds"
+          (click)="setInfo(views.myBonds)">
+    My bonds
+  </button>
+</div>
+<div class="chart-table first-row"
+     *ngIf="infoActive() == views.catalogue">
+  <div class="box">
+    <div class="product flex">
+      <mat-icon class="mat-icon-size-50-only"
+                svgIcon="transactionsCircle">
+      </mat-icon>
+      <div class="cell">
+        <div>Genesis Bond</div>
+        <span>Company</span>
+      </div>
+    </div>
+    <div class="cell">
+      <div>10 000 000 USDT</div>
+      <span>Emission Value</span>
+    </div>
+    <div class="cell">
+      <div>12%</div>
+      <span>Coupon Rate</span>
+    </div>
+    <div class="cell">
+      <div>3 Years</div>
+      <span>Maturity</span>
+    </div>
+    <div class="cell">
+      <button matRipple
+              class="button-trans-confirm image-button">
+        Open
+      </button>
+      <span class="status">Status</span>
+    </div>
+    <div class="table-buttons cell">
+      <a routerLink="/earn/bonds-investing"
+         class="button-primary">
+        Invest
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="expansion-container">
+  <mat-accordion class="example-headers-align"
+                 *ngIf="infoActive() == views.myBonds">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <div class="chart-table-expansion first-row">
+          <div class="box">
+            <div class="product flex">
+              <mat-icon class="mat-icon-size-50-only"
+                        svgIcon="transactionsCircle">
+              </mat-icon>
+              <div class="cell">
+                <div>Genesis Bond</div>
+                <span>Balance: {{ balance().toString() | number:'1.0-0' }}</span>
+              </div>
+            </div>
+            <div class="cell">
+              <div>12.15%</div>
+              <span>Coupon Rate</span>
+            </div>
+            <div class="cell">
+              <div>15.03.2024</div>
+              <span>Opening date</span>
+            </div>
+            <div class="cell">
+              <div>15.04.2024</div>
+              <span>End date</span>
+            </div>
+            <div class="table-buttons cell">
+              <a class="button-primary">
+                Detail
+              </a>
+            </div>
+          </div>
+        </div>
+      </mat-expansion-panel-header>
+
+      <div>
+        <h4>
+          Bond repoayment schedule
+        </h4>
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.07.2024
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.10.2024
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.01.2025
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.04.2025
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.07.2025
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.10.2025
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.01.2026
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.04.2026
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.07.2026
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.10.2026
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.01.2027
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+
+        <div class="table-body">
+          <mat-icon class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle">
+          </mat-icon>
+          <a [copy]="bondAddress()">
+            Contract:
+            {{ bondAddress() | address }}
+          </a>
+          <div class="wallet">
+            ~ USDC
+          </div>
+          <div class="wallet">
+            15.04.2027
+          </div>
+          <span>
+            <button mat-button>
+              Pending
+            </button>
+          </span>
+          <mat-icon class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight">
+          </mat-icon>
+        </div>
+      </div>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+</div>

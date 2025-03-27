@@ -1,0 +1,32 @@
+:host {
+  max-width: 880px;
+  padding: 32px 0 0 32px;
+}
+
+div.banner-wrapper {
+  padding-top: 32px;
+}
+
+div.portfolio-lending {
+  display: flex;
+  justify-content: space-between;
+
+  &.margin {
+    margin: 18px 0 12px 0;
+  }
+}
+
+div.app-type-of-staking {
+  margin-top: 32px;
+}
+
+div.app-portfolio-staking {
+  margin-top: 24px;
+}
+
+
+@media (max-width: 870px) {
+  :host {
+    padding: 0 6px !important;
+  }
+}

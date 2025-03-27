@@ -1,0 +1,174 @@
+<div class="wrapper">
+
+    <div class="container">
+        <div class="banner-wrapper">
+            <app-banner
+                [title]="title"
+                [titleColor]="titleColor"
+                [description]="description"
+                [descriptionColor]="descriptionColor"
+                [image]="image"
+                [imgProps]="imgProps"
+                [linearGradient]="linearGradient"
+            ></app-banner>
+        </div>
+
+       
+        
+
+        <div class="heading">
+            <div>
+                <a
+                    class="remove-underline-link"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}"
+                    routerLink="/earn/bonds"
+                >
+                    <button
+                        class="button-filter-catalogue"
+                        mat-button
+                    >Bonds catalogue</button>
+                </a>
+                <a
+                    class="remove-underline-link"
+                    routerLinkActive="active"
+                    routerLink="/earn/bonds02"
+                >
+                    <button
+                        class="button-filter-project"
+                        mat-button
+                    >My bonds</button>
+                </a>
+            </div>
+            <button
+                class="button-filter"
+                mat-button
+            >
+                <span class="h-16-style-bold">Filter</span> <mat-icon
+                    class="mat-icon-button-filter"
+                    svgIcon="buttonFilter"
+                ></mat-icon>
+            </button>
+        </div>
+
+
+        <app-bonds01-table></app-bonds01-table>
+
+    </div>
+
+
+    <div class="banner-wrapper-mobile">
+        <app-banner-mobile-lend
+            [title]="title"
+            [titleColor]="titleColor"
+            [description]="descriptionMobile"
+            [descriptionColor]="descriptionColor"
+            [image]="imageMobile"
+            [imgProps]="imgPropsMobile"
+            [linearGradient]="linearGradientMobile"
+        ></app-banner-mobile-lend>
+    </div>
+
+
+    <div class="heading-mobile">
+        <div>
+            <a
+                class="remove-underline-link"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/earn/bonds"
+            >
+                <button
+                    class="button-filter-catalogue-mobile"
+                    mat-button
+                >Bonds catalogue</button>
+            </a>
+            <a
+                class="remove-underline-link"
+                routerLinkActive="active"
+                routerLink="/earn/bonds02"
+            >
+                <button
+                    class="button-filter-project-mobile"
+                    mat-button
+                >My bonds</button>
+            </a>
+        </div>
+        <button
+            class="button-filter-mobile"
+            mat-button
+        >
+            <span class="h-16-style-bold">Filter</span> <mat-icon
+                class="mat-icon-button-filter-mobile"
+                svgIcon="buttonFilter"
+            ></mat-icon>
+        </button>
+    </div>
+    
+    <div class="app-porfolio">
+        <app-bonds-portfolio-mobile
+            [portfolioImage]="portfolioImage"
+            [portfolioName]="portfolioName"
+            [coinValue]="coinValue"
+            [iconArrow] = "iconArrow"
+        ></app-bonds-portfolio-mobile>
+        <app-bonds-portfolio-mobile
+            [portfolioImage]="portfolioImage2"
+            [portfolioName]="portfolioName"
+            [coinValue]="coinValue"
+            [iconArrow] = "iconArrow"
+        ></app-bonds-portfolio-mobile>
+        <app-bonds-portfolio-mobile
+            [portfolioImage]="portfolioImage3"
+            [portfolioName]="portfolioName"
+            [coinValue]="coinValue"
+            [iconArrow] = "iconArrow"
+        ></app-bonds-portfolio-mobile>
+        <app-bonds-portfolio-mobile
+            [portfolioImage]="portfolioImage4"
+            [portfolioName]="portfolioName"
+            [coinValue]="coinValue"
+            [iconArrow] = "iconArrow"
+        ></app-bonds-portfolio-mobile>
+        <app-bonds-portfolio-mobile
+            [portfolioImage]="portfolioImage5"
+            [portfolioName]="portfolioName"
+            [coinValue]="coinValue"
+            [iconArrow] = "iconArrow"
+        ></app-bonds-portfolio-mobile>
+        <app-bonds-portfolio-mobile
+            [portfolioImage]="portfolioImage6"
+            [portfolioName]="portfolioName"
+            [coinValue]="coinValue"
+            [iconArrow] = "iconArrow"
+        ></app-bonds-portfolio-mobile>
+        <app-bonds-portfolio-mobile
+        [portfolioImage]="portfolioImage7"
+        [portfolioName]="portfolioName"
+        [coinValue]="coinValue"
+        [iconArrow] = "iconArrow"
+    ></app-bonds-portfolio-mobile>
+    <app-bonds-portfolio-mobile
+        [portfolioImage]="portfolioImage8"
+        [portfolioName]="portfolioName"
+        [coinValue]="coinValue"
+        [iconArrow] = "iconArrow"
+    ></app-bonds-portfolio-mobile>
+    <app-bonds-portfolio-mobile
+        [portfolioImage]="portfolioImage9"
+        [portfolioName]="portfolioName"
+        [coinValue]="coinValue"
+        [iconArrow] = "iconArrow"
+    ></app-bonds-portfolio-mobile>
+    <app-bonds-portfolio-mobile
+        [portfolioImage]="portfolioImage10"
+        [portfolioName]="portfolioName"
+        [coinValue]="coinValue"
+        [iconArrow] = "iconArrow"
+    ></app-bonds-portfolio-mobile>
+   
+    </div>
+
+
+
+</div>

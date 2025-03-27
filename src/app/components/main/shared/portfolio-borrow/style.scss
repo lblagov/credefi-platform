@@ -1,0 +1,371 @@
+/*  ---------------------------------------------------------- */
+  /* taken from portfolio component styles */
+
+  .div-portfolio{
+    height:68.2px;
+    width: 978.2px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid rgba(7, 7, 7, 0.1);
+    border-radius: 100px;
+    padding-left: 20px;
+    padding-top: 20px;
+
+}
+
+.h4-chart{
+    display: inline-flex;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px ;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 872px;
+  height:40px;
+  margin: 0 auto;
+}
+
+.btn-chart-5 {
+  display: flex;
+  justify-content: center;
+}
+
+mat-icon.mat-icon-size-arrow {
+    /* height: 7px; */
+    width: 9px;
+    padding-left: 14.4px;
+    /* padding-top:10px; */
+  }
+  .chart-buttons{
+    display: flex;
+    gap: 12px;
+    margin-left: 32px;
+  }
+
+   
+  button.button-chart-1,
+  button.button-chart-3,
+  button.button-chart-4,
+  button.button-chart-5{
+    font-family: 'Mulish';
+    font-size: 16px;
+    color: #11121C;
+    border-radius: 96px;
+    border-width: 0px;
+    background-color:  #F3F4FA;
+    font-weight: 700;
+    line-height:  140%;
+  }
+
+  button.button-chart-2{
+    font-family: 'Mulish';
+    height: 48px ;
+    width: 189px;
+    border-radius: 100px;
+    background-color:  #5C68FF;
+    border-width: 0px;
+    color: #FCFDFD;
+    font-size: 16px;
+    line-height:  140%;
+    font-weight: 700;
+  }
+
+  button.button-chart-1 {
+    width: 167px;
+    height: 48px ;
+  }
+
+   button.button-chart-3 {
+    width: 156px;
+    height: 48px ;
+  }
+
+  button.button-chart-4 {
+    width: 225px;
+    height: 48px ;
+  }
+
+  button.button-chart-5 {
+    width: 136px;
+    height: 48px ;
+  }
+
+  
+  .chart-table {
+    display: grid;
+    align-items: center;
+    width: 1000px;
+    height: 90px;
+    /* background-color:rgba(7, 7, 7, 0.1); */
+    border: 1px solid rgba(7, 7, 7, 0.1);
+    border-radius: 100px;
+    /* margin-left: 60px; */
+    margin-top: 32px;
+    margin-top: 16px;
+    margin-right: 32px;
+  }
+  
+  .chart-table.first-row {
+    /* margin-top: 32px; */
+  }
+  
+  .mat-icon-size-50-only {
+    width: 50px;
+    height:50px;
+}
+
+.first-column {
+  display: grid;
+  grid-template-columns: 50px 160px 158px 156px 156px 1fr;
+  grid-template-columns: 50px 160px 158px 78px 117px 127px 145px 1fr;
+  grid-template-columns: 50px 140px 148px 114px 117px 106px 124px 1fr;
+  grid-template-rows: 50px;
+  margin-left: 20px;
+  /* margin-top: 20px; */
+}
+
+.cell:first-of-type {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 12px;
+  border: 0;
+}
+
+.cell:nth-of-type(6) {
+  border: 0;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 16px;
+  border-right: 1px solid rgba(7,7,7,0.1);
+  /* height: 46px; */
+}
+
+.cell div {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #11121C;
+  margin-bottom: 4px;
+}
+
+.cell span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: rgba(7,7,7,0.4);
+}
+
+.tether p {
+  display: inline;
+  font-weight: 400;
+}
+
+.cell.tether {
+  display: grid;
+  grid-template-columns: 20px 153px;
+  grid-template-rows: 20px 20px;
+  gap: 12px;
+  grid-row-gap: 4px;
+  grid-row-gap: 6px;
+  margin-left: 0px;
+  height: 46px;
+}
+
+div.p-black + span {
+  grid-column-start: 2;
+}
+
+.table-body > span:last-of-type {
+  grid-column-start: 5;
+}
+
+.button-chart-6 {
+  font-family: 'Mulish';
+  height: 50px ;
+  width: 110px;
+  border-radius: 100px;
+  background-color:  #5C68FF;
+  border-width: 0px;
+  color: #FCFDFD;
+  font-size: 16px;
+  line-height:  140%;
+  font-weight: 700; 
+}
+
+.table-buttons {
+  display: flex;
+  /* justify-content: flex-end; */
+  gap: 8px;
+  margin-right: 20px;
+}
+
+.chart-wrapper {
+    width:1000px;
+    height:988px;
+    background-color: #FCFDFD;
+    margin-left: 60px;
+    border-radius: 20px;
+}
+
+/* taken from portfolio component styles */
+/*  ---------------------------------------------------------- */
+.fill-white {
+  fill: #FCFDFD;
+}
+
+.expand {
+  height: 380px;
+  width: 1000px;
+  background-color: white;
+  border-radius: 20px;
+  /* margin: 0 auto; */
+}
+
+.wrapper-portfolio-borrow {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+.expanded .title {
+  display: block;
+  margin-top: 26px;
+  margin-left: 25px;
+}
+
+.trans-wrapper {
+  width: 1000px;
+  height:988px;
+  /* background-color: #FCFDFD; */
+  border-radius: 20px;
+  /* margin-left: 60px; */
+}
+
+.trans-container .recent-transactions {
+  display: inline-flex;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #11121C;
+  width: 272px;
+  height: 34px;
+  
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+  align-items: center;
+}
+
+.table-head {
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+
+.table-body {
+  align-items: center;
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #F2F2F2;
+}
+.schedule {
+  padding: 0;
+  margin-bottom: 16px;
+  border: 0;
+}
+.table-body:last-of-type {
+  border-bottom: none;
+  padding-bottom: 5px;
+}
+
+.table-head,.table-body {
+  display: grid;
+  grid-template-columns: 175px 181px 180px 180px 177px 75px;
+  grid-template-columns: 215px 181px 215px 207px 177px 75px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.table-head > span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  color: rgba(7,7,7,0.4);
+}
+
+.table-body > span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 140%;
+  height: 20px;
+  color: #11121C;
+}
+
+
+.installment-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 49px;
+  height: 30px;
+  border-radius: 18px;
+  border: 1px solid #A64444;
+  background: rgba(166, 68, 68, 0.10);
+  color: #A64444;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 102px;
+  height: 30px;
+  border-radius: 18px;
+  border: 1px solid #4FA677;
+  background: rgba(79, 166, 119, 0.10);
+  color: #4FA677;
+}
+
+.p-black p {
+  display: inline;
+  font-weight: 400;
+}
+
+.p-black {
+  margin-left: 0px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 140%;
+  color: #11121C;
+  border: 0;
+}
+
+.scroll {
+  height: 288px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.hide {
+  display: none;
+}
+
+.first-column > mat-icon.add-border {
+  border: 1px solid rgba(7, 7, 7, 0.1);
+  border-radius: 100px;
+}
+
+.chart-table.remove-border {
+  border: 0;
+}

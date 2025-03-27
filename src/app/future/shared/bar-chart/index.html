@@ -1,0 +1,30 @@
+<div class="graph">
+    <div class="content">
+        <div class="bars" *ngFor="let item of List">
+
+            <mat-icon class="bar-image" svgIcon="chartClose"></mat-icon>
+            <div class="div-wrapper">
+
+         
+            <span   class="span-name">{{item.name}}</span>
+            <!-- <br> -->
+           
+            <p class="span-value">{{item.Value}} %</p>
+        </div>
+            <div class="bar" 
+            [style.background-image]="item.Color" 
+         
+
+            [style.height]='item.Size'></div>
+            <!-- [style.background-color]="item.Color" -->
+            <!--    <div class="bar" [style.background-color]="item.Color"
+            [style.background-image] = "linear-gradient(to bottom, #7D77FF , rgba(128, 123, 255, 0))" 
+            [style.height]='item.Size'></div> 
+            linear-gradient(to bottom, #7D77FF , rgba(128, 123, 255, 0));-->
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="legends">
+        <span *ngFor="let item of List">{{item.Legend}}</span>
+    </div>
+</div>

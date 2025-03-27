@@ -1,0 +1,315 @@
+<header>
+    <h3>{{ title() }}</h3>
+    <div class="dashboard">
+        <!-- <mat-icon svgIcon="Vector">
+        </mat-icon> -->
+
+        <lazy-image
+            class="mobile-logo"
+            src="/assets/logo-header.svg"
+        />
+
+        <div class="flex container-box">
+
+          <button class="cursor network image-button" mat-ripple [matMenuTriggerFor]="network">
+            <mat-icon [svgIcon]="defaultChain">
+            </mat-icon>
+            {{chain[defaultChain].name}}
+          </button>
+
+            <button
+                class="cursor connect image-button"
+                (click)="connect()"
+                matRipple
+            >
+                <mat-icon svgIcon="credefiLogo">
+                </mat-icon>
+
+                <p>{{ walletProvider.shortAddress() ? walletProvider.shortAddress() : 'CONNECT' }}</p>
+
+            </button>
+
+            <mat-menu #network="matMenu">
+
+              <button mat-menu-item class="flex-menu-button padding" *ngFor="let item of chain | keyvalue" (click)="setChain(item.key)">
+                <mat-icon [svgIcon]="item.key">
+                </mat-icon>
+                <span>
+                  {{item.value.name}}
+                </span>
+              </button>
+
+              <button mat-menu-item class="flex-menu-button padding" (click)="xrplRedirect()">
+                <mat-icon svgIcon="xrpl" >
+                </mat-icon>
+                <span>
+                  XRPL
+                </span>
+              </button>
+
+            </mat-menu>
+
+            <div
+                class="flex user"
+                (click)="openSettings()"
+                #menuBar
+            >
+                <button
+                    class="image-button mobile-header"
+                    matRipple
+                >
+                    <lazy-image [src]="show() ? '/assets/close-header.svg' : '/assets/header-menu.svg' " />
+
+                </button>
+
+                <div class="profile">
+                    <img
+                        *ngIf="userData()?.picture else noProfile"
+                        src="{{api_url}}/min_uploads/images/{{ userData().picture.name }}"
+                    />
+                </div>
+                <ng-template #noProfile>
+                    <img
+                        class="images"
+                        src="./assets/svg/profile.svg"
+                    />
+                </ng-template>
+                <div class="dash-name">
+                    <div>{{ user }} </div>
+                    <div *ngIf="tierLevel() > 0" class="tier">Tier Level {{ tierLevel() }}</div>
+                    <span class="settings">Settings</span>
+
+
+                </div>
+                <section
+                    *ngIf="show()"
+                    class="dash-verify"
+                >
+                    <div>
+                        <div class="dash-top">
+                            <div
+                                class="add-img"
+                                mat-ripple
+                            >
+                                <mat-icon
+                                    class="header-icon plus"
+                                    svgIcon="plus"
+                                ></mat-icon>
+                            </div>
+                            <div class="name-email">
+                                <h6>{{ user }}</h6>
+                                <p>{{ email }}</p>
+                            </div>
+                        </div>
+                        <ng-container *ngIf="userData().kycActivation else validate">
+                            <div class="info">
+                                <div class="header-img-hand">
+                                    <img src="/assets/verified.svg" />
+
+                                </div>
+                                <p>
+                                    Your account is verified
+                                </p>
+                            </div>
+                        </ng-container>
+
+                        <ng-template #validate>
+
+                            <div class="verify relative">
+                                <div>
+                                    <span>Verify your identity</span>
+                                    <div>
+                                        Deposits, daily rewards, swaps and referral rewards will be available after
+                                        your
+                                        verify
+                                        your
+                                        identity
+                                    </div>
+
+                                    <button
+                                        mat-ripple
+                                        class="button-secondary"
+                                        (click)="validateKyc()"
+                                    >
+                                        Pass KYC
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="header-img-hand">
+                                    <mat-icon
+                                        class="header-icon hand"
+                                        svgIcon="Hand"
+                                    ></mat-icon>
+                                </div>
+                                <p>
+                                    It will take no more than 5 minutes
+                                </p>
+                            </div>
+                        </ng-template>
+
+                    </div>
+
+                    <div class="actions">
+                        <a
+                            class="link"
+                            routerLink="/profile"
+                        >
+                            <mat-icon svgIcon="Profile"></mat-icon>
+                            Profile
+                        </a>
+                    </div>
+
+
+                    <button
+                        mat-ripple
+                        class="button-primary"
+                        (click)="logOut()"
+                    >
+                        Logout
+                    </button>
+
+                    <ul>
+
+                        <li>
+                            <a
+                                routerLinkActive="active"
+                                routerLink="/dashboard"
+                            >
+                                <mat-icon svgIcon="dashboard"></mat-icon>
+                                <span class="span-item">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <!-- <li>
+                            <a
+                                href="https://v1.credefi.finance/profile/loans/lent/portfolio"
+                                target="_blank"
+                            >
+                                <mat-icon svgIcon="lend"></mat-icon>
+
+                                <span class="span-item">Lend(platform v1)</span>
+
+                            </a>
+                        </li> -->
+
+                        <li>
+                            <a
+                                routerLinkActive="active"
+                                routerLink="/earn/autonomous-earning"
+                            >
+                                <mat-icon svgIcon="ai2"></mat-icon>
+                                <span class="span-item">Autonomous earning</span>
+                            </a>
+                        </li>
+
+                        <li>
+                          <a
+                              routerLinkActive="active"
+                              routerLink="/earn/autonomous-business"
+                          >
+                              <mat-icon svgIcon="ai2"></mat-icon>
+                              <span class="span-item">Autonomous for business</span>
+                          </a>
+                        </li>
+
+                        <li>
+                            <a
+                                routerLinkActive="active"
+                                routerLink="/staking"
+                            >
+
+                                <mat-icon svgIcon="stakenew2"></mat-icon>
+                                <span class="span-item">Stake</span>
+                            </a>
+                        </li>
+
+                        <li>
+                          <a
+                          routerLinkActive="active"
+                          routerLink="/modulex">
+                             <mat-icon svgIcon="stake"></mat-icon>
+                              <span class="span-item">Module X</span>
+                          </a>
+                        </li>
+
+                        <li>
+                            <a
+                            routerLinkActive="active"
+                            routerLink="/utilities">
+                           <mat-icon svgIcon="stake"></mat-icon>
+                           <span class="span-item">Utilities</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                routerLinkActive="active"
+                                routerLink="/wallet"
+                            >
+                                <mat-icon svgIcon="wallet"></mat-icon>
+                                <span class="span-item">Bank</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                routerLinkActive="active"
+                                routerLink="/transactions"
+                            >
+
+                                <mat-icon svgIcon="allTransactions"></mat-icon>
+                                <span class="span-item">All Transactions</span>
+
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a routerLink="/">
+                                <mat-icon svgIcon="goBack"></mat-icon>
+                                <span class="span-item">Go back to main</span>
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                    <div class="sidebar-footer">
+                        <div class="footer">
+                            <a
+                                href="https://web.telegram.org/k/#@credefi"
+                                target="_blank"
+                            >
+                                <mat-icon svgIcon="telegram">
+                                </mat-icon>
+                            </a>
+                            <a
+                                href="https://www.facebook.com/credefi.finance"
+                                target="_blank"
+                            >
+                                <mat-icon svgIcon="facebook20">
+                                </mat-icon>
+                            </a>
+                            <a
+                                href="https://twitter.com/credefi_finance"
+                                target="_blank"
+                            >
+                                <mat-icon svgIcon="twitter">
+                                </mat-icon>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/company/credefi"
+                                target="_blank"
+                            >
+                                <mat-icon svgIcon="linkedin">
+                                </mat-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+</header>

@@ -1,0 +1,65 @@
+<div #mat id={{p2pId1}} class="chart-table first-row">
+    <div class="first-column">
+        <mat-icon class="mat-icon-size-42-only" svgIcon={{portfolioImage}}></mat-icon>
+        <div class="cell">
+            <div>{{portfolioName}}</div>
+            <span>{{coinValue}}</span>
+        </div>
+   
+       
+        <div class="table-buttons">
+            <mat-icon class="mat-icon-size-42-only" svgIcon={{iconArrow}}  (click)="this.changeImage($event)"></mat-icon>
+
+        </div>
+    </div>
+
+
+    <div class="hide expanded">
+            <div class="loan-repayment-table">
+                <div class="trans-wrapper">
+                    <div class="trans-container">
+                        <div class="table-body schedule div-margin">
+                            <div class="table-head">
+                                <span class="p-color">Total Loan Size 
+                                </span>
+                                <span class="inner-span width1">??? </span> 
+                            </div>
+                            <div class="outstanding">
+                                <span class="p-color">Outstanding
+                                </span>
+                                <span class="inner-span width2">5 000 000</span> 
+                            </div>
+                            <div class="schedule">
+                                <span class="p-color">APY
+                                </span>
+                                <span class="inner-span width3">12.15% USDC</span> 
+                            </div>
+                            <div class="status">
+                                <span class="p-color">Maturity
+                                </span>
+                                <span class="inner-span width4">???</span> 
+                            </div>                       
+                           
+                        </div>
+                        
+                        <div class="table-buttons2">
+                            <button
+                            style={{openCloseColor}}
+                            class="button-chart-open">
+                                {{openClose}}
+                            </button>
+                            <button
+                            style={{investNowColor}}
+                             class="button-chart-invest">
+                                {{investNow}}
+                            </button>
+                        </div>
+                      
+                    </div>
+            </div>
+        </div>
+   
+      
+
+</div>
+

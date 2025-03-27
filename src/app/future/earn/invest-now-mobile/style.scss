@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    gap: 32px;
+    width: 1120px;
+    background: #F6F5F8;
+    display: grid;
+    grid-template-rows: 53px 212px 274px 268px 518px 675px 100px;
+    grid-template-columns: 656px 312px;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    padding-left: 60px;
+    padding-top: 32px;
+}
+
+.mat-icon-size-50-only {
+    width: 50px;
+    height: 50px;
+}
+
+#dashboard-footer {
+    grid-column-start: 1;
+    grid-row-start: 7;
+    /* border-top: 1px solid rgba(7, 7, 7, 0.1); */
+}
+
+.invest {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    width: 312px;
+    height: 580px;
+    border-radius: 20px;
+    background-color: #5C68FF;
+    z-index: 90;
+}
+
+.wrap {
+    padding: 24px;
+}
+
+.wrap h3 {
+    margin-bottom: 20px;
+}
+
+input,
+input.mdc-text-field__input {
+    background-color: #5C68FF;
+}
+
+input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #FFF;
+    opacity: 1;
+    /* Firefox */
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
+    color: #FFF;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input:focus::placeholder {
+    color: transparent;
+}
+
+::ng-deep .mat-mdc-select-arrow {
+    color: #FFF;
+}
+
+::ng-deep .invest mat-icon svg rect {
+    fill: rgba(255, 255, 255, 0.1);
+}
+
+.mat-mdc-form-field {
+    width: 264px;
+}
+
+::ng-deep div.mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--filled {
+    background: #5C68FF;
+}
+
+::ng-deep input.mat-mdc-input-element.mat-mdc-form-field-input-control {
+    width: 168px;
+    color: #FFF;
+}
+
+::ng-deep div.mat-mdc-form-field-icon-prefix,
+[dir=rtl] .mat-mdc-form-field-icon-suffix {
+    padding: 0 2px 0 0;
+}
+
+mat-icon.mat-icon-size-50 {
+    padding: 10px !important;
+}
+
+.mat-icon-email,
+.mat-icon-password {
+    position: absolute;
+    top: 22px;
+    left: 22px;
+}
+
+label {
+    margin-top: 14px;
+}
+
+::ng-deep .mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix {
+    padding: 0px;
+}
+
+.dropDown {
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    padding-right: 24px;
+    padding-left: 70px;
+    position: relative;
+}
+
+::ng-deep .mat-mdc-select-value {
+    color: #FFF;
+}
+
+::ng-deep .mat-mdc-select-placeholder {
+    color: #FFF !important;
+}
+
+.blankCircle {
+    position: absolute;
+    left: 10px;
+}
+
+.mat-icon-circleInvest {
+    left: 14.5px;
+    top: 14.5px;
+}
+
+.mat-icon-calendar {
+    left: 12.5px;
+    top: 12.5px;
+}
+
+::ng-deep .mat-mdc-select-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    color: #FFF;
+}
+
+::ng-deep .mat-mdc-form-field-focus-overlay {
+    background-color: transparent;
+}
+
+::ng-deep div.mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--filled {
+    border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.available {
+    color: rgba(255, 255, 255, 0.5);
+    margin-left: 10px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+button.button-invest {
+    width: 264px;
+    height: 60px;
+    background-color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 100px;
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 700;
+    color: rgba(7, 7, 7, 1);
+}
+
+.consent {
+    margin-top: 16px;
+    font-size: 12px;
+
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.50);
+
+}
+
+.back {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+
+
+    .container {
+        gap: 20px;
+        width: 360px;
+        background: #F6F5F8;
+        display: grid;
+        grid-template-rows: 34px 546px 100px;
+        grid-template-columns: 360px;
+        grid-row-start: 1;
+        grid-column-start: 1;
+        padding-left: 24px;
+        margin-top: 32px;
+    }
+
+    .container .h2-style {
+        font-size: 24px;
+    }
+
+    .back {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .invest {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        width: 312px;
+        height: 546px;
+        border-radius: 20px;
+        background-color: #5C68FF;
+        z-index: 90;
+    }
+
+    input.mat-mdc-input-element.mat-mdc-form-field-input-control {
+        width: 184px;
+    }
+
+    .mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--filled {
+        border-radius: 100px;
+        border: 1px solid rgb(7, 7, 7, 0.1);
+    }
+
+    div.mat-mdc-form-field-flex {
+        display: flex;
+        align-items: center;
+    }
+
+    div.mat-mdc-text-field-wrapper.mdc-text-field.mdc-text-field--filled {
+        border-radius: 100px;
+        border: 1px solid rgb(7, 7, 7, 0.1);
+        background: #F6F5F8;
+    }
+
+    input.mat-mdc-input-element.mat-mdc-form-field-input-control {
+        height: 70px !important;
+        width: 270px;
+    }
+
+    div.mat-mdc-form-field-icon-suffix {
+        padding: 0px 15px 0px 4px;
+    }
+
+    div.mdc-line-ripple::before,
+    div.mdc-line-ripple::after {
+        border: 0;
+    }
+
+}
+
+.wallet-connect {
+    .mat-mdc-dialog-surface {
+        border-radius: 16px !important;
+    }
+}

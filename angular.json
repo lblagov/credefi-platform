@@ -1,0 +1,402 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "credi": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/credi",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": [
+              "src/polyfills.ts",
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.json",
+            "allowedCommonJsDependencies": [
+              "web3",
+              "hash.js",
+              "bn.js",
+              "js-sha3",
+              "crc-32",
+              "@ethereumjs/rlp",
+              "setimmediate",
+              "cross-fetch",
+              "is-my-json-valid",
+              "qrcode",
+              "eventemitter3",
+              "@stablelib/random",
+              "@stablelib/sha256",
+              "@walletconnect/logger",
+              "@walletconnect/time",
+              "isomorphic-unfetch",
+              "@walletconnect/environment",
+              "@stablelib/ed25519"
+            ],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "./stylesheets/application.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "12kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "credi:build:production"
+            },
+            "development": {
+              "browserTarget": "credi:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "credi:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "./stylesheets/application.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    },
+    "xrpl": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "fileReplacements": [
+              {
+                "replace": "src/main.ts",
+                "with": "src/main.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/wallet/index.ts",
+                "with": "src/app/components/main/wallet/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/app-routing.module.ts",
+                "with": "src/app/app-routing.module.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/earn/routes.ts",
+                "with": "src/app/components/main/earn/routes.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/profile/routes.ts",
+                "with": "src/app/components/main/profile/routes.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/routes.ts",
+                "with": "src/app/components/main/routes.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/dashboard/index.ts",
+                "with": "src/app/components/main/dashboard/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/all-transactions/index.ts",
+                "with": "src/app/components/main/all-transactions/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/shared/transfer/index.ts",
+                "with": "src/app/components/main/shared/transfer/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/shared/transactions/index.ts",
+                "with": "src/app/components/main/shared/transactions/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/shared/sign/index.ts",
+                "with": "src/app/components/main/shared/sign/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/shared/private-key/index.ts",
+                "with": "src/app/components/main/shared/private-key/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/shared/portfolio-wallet/index.ts",
+                "with": "src/app/components/main/shared/portfolio-wallet/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/shared/create-wallet/index.ts",
+                "with": "src/app/components/main/shared/create-wallet/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/shared/income-chart/index.ts",
+                "with": "src/app/components/main/shared/income-chart/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/shared/sidebar/index.ts",
+                "with": "src/app/components/main/shared/sidebar/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/earn/autonomous-earning/index.ts",
+                "with": "src/app/components/main/earn/autonomous-earning/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/shared/deposit/index.ts",
+                "with": "src/app/components/main/shared/deposit/index.xrpl.ts"
+              },
+              {
+                "replace": "src/app/components/main/shared/header/index.ts",
+                "with": "src/app/components/main/shared/header/index.xrpl.ts"
+              }
+            ],
+            "outputPath": "dist/xrpl",
+            "index": "src/index.xrpl.html",
+            "main": "src/main.ts",
+            "polyfills": [
+              "src/polyfills.ts",
+              "zone.js"
+            ],
+            "tsConfig": "tsconfig.app.xrpl.json",
+            "allowedCommonJsDependencies": [
+              "web3",
+              "hash.js",
+              "bn.js",
+              "js-sha3",
+              "crc-32",
+              "@ethereumjs/rlp",
+              "setimmediate",
+              "cross-fetch",
+              "is-my-json-valid",
+              "qrcode",
+              "eventemitter3",
+              "@stablelib/random",
+              "@stablelib/sha256",
+              "@walletconnect/logger",
+              "@walletconnect/time",
+              "isomorphic-unfetch",
+              "@walletconnect/environment",
+              "@stablelib/ed25519",
+              "xrpl",
+              "@gemwallet/api"
+            ],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "./stylesheets/application.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.xrpl.ts",
+                  "with": "src/environments/environment.xrpl.prod.ts"
+                },
+                {
+                  "replace": "src/main.ts",
+                  "with": "src/main.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/wallet/index.ts",
+                  "with": "src/app/components/main/wallet/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/app-routing.module.ts",
+                  "with": "src/app/app-routing.module.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/earn/routes.ts",
+                  "with": "src/app/components/main/earn/routes.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/profile/routes.ts",
+                  "with": "src/app/components/main/profile/routes.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/routes.ts",
+                  "with": "src/app/components/main/routes.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/dashboard/index.ts",
+                  "with": "src/app/components/main/dashboard/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/all-transactions/index.ts",
+                  "with": "src/app/components/main/all-transactions/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/shared/transfer/index.ts",
+                  "with": "src/app/components/main/shared/transfer/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/shared/transactions/index.ts",
+                  "with": "src/app/components/main/shared/transactions/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/shared/sign/index.ts",
+                  "with": "src/app/components/main/shared/sign/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/shared/private-key/index.ts",
+                  "with": "src/app/components/main/shared/private-key/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/shared/portfolio-wallet/index.ts",
+                  "with": "src/app/components/main/shared/portfolio-wallet/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/shared/create-wallet/index.ts",
+                  "with": "src/app/components/main/shared/create-wallet/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/shared/income-chart/index.ts",
+                  "with": "src/app/components/main/shared/income-chart/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/shared/sidebar/index.ts",
+                  "with": "src/app/components/main/shared/sidebar/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/earn/autonomous-earning/index.ts",
+                  "with": "src/app/components/main/earn/autonomous-earning/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/shared/deposit/index.ts",
+                  "with": "src/app/components/main/shared/deposit/index.xrpl.ts"
+                },
+                {
+                  "replace": "src/app/components/main/shared/header/index.ts",
+                  "with": "src/app/components/main/shared/header/index.xrpl.ts"
+                }
+              ],
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "12kb"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "xrpl:build:production"
+            },
+            "development": {
+              "browserTarget": "xrpl:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "xrpl:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "tsconfig.spec.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "./stylesheets/application.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}

@@ -1,0 +1,325 @@
+<div
+    id="dashboard-wrapper-id"
+    class="wrapper"
+>
+    <div class="background-first-column">
+
+    </div>
+    <div class="app-sidebar">
+        <app-sidebar [height]="height"> </app-sidebar>
+    </div>
+    <div class="app-header">
+        <app-header [currentPage]="currentPage"></app-header>
+    </div>
+
+
+    <div class="container">
+
+        <div class="h2-style city-cash">
+            <mat-icon
+                class="mat-icon-size-48-only"
+                svgIcon="p2pKosogamaWhite"
+            ></mat-icon>
+            <div class="city-cash-level2">
+                Kosogama
+            </div>
+        </div>
+
+
+        <div class="wrapper-dash">
+
+            <div class="container-dash">
+
+                <div class="box-dash">
+                    <mat-icon
+                        class="mat-icon-size-48-only"
+                        svgIcon="p2pAgri"
+                    ></mat-icon>
+                    <div class="box-dash-inner">
+                        <h3>Agribusiness</h3>
+                        <p class="p-style">Category</p>
+                    </div>
+                </div>
+
+                <div class="box-dash">
+                    <mat-icon
+                        class="mat-icon-size-48-only"
+                        svgIcon="p2pCoinsStacked"
+                    ></mat-icon>
+                    <div class="box-dash-inner">
+                        <div class="box-usd">
+                            <h3>1,000,000.00</h3> <span class="span-line">/</span> <span
+                                class="span-currency">USD</span>
+                        </div>
+                        <p class="p-style">Loan amount</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="container-dash">
+
+                <div class="box-dash-3">
+                    <mat-icon
+                        class="mat-icon-size-48-only"
+                        svgIcon="p2pPercent"
+                    ></mat-icon>
+                    <div class="box-dash-inner">
+                        <h3>6.2%</h3>
+                        <p class="p-style">Interest rate</p>
+                    </div>
+                </div>
+                <div class="box-dash-3 box-green">
+                    <mat-icon
+                        class="mat-icon-size-48-only"
+                        svgIcon="p2pStar"
+                    ></mat-icon>
+                    <div class="box-dash-inner">
+                        <h3>A</h3>
+                        <p class="p-style">Risk category</p>
+                    </div>
+                </div>
+                <div class="box-dash-3">
+                    <mat-icon
+                        class="mat-icon-size-48-only"
+                        svgIcon="p2pPercent"
+                    ></mat-icon>
+                    <div class="box-dash-inner">
+                        <h3>0.70%</h3>
+                        <p class="p-style">Default rate</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container-dash">
+                <div class="box-dash">
+                    <mat-icon
+                        class="mat-icon-size-48-only"
+                        svgIcon="p2pArrowUp"
+                    ></mat-icon>
+                    <div class="box-dash-inner">
+                        <h3>???</h3>
+                        <p class="p-style">Maturity</p>
+                    </div>
+                </div>
+
+                <div class="box-dash">
+                    <mat-icon
+                        class="mat-icon-size-48-only"
+                        svgIcon="p2pCoinsHand"
+                    ></mat-icon>
+                    <div class="box-dash-inner">
+                        <div class="box-usd">
+                            <h3>500,000</h3> <span class="span-line">/</span> <span class="span-currency">USD</span>
+                        </div>
+                        <p class="p-style">Collateral value</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-dash">
+                <div class="box-dash">
+                    <mat-icon
+                        class="mat-icon-size-48-only"
+                        svgIcon="p2pCreditCard"
+                    ></mat-icon>
+                    <div class="box-dash-inner">
+                        <div class="box-usd">
+                            <h3>200,000</h3> <span class="span-line">/</span> <span class="span-currency">USD</span>
+                        </div>
+                        <p class="p-style">Repayment (Monthly)</p>
+                    </div>
+                </div>
+                <div class="box-dash">
+                    <mat-icon
+                        class="mat-icon-size-48-only"
+                        svgIcon="p2pCreditCard"
+                    ></mat-icon>
+                    <div class="box-dash-inner">
+                        <div class="box-usd">
+                            <h3>1,500,000.00</h3> <span class="span-line">/</span> <span
+                                class="span-currency">USD</span>
+                        </div>
+                        <p class="p-style">Repayment (Quarterly)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="invest">
+            <div class="wrap">
+                <h3 class="h3-style">Invest now</h3>
+                <form class="invest-form">
+                    <div class="">
+                        <mat-form-field appearance="fill">
+                            <mat-icon
+                                matPrefix
+                                class="mat-icon-size-50"
+                                svgIcon="blankCircle"
+                            >
+                                <mat-icon
+                                    class="mat-icon-email"
+                                    svgIcon="userInvest"
+                                ></mat-icon>
+                            </mat-icon>
+                            <input
+                                matInput
+                                placeholder="Full name"
+                            />
+                        </mat-form-field>
+                        <div class="dropDown">
+                            <mat-select
+                                disableOptionCentering
+                                placeholder="Select currency"
+                                panelClass="myPanelClass"
+                                class="mySelectClass"
+                            >
+                                <mat-option
+                                    *ngFor="let item of list"
+                                    [value]="item"
+                                >{{item}}</mat-option>
+                            </mat-select>
+                            <mat-icon
+                                matPrefix
+                                class="mat-icon-size-50-only blankCircle"
+                                svgIcon="blankCircle"
+                            >
+                                <mat-icon
+                                    class="mat-icon-email mat-icon-circleInvest"
+                                    svgIcon="circleInvest"
+                                ></mat-icon>
+                            </mat-icon>
+                            <mat-icon
+                                class="mat-icon-tether mat-icon-tetherInvest"
+                                svgIcon="tetherInvest"
+                            ></mat-icon>
+                            <span class="currency-value">USDT (32,000)</span>
+                        </div>
+                        <div class="h-12-style available">
+                            Available 50,000 USDT
+                        </div>
+                        <mat-form-field
+                            appearance="fill"
+                            subscriptSizing="dynamic"
+                        >
+                            <mat-icon
+                                matPrefix
+                                class="mat-icon-size-50"
+                                svgIcon="blankCircle"
+                            >
+                                <mat-icon
+                                    class="mat-icon-email"
+                                    svgIcon="potInvest"
+                                ></mat-icon>
+                            </mat-icon>
+                            <input
+                                matInput
+                                placeholder="Enter amount"
+                            />
+                        </mat-form-field>
+                        <div class="h-12-style available">
+                            1 bond = $100
+                        </div>
+                        <button
+                            class="button-invest"
+                            mat-button
+                        >Invest</button>
+                        <div class="consent">
+                            By entering my name and clicking "Supply" below, I hereby agree and acknowledge that (i) I
+                            am electronically signing and becoming a party to the Loan Agreement for this pool, and (ii)
+                            my name and transaction information may be shared with the borrower
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="banner-p2p-lending">
+            <!-- <app-banner-corporate-bonds></app-banner-corporate-bonds> -->
+            <app-banner-p2p-lending></app-banner-p2p-lending>
+        </div>
+
+        <div class="below-chart-wrapper">
+            <div class="below-chart-wrapper-inner">
+                <button
+                    class="button-overview"
+                    mat-button
+                >Product summary</button>
+                <button
+                    class="button-deal-overview"
+                    mat-button
+                >Deal overview</button>
+                <button
+                    class="button-activity"
+                    mat-button
+                >Recent activity</button>
+                <div class="div-padding div-flex-row">
+                    <mat-icon
+                        class="mat-icon-size-50-only"
+                        svgIcon="p2pKosogamaLight"
+                    ></mat-icon>
+                    <h4 class="h4-padding">Kosogama</h4>
+                </div>
+
+                <p class="p-ae">Credefi is a mission-driven investment firm that delivers growth capital
+                    to best-in-class Fintechs and high risk-adjusted returns to investors.
+                    We aim to facilitate the extension of financial services to <span class="span-ae-bold"> 100 million
+                        people</span>
+                    accelerating the rise of the global middle class and enabling economic
+                    growth in emerging markets. Cauris's debt financing enables its partners to
+                    scale efforts that deliver <span class="span-ae-bold">financial services to small</span> businesses
+                    and
+                    consumers--many of which are traditionally underserved--that are the
+                    economic engines of every economy. Leveraging cutting edge technology
+                    and highly structured underwriting, Cauris delivers both consistent
+                    financial returns and compelling social impact.</p>
+
+                <div class="div-padding">
+                    <mat-icon
+                        class="mat-icon-size-50-only icon-padding"
+                        svgIcon="appleae50"
+                    ></mat-icon>
+                    <mat-icon
+                        class="mat-icon-size-50-only icon-padding"
+                        svgIcon="appleae50"
+                    ></mat-icon>
+                    <mat-icon
+                        class="mat-icon-size-50-only icon-padding"
+                        svgIcon="appleae50"
+                    ></mat-icon>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="highlights-wrapper">
+            <div class="highlights-wrapper-inner">
+                <h4 class="h4-general">Highlights</h4>
+                <ul class="ul-highlights">
+                    <li>Founded by a team of former fintech entrepreneurs, operators, investment professionals and
+                        bankers with expertise in credit and structured finance, direct experience working with Fintechs
+                        in the Global South and deep industry experience in financial inclusion </li>
+                    <li>Growing portfolio of fintech investments are supported by disciplined and robust underwriting
+                        while enabling our fintechs partners to continue innovating and growing</li>
+                    <li>Cauris has high-quality portfolio companies in Africa, Asia and Latin America; borrowers are
+                        backed by marquee equity investors like A16Z, Tiger Global and the World Bank</li>
+                    <li>Strong performance track record with $15M borrowed on Goldfinch to date, generating healthy
+                        risk-adjusted yields for investors with zero delays or defaults in borrower repayments</li>
+                </ul>
+                <button class="button-invest-now">
+                    Invest now
+                </button>
+            </div>
+        </div>
+
+        <div id="dashboard-footer">
+            <footer>
+                <span>@2024 Credefi</span>
+                <span class="fl-right">
+                    <span>Powered by &nbsp;<u>Experian</u></span>
+                    <span>All rights reserved</span>
+                </span>
+            </footer>
+        </div>
+    </div>
+</div>

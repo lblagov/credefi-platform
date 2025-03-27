@@ -1,0 +1,129 @@
+<div class="portfolio-lending">
+  <h2 class="h2-general">Utility stake
+  </h2>
+  <p>Unlock our platform’s full potential and benefits by staking $xCREDI
+  </p>
+</div>
+
+<div class="container-box">
+  <div class="module-x-wrapper">
+    <div class="module-x-down-wrapper">
+      <div class="module-x-down">
+        <mat-icon matPrefix class="mat-icon-48" svgIcon="tvl">
+        </mat-icon>
+        <div class="module-x-down-inner">
+          <h4 class="h4-stake">{{ locked() | number:'1.2-6'}}</h4>
+          <p class="p-stake-bigger ml16">Your staked amount</p>
+        </div>
+      </div>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="stake-wrapper">
+
+        <div class="stake-unstake-inner">
+          <button class="button-stake" mat-button>
+            Stake
+          </button>
+          <button class="button-unstake" mat-button  type="button" (click)="onClaim()">
+            Unstake
+          </button>
+        </div>
+
+
+        <mat-form-field class="credi-outline white">
+          <mat-icon matPrefix class="prefix gray" svgIcon="currency-outline">
+          </mat-icon>
+          <input matInput autocomplete type="number" formControlName="amount" placeholder="Enter the amount">
+          <button class="max image-button" matRipple type="button" (click)="setMax()">
+            MAX
+          </button>
+          <mat-error *ngFor="let error of form.get('amount') | error | slice:0:1">
+            {{ error }}
+          </mat-error>
+        </mat-form-field>
+        <div class="stake-available">
+          <span class="mr12">
+            Available to stake:
+            <span class="value">{{ balance() | number:'1.6-6' }} </span>
+            <span class="credi">$xCREDI</span>
+          </span>
+        </div>
+        <button class="button-primary" matRipple [disabled]="isSubmit()">
+          Stake $xCREDI
+        </button>
+      </div>
+
+    </form>
+    <h4>Utility Levels Explained</h4>
+    <p>The Credefi platform offers a tiered benefits system designed to reward its users with various incentives based on their
+      level of participation. Here's a summary of the tier levels and the benefits associated with each:</p>
+    <p><b>Tier 1:</b> This is the entry-level tier, where users can enjoy an Instant Return On Investment (ROI) for the first year.
+       This benefit is specifically tailored to cover the initial period, providing an immediate incentive for new users.
+    </p>
+    <!-- <p><b>Tier 2:</b> Building upon the foundation of Tier 1, Tier 2 enhances the benefits package by not only offering an Instant ROI but also an Extra Interest of +2%. This tier is designed for users looking to increase their returns beyond the instant benefits, rewarding them for their continued engagement with the platform.
+    </p>
+    <p><b>Tier 3:</b> The highest tier in the Credefi platform, Tier 3, includes all the benefits of the previous tiers—Instant ROI and an Extra Interest of +2%—and introduces Insurance Included. This additional feature offers a layer of protection for the users' investments, providing peace of mind and enhancing the overall value of being part of this tier.
+    </p> -->
+    <p>Each tier is structured to offer increasing value, encouraging users to engage more deeply with the Credefi platform. From instant rewards to enhanced interest rates and investment insurance, the tier system is designed to cater to a wide range of user needs and investment strategies.</p>
+  </div>
+  <div class="info">
+    <div class="module-x-down">
+      <mat-icon matPrefix class="large" svgIcon="moduleGreen" *ngIf="tierLevel() == TierLevels.ONE else greenTemplate">
+      </mat-icon>
+      <div class="module-x-down-inner">
+        <h4 class="h4-stake">Tier 1</h4>
+        <p class="p-stake-bigger ml16" *ngIf="tierLevel() == TierLevels.ONE else lockedTier2">
+          Unlocked
+        </p>
+        <ng-template #lockedTier2>
+          <p class="p-stake-bigger ml16">
+            Stake requirement: 100 $xCREDI
+          </p>
+      </ng-template>
+      </div>
+    </div>
+    <div class="module-x-down">
+      <mat-icon matPrefix class="large" svgIcon="moduleGreen" *ngIf="tierLevel() == TierLevels.TWO else greenTemplate">
+      </mat-icon>
+      <!-- <div class="module-x-down-inner">
+        <h4 class="h4-stake">
+          Tier 2
+        </h4>
+        <p class="p-stake-bigger ml16" *ngIf="tierLevel() == TierLevels.TWO else lockedTier3">
+          Unlocked
+        </p>
+        <ng-template #lockedTier3>
+          <p class="p-stake-bigger ml16">
+            Stake requirement: 1000 $xCREDI
+          </p>
+      </ng-template>
+      </div>
+    </div>
+    <div class="module-x-down">
+      <mat-icon matPrefix class="large" svgIcon="moduleGreen" *ngIf="tierLevel() == TierLevels.THREE else greenTemplate">
+      </mat-icon>
+      <div class="module-x-down-inner">
+        <h4 class="h4-stake">Tier 3</h4>
+        <p class="p-stake-bigger ml16" *ngIf="tierLevel() == TierLevels.THREE else lockedTier">
+          Unlocked
+        </p>
+        <ng-template #lockedTier>
+          <p class="p-stake-bigger ml16">
+            Stake requirement: 10 000 $xCREDI
+          </p>
+      </ng-template>
+      </div>
+    </div> -->
+    <ng-template #greenTemplate>
+      <mat-icon matPrefix class="large" svgIcon="moduleRed">
+      </mat-icon>
+    </ng-template>
+    <div class="info-box">
+      The Credefi platform offers a tiered benefits system designed to reward its users with various incentives based on their level of participation.
+      <lazy-image class="background" src="/assets/images/staking.png">
+
+      </lazy-image>
+    </div>
+  </div>
+</div>

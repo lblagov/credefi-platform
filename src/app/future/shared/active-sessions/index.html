@@ -1,0 +1,18 @@
+<div class="active-sessions">
+    <mat-icon
+        class="mat-icon-size-50"
+        svgIcon={{svgIcon}}
+    ></mat-icon>
+    <!-- "sessionsApple" -->
+    <div class="sessions">
+        <div class="h6-style">{{sessionName}}</div>
+        <!-- TR5502TG -->
+        <div class="h6-style light">{{sessionLocation}}</div>
+        <!-- Google chrome · Ukraine · 3:18 -->
+    </div>
+    <mat-icon
+        *ngIf="showxClose"
+        class="mat-icon-close"
+        svgIcon="xCloseLight"
+    ></mat-icon>
+</div>

@@ -1,0 +1,30 @@
+<div class="portfolio-lending">
+    <h2 class="h2-general">Staking options</h2>
+</div>
+
+<div class="app-type-of-staking">
+    <app-type-of-staking
+        logoMobile="logoMobile"
+        stakingTitle="$xCREDI LP"
+        (onClick)="onStake()"
+        [balance]="tvl()"
+        [ar]="ar()"
+    >
+    </app-type-of-staking>
+</div>
+
+<div
+    *ngIf="stakings().length > 0"
+    class="portfolio-lending margin"
+>
+    <h2 class="h2-general">My staking</h2>
+</div>
+
+<div class="app-portfolio-staking">
+    <app-portfolio-staking
+        *ngFor="let staking of stakings(); trackBy: track"
+        [data]="staking"
+        portfolioImage="logoMobile"
+    >
+    </app-portfolio-staking>
+</div>

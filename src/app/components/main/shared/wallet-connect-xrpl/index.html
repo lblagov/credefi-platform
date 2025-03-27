@@ -1,0 +1,22 @@
+<div class="small-scroll">
+    <button (click)="connectGemWallet()" mat-ripple>
+        <mat-icon
+            svgIcon="gem-wallet-icon"
+        ></mat-icon>
+        <div id="whitelist-inner">
+            <span>Gem Wallet</span>
+        </div>
+    </button>
+    <button (click)="connectXummWallet()" mat-ripple>
+        <img class="xumm" src="/assets/svg/wallet/xumm.svg" />
+        <div id="whitelist-inner">
+            <span>Xumm Wallet</span>
+        </div>
+    </button>
+    <button (click)="connectCrossmarkWallet()" mat-ripple>
+      <img class="xumm" src="/assets/crossmark.webp" />
+      <div id="whitelist-inner">
+          <span>Crossmark Wallet</span>
+      </div>
+  </button>
+</div>

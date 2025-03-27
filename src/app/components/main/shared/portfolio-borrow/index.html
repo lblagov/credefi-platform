@@ -1,0 +1,115 @@
+<div class="wrapper-portfolio-borrow">
+    <div class="chart-table first-row">
+        <div class="first-column">
+            <mat-icon class="mat-icon-size-50" svgIcon={{portfolioImage}}></mat-icon>
+            <div class="cell">
+                <div>{{portfolioName}}</div>
+                <span>22 July 2023</span>
+            </div>
+            <div class="cell tether">
+                <mat-icon class="mat-icon-size-20" svgIcon="tether"></mat-icon>
+                <div class="p-black"> 100, 000 <p>USDT</p> </div>
+                <span>Loan amount</span>
+            </div>
+            <div class="cell">
+                <div  class="p-bold">12 %</div>
+                <span class="p-bright">Interest Rate</span>
+            </div>
+            <div class="cell">
+                <div class="p-bold">5 000</div>
+                <span class="p-bright">Outstanding</span>
+            </div>
+            <div class="cell">
+                <div class="p-bold">Performing</div>
+                <span class="p-bright">Status</span>
+            </div>
+            <div class="cell">
+                <div class="p-bold">22 July 2023</div>
+                <span class="p-bright">End date</span>
+            </div>
+            <div class="table-buttons">
+                <button class="button-repay">
+                    Repay 
+                </button>
+                <mat-icon class="mat-icon-size-50 fill-white" svgIcon={{iconArrow}} (click)="slidePortfolioBorrow()"></mat-icon>
+            </div>
+        </div>
+    </div>
+
+    <div class="hide expanded">
+        <div class="scroll">
+            <div *ngIf="height === '300'"> </div>
+            
+            <span class="title h4-style">Loan repayment schedule</span>
+       
+            <div class="loan-repayment-table">
+                <div class="trans-wrapper">
+                    <div class="trans-container">
+                        <div class="table-head">
+                            <span>Due date</span>
+                            <span>Instalment</span>
+                            <span>Status</span>
+                            <span>Amount</span>
+                            <span>Date</span>
+                        </div>
+                        <div class="table-body schedule">
+                            <span>22 July 2023</span>
+                            <div class="wallet installment-no">
+                                <span>No</span>
+                            </div>
+                            <div class="status">
+                                <span>Performing</span>
+                            </div>
+                            <div class="p-black"> 100, 000 &nbsp;<p>USDT</p> </div>
+                            <span>22 July 2023</span>
+                        </div>
+                        <div class="table-body schedule">
+                            <span>22 July 2023</span>
+                            <div class="wallet installment-no">
+                                <span>No</span>
+                            </div>
+                            <div class="status">
+                                <span>Performing</span>
+                            </div>
+                            <div class="p-black"> 100, 000 &nbsp;<p>USDT</p> </div>
+                            <span>22 July 2023</span>
+                        </div>
+                        <div class="table-body schedule">
+                            <span>22 July 2023</span>
+                            <div class="wallet installment-no">
+                                <span>No</span>
+                            </div>
+                            <div class="status">
+                                <span>Performing</span>
+                            </div>
+                            <div class="p-black"> 100, 000 &nbsp;<p>USDT</p> </div>
+                            <span>22 July 2023</span>
+                        </div>
+                        <div class="table-body schedule">
+                            <span>22 July 2023</span>
+                            <div class="wallet installment-no">
+                                <span>No</span>
+                            </div>
+                            <div class="status">
+                                <span>Performing</span>
+                            </div>
+                            <div class="p-black"> 100, 000 &nbsp;<p>USDT</p> </div>
+                            <span>22 July 2023</span>
+                        </div>
+                        <div class="table-body schedule">
+                            <span>22 July 2023</span>
+                            <div class="wallet installment-no">
+                                <span>No</span>
+                            </div>
+                            <div class="status">
+                                <span>Performing</span>
+                            </div>
+                            <div class=" p-black"> 100, 000 &nbsp;<p>USDT</p> </div>
+                            <span>22 July 2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

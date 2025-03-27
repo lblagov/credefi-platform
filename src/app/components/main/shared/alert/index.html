@@ -1,0 +1,24 @@
+<div class="header">
+    {{ data.title ?? 'Alert' }}
+    <button
+        mat-icon-button
+        (click)="ref.close()"
+    >
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<div class="deposit">
+    <p class="text">
+        {{ data.message }}
+    </p>
+
+</div>
+
+<button
+    class="button-primary"
+    matRipple
+    (click)="ref.close()"
+>
+    {{ data.button ?? 'Submit' }}
+</button>

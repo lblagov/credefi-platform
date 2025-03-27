@@ -1,0 +1,86 @@
+<div class="header">
+    Verify business
+    <button
+        mat-icon-button
+        (click)="ref.close()"
+    >
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+>
+    <mat-form-field class="credi-outline">
+        <input
+            matInput
+            autocomplete
+            type="text"
+            placeholder="Wallet"
+            formControlName="wallet"
+        />
+        <mat-error *ngFor="let error of form.get('wallet') | error | slice:0:1">
+            {{ error }}
+        </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="credi-outline">
+      <input
+          matInput
+          autocomplete
+          type="text"
+          placeholder="Company"
+          formControlName="company"
+      />
+      <mat-error *ngFor="let error of form.get('company') | error | slice:0:1">
+          {{ error }}
+      </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="credi-outline">
+    <input
+        matInput
+        autocomplete
+        type="text"
+        placeholder="Representive"
+        formControlName="representive"
+    />
+    <mat-error *ngFor="let error of form.get('representive') | error | slice:0:1">
+        {{ error }}
+    </mat-error>
+</mat-form-field>
+
+<mat-form-field class="credi-outline">
+  <input
+      matInput
+      autocomplete
+      type="text"
+      placeholder="Email"
+      formControlName="email"
+  />
+  <mat-error *ngFor="let error of form.get('email') | error | slice:0:1">
+      {{ error }}
+  </mat-error>
+</mat-form-field>
+
+<mat-form-field class="credi-outline">
+  <input
+      matInput
+      autocomplete
+      type="text"
+      placeholder="Phone"
+      formControlName="phone"
+  />
+  <mat-error *ngFor="let error of form.get('phone') | error | slice:0:1">
+      {{ error }}
+  </mat-error>
+</mat-form-field>
+    <button
+        class="button-login"
+        matRipple
+        [disabled]="isSubmit()"
+    >
+        Submit
+    </button>
+</form>

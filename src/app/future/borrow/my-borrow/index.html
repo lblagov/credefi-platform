@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="banner-wrapper">
+        <app-banner
+            [title]="title"
+            [titleColor]="titleColor"
+            [description]="description"
+            [descriptionColor]="descriptionColor"
+            [image]="image"
+            [imgProps]="imgProps"
+            [linearGradient]="linearGradient"
+        ></app-banner>
+    </div>
+
+    <div class="portfolio-lending">
+        <h2 class="h2-general">My loans</h2>
+        <button
+            class="button-lend-now"
+            mat-button
+        >Request Loan</button>
+    </div>
+
+    <div class="wrapper-mobile">
+        <div class="portfolio-lending-mobile">
+            <h3 class="h3-general">My loans</h3>
+        </div>
+
+        <div class="app-porfolio">
+            <app-borrow-portfolio-mobile
+                [portfolioImage]="portfolioImage"
+                [portfolioName]="portfolioName"
+            ></app-borrow-portfolio-mobile>
+            <app-borrow-portfolio-mobile
+                [portfolioImage]="portfolioImage2"
+                [portfolioName]="portfolioName2"
+            ></app-borrow-portfolio-mobile>
+            <app-borrow-portfolio-mobile
+                [portfolioImage]="portfolioImage3"
+                [portfolioName]="portfolioName3"
+            ></app-borrow-portfolio-mobile>
+            <app-borrow-portfolio-mobile
+                [portfolioImage]="portfolioImage4"
+                [portfolioName]="portfolioName4"
+            ></app-borrow-portfolio-mobile>
+            <app-borrow-portfolio-mobile
+                [portfolioImage]="portfolioImage5"
+                [portfolioName]="portfolioName5"
+            ></app-borrow-portfolio-mobile>
+            <app-borrow-portfolio-mobile
+                [portfolioImage]="portfolioImage6"
+                [portfolioName]="portfolioName6"
+            ></app-borrow-portfolio-mobile>
+        </div>
+        
+       <button
+                class="button-lend-now-mobile"
+                mat-button
+            >Request Loan
+        </button>
+
+        <div class="banner-wrapper-mobile">
+            <app-banner-mobile-lend
+                [title]="title"
+                [titleColor]="titleColor"
+                [description]="descriptionMobile"
+                [descriptionColor]="descriptionColor"
+                [image]="imageMobile"
+                [imgProps]="imgPropsMobile"
+                [linearGradient]="linearGradientMobile"
+            ></app-banner-mobile-lend>
+        </div>
+        
+
+    </div>
+    <div>
+        <div class="div-table">
+            <div class="app-porfolio">
+                <app-portfolio-borrow
+                    (heightEvent)="getHeight($event)"
+                    [portfolioImage]="portfolioImage"
+                    [portfolioName]="portfolioName"
+                ></app-portfolio-borrow>
+                <app-portfolio-borrow
+                    [portfolioImage]="portfolioImage"
+                    [portfolioName]="portfolioName"
+                ></app-portfolio-borrow>
+                <app-portfolio-borrow
+                    [portfolioImage]="portfolioImage"
+                    [portfolioName]="portfolioName"
+                ></app-portfolio-borrow>
+                <app-portfolio-borrow
+                    [portfolioImage]="portfolioImage"
+                    [portfolioName]="portfolioName"
+                ></app-portfolio-borrow>
+                <app-portfolio-borrow
+                    [portfolioImage]="portfolioImage"
+                    [portfolioName]="portfolioName"
+                ></app-portfolio-borrow>
+                <app-portfolio-borrow
+                    [portfolioImage]="portfolioImage"
+                    [portfolioName]="portfolioName"
+                ></app-portfolio-borrow>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>

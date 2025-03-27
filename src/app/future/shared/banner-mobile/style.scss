@@ -1,0 +1,95 @@
+.div-banner {
+    display: flex;
+    flex-direction: column;
+    width: 321px;
+    height: 170px;
+    border-radius: 20px;
+    display: flow-root;
+    margin: 0 auto;
+    position: relative;
+}
+
+.fl-left {
+    padding-left: 20px;
+    float: left;
+}
+
+mat-icon.mat-icon-banner {
+    height: 166px;
+    width: 360px;
+    left: 671px;
+    top: 0px;
+    float: right;
+}
+
+.images-mobile {
+    width: 321px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.span-banner-filled {
+    background-color: white;
+    height: 4px;
+    width: 32px;
+}
+
+
+.span-banner-half {
+    background-color: white;
+    height: 4px;
+    width: 11px;
+}
+
+
+.span-banner-empty {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 4px;
+    width: 32px;
+}
+
+.h3-banner {
+    width: 435px;
+    height: 34px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    color: #070707;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px;
+    padding-top: 20px;
+}
+
+.p-banner {
+    margin-top: 18px;
+    width: 262px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(7, 7, 7, 0.7);
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+mat-icon.mat-icon-button-filter {
+    height: 40px;
+    width: 168px;
+}
+
+@media (max-width: 700px) {
+    .div-banner {
+        margin: 24px 0 !important;
+    }
+
+    .h3-banner {
+        height: auto;
+        width: 100%;
+    }
+}

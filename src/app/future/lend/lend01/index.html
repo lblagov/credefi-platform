@@ -1,0 +1,143 @@
+<div class="container">
+    <div class="banner-wrapper">
+        <app-banner
+            [title]="title"
+            [titleColor]="titleColor"
+            [description]="description"
+            [descriptionColor]="descriptionColor"
+            [image]="image"
+            [imgProps]="imgProps"
+            [linearGradient]="linearGradient"
+        ></app-banner>
+    </div>
+
+    <div class="lend">
+        <div class="overview">
+            <div class="apy">
+                <p class="p-lend"> APY Overview </p>
+                <h2 class="h2-general">30%</h2>
+            </div>
+            <img
+                class="img-apy"
+                src="./assets/images/lend/apy.png"
+            />
+        </div>
+
+
+        <div class="div-chart">
+            <app-bar-chart [List]='BarData'></app-bar-chart>
+        </div>
+    </div>
+
+
+    <div class="portfolio-lending">
+        <h2 class="h2-general">Portfolio Lending</h2>
+        <button
+            (click)="lendNow()"
+            class="button-lend-now"
+            mat-button
+        >Lend now</button>
+    </div>
+    <!-- 1519px height -->
+    <div>
+        <div class="div-table">
+
+            <div class="app-porfolio">
+                <app-portfolio
+                    [portfolioImage]="portfolioImage"
+                    [portfolioName]="portfolioName"
+                ></app-portfolio>
+                <app-portfolio
+                    [portfolioImage]="portfolioImage2"
+                    [portfolioName]="portfolioName2"
+                ></app-portfolio>
+                <app-portfolio
+                    [portfolioImage]="portfolioImage3"
+                    [portfolioName]="portfolioName3"
+                ></app-portfolio>
+                <app-portfolio
+                    [portfolioImage]="portfolioImage4"
+                    [portfolioName]="portfolioName4"
+                ></app-portfolio>
+                <app-portfolio
+                    [portfolioImage]="portfolioImage5"
+                    [portfolioName]="portfolioName5"
+                ></app-portfolio>
+                <app-portfolio
+                    [portfolioImage]="portfolioImage6"
+                    [portfolioName]="portfolioName6"
+                ></app-portfolio>
+            </div>
+
+        </div>
+    </div>
+
+    <div>
+        <div class="div-table-mobile">
+            <h3 class="h3-general">Portfolio Lending</h3>
+            <div class="app-porfolio">
+                <app-portfolio-mobile
+                    [portfolioImage]="portfolioImage"
+                    [portfolioName]="portfolioName"
+                ></app-portfolio-mobile>
+                <app-portfolio-mobile
+                    [portfolioImage]="portfolioImage2"
+                    [portfolioName]="portfolioName2"
+                ></app-portfolio-mobile>
+                <app-portfolio-mobile
+                    [portfolioImage]="portfolioImage3"
+                    [portfolioName]="portfolioName3"
+                ></app-portfolio-mobile>
+                <app-portfolio-mobile
+                    [portfolioImage]="portfolioImage4"
+                    [portfolioName]="portfolioName4"
+                ></app-portfolio-mobile>
+                <app-portfolio-mobile
+                    [portfolioImage]="portfolioImage5"
+                    [portfolioName]="portfolioName5"
+                ></app-portfolio-mobile>
+                <app-portfolio-mobile
+                    [portfolioImage]="portfolioImage6"
+                    [portfolioName]="portfolioName6"
+                ></app-portfolio-mobile>
+            </div>
+            <div class="portfolio-lending-mobile">
+                <button
+                    (click)="lendNow()"
+                    class="button-lend-now-mobile"
+                    mat-button
+                >Lend now</button>
+            </div>
+            
+        </div>
+        <div class="banner-wrapper-mobile">
+            <app-banner-mobile-lend
+                [title]="title"
+                [titleColor]="titleColor"
+                [description]="descriptionMobile"
+                [descriptionColor]="descriptionColor"
+                [image]="imageMobile"
+                [imgProps]="imgPropsMobile"
+                [linearGradient]="linearGradientMobile"
+            ></app-banner-mobile-lend>
+        </div>
+
+        
+    <div class="lend-mobile">
+        <div class="overview">
+            <div class="apy">
+                <p class="p-lend-mobile"> APY Overview 30% </p>
+                <app-bar-chart-mobile [List]='BarData'></app-bar-chart-mobile>
+
+            </div>
+       
+        </div>
+
+
+        <!-- <div class="div-chart"> -->
+        <!-- </div> -->
+    </div>
+
+
+    </div>
+</div>

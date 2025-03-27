@@ -1,0 +1,28 @@
+:host {
+    padding: 12px;
+    display: block;
+}
+
+div.dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 8px;
+}
+
+p.text {
+    color: rgb(7 7 7 / 40%);
+    font-size: 14px;
+    text-align: center;
+}
+
+img {
+    width: 220px;
+    height: 220px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+button {
+    margin-top: 12px;
+}

@@ -1,0 +1,152 @@
+
+<div class="wrapper-bonds02-table">    
+   <!-- <div
+   id="bonds-id1"
+   class="chart-table first-row">
+        <div class="first-column">
+            <mat-icon class="mat-icon-size-50-only fill-white" svgIcon="google50"></mat-icon>
+            <div class="cell">
+                <div>Name of bond</div>
+                <span>1000$ (10 pieces)</span>
+            </div>
+            <div class="cell">
+                <div>12.15%</div>
+                <span>Coupon rate</span>
+            </div>
+            <div class="cell">
+                <div>22 July 2023</div>
+                <span>Next payment</span>
+            </div>
+            <div class="cell-no-border padding-mid">
+                <div>23 June 2025</div>
+                <span>Maturity date</span>
+            </div>
+       
+            <div class="table-buttons">
+                <button class="button-detail">
+                    Detail
+                </button>
+                <mat-icon class="mat-icon-size-50" svgIcon={{iconArrow}} (click)="slidePortfolioBorrow()"></mat-icon>
+            </div>
+        </div>
+    </div> -->
+
+   <div #mat id={{p2pId1}} class="chart-table first-row">
+        <div class="first-column">
+            <mat-icon class="mat-icon-size-50-only fill-white" svgIcon={{bondsIcon}}></mat-icon>
+            <!-- <mat-icon class="mat-icon-size-50-only fill-white" svgIcon="microsoft50"></mat-icon> -->
+            <div class="cell">
+                <div>Name of bond</div>
+                <span>1000$ (10 pieces)</span>
+            </div>
+            <div class="cell">
+                <div>12.15%</div>
+                <span>Coupon rate</span>
+            </div>
+            <div class="cell">
+                <div>22 July 2023</div>
+                <span>Next payment</span>
+            </div>
+            <div class="cell-no-border padding-mid">
+                <div>23 June 2025</div>
+                <span>Maturity date</span>
+            </div>
+       
+            <div class="table-buttons">
+                <button class="button-detail">
+                    Detail
+                </button>
+                <mat-icon class="mat-icon-size-50" svgIcon={{iconArrow}} (click)="this.slideBonds02Table($event)"></mat-icon>
+                <!-- <mat-icon class="mat-icon-size-50" svgIcon={{iconArrow}} (click)="slidePortfolioBorrow($event)"></mat-icon> -->
+            </div>
+        </div>
+    
+
+        <div class="hide expanded ">
+            <div class="expand-wrapper">
+                <!-- <div *ngIf="height === '300'"> </div> -->
+                
+                <span class="title h4-style">Bond repayment schedule</span>
+        
+                <div class="loan-repayment-table">
+                    <div class="trans-wrapper">
+                        <div class="trans-container">
+                            <div class="table-body schedule">
+                                <mat-icon class="mat-icon-size-22" svgIcon="bondsRepayment"></mat-icon>
+                                <span>0x70c6...4b54</span>
+                                <div class="wallet installment-no p-light">
+                                    <span>+$1,000.00 USDC</span>
+                                </div>
+                                <span class=""> Oct 11, 2022</span>
+                                <div class="status pending h5-style-light">
+                                    <span>Pending</span>
+                                </div>
+                                <div class="p-black"><u>Tx</u>
+                                    <mat-icon class="mat-icon-size-16 valign" svgIcon="arrowUpRight"></mat-icon>
+                                </div>
+                            </div>
+                            <div class="table-body schedule">
+                                <mat-icon class="mat-icon-size-22" svgIcon="bondsRepayment"></mat-icon>
+                                <span>0x70c6...4b54</span>
+                                <div class="wallet installment-no p-light">
+                                    <span>+$1,000.00 USDC</span>
+                                </div>
+                                <span> Oct 11, 2022</span>
+                                <div class="status confirmed h5-style-light">
+                                    <span>Confirmed</span>
+                                </div>
+                                <div class="p-black"><u>Tx</u>
+                                    <mat-icon class="mat-icon-size-16 valign" svgIcon="arrowUpRight"></mat-icon>
+                                </div>
+                            </div>
+                            <div class="table-body schedule">
+                                <mat-icon class="mat-icon-size-22" svgIcon="bondsRepayment"></mat-icon>
+                                <span>0x70c6...4b54</span>
+                                <div class="wallet installment-no p-light">
+                                    <span>+$1,000.00 USDC</span>
+                                </div>
+                                <span> Oct 11, 2022</span>
+                                <div class="status confirmed h5-style-light">
+                                    <span>Confirmed</span>
+                                </div>
+                                <div class="p-black"><u>Tx</u>
+                                    <mat-icon class="mat-icon-size-16 valign" svgIcon="arrowUpRight"></mat-icon>
+                                </div>
+                            </div>
+                            <div class="table-body schedule">
+                                <mat-icon class="mat-icon-size-22" svgIcon="bondsRepayment"></mat-icon>
+                                <span>0x70c6...4b54</span>
+                                <div class="wallet installment-no p-light">
+                                    <span>+$1,000.00 USDC</span>
+                                </div>
+                                <span> Oct 11, 2022</span>
+                                <div class="status confirmed h5-style-light">
+                                    <span>Confirmed</span>
+                                </div>
+                                <div class="p-black"><u>Tx</u>
+                                    <mat-icon class="mat-icon-size-16 valign" svgIcon="arrowUpRight"></mat-icon>
+                                </div>
+                            </div>
+                            <div class="table-body schedule">
+                                <mat-icon class="mat-icon-size-22" svgIcon="bondsRepayment"></mat-icon>
+                                <span>0x70c6...4b54</span>
+                                <div class="wallet installment-no p-light">
+                                    <span>+$1,000.00 USDC</span>
+                                </div>
+                                <span> Oct 11, 2022</span>
+                                <div class="status confirmed h5-style-light">
+                                    <span>Confirmed</span>
+                                </div>
+                                <div class="p-black"><u>Tx</u>
+                                    <mat-icon class="mat-icon-size-16 valign" svgIcon="arrowUpRight"></mat-icon>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

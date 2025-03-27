@@ -1,0 +1,24 @@
+.h6-style.light {
+    color: rgba(7, 7, 7, 0.40);
+    font-weight: 400;
+}
+
+.active-sessions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sessions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: auto;
+    // margin-left: 16px;
+}
+.mat-icon-close {
+    width: 22px !important;
+    height: 22px !important;
+    margin-top: -19px;
+}

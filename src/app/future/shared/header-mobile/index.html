@@ -1,0 +1,161 @@
+<header>
+    <nav>
+        <mat-icon
+            class="logo--header-mobile"
+            svgIcon="logoMobileHeader"
+        ></mat-icon>
+        <div class="dashboard">
+            <div
+                class="box cursor"
+            >
+                <mat-icon
+                    class="header-icon fox"
+                    svgIcon="MetaMask_Fox"
+                ></mat-icon>
+
+                <button style="border: 0;background-color:transparent;">
+                    <p>{{ 'CONNECT' }}</p>
+                </button>
+            </div>
+
+            <div class="dash-name">
+                <button
+                    style="border: 0;background-color:transparent;"
+                    routerLink="/shared/header-open-mobile"
+                    (click)="changeMenuIcon()"
+                >
+                    <mat-icon
+                        class="header-icon icon-menu"
+                        svgIcon={{iconMenu}}
+                    ></mat-icon>
+                </button>
+                <section
+                    *ngIf="iconArrow === 'ArrowUp'"
+                    class="dash-verify"
+                >
+                    <div class="dash-top">
+                        <div class="add-img">
+                            <div class="add-img-circle">
+                                <mat-icon
+                                    class="header-icon plus"
+                                    svgIcon="plus"
+                                ></mat-icon>
+                            </div>
+                        </div>
+                        <div class="name-email">
+                            <h6>Hello {{ "user" }}</h6>
+                            <p>{{ "email" }}</p>
+                        </div>
+                    </div>
+                    <div id="take-five">
+                        <div id="five-back">
+                            <div class="header-img-hand +add-img-circle">
+                                <mat-icon
+                                    class="header-icon hand"
+                                    svgIcon="Hand"
+                                ></mat-icon>
+                            </div>
+                            <div>
+                                It will take no more than 5 minutes
+                            </div>
+                        </div>
+                        <div id="five-front">
+                            <span>Verify your identity</span>
+                            <div>
+                                Deposits, daily rewards, swaps and referral rewards will be available after your verify
+                                your
+                                identity
+                            </div>
+                            <button
+                                class="button-header"
+                                mat-button
+                            >Pass KYC</button>
+                        </div>
+                    </div>
+                    <!-- <div id="dash-bottom">
+                        <div id="whitelist">
+                            <mat-icon
+                                class="header-icon whitelist"
+                                svgIcon="Whitelist"
+                            ></mat-icon>
+                            <div id="whitelist-inner">
+                                <span class="dash-black">Whitelist</span>
+                            </div>
+                        </div>
+                        <div id="profile">
+                            <mat-icon
+                                class="header-icon profile"
+                                svgIcon="Profile"
+                            ></mat-icon>
+                            <div id="profile-inner">
+                                <span class="dash-black">Profile</span>
+                            </div>
+                        </div>
+                        <div id="referral">
+                            <mat-icon
+                                class="header-icon referral"
+                                svgIcon="Referral"
+                            ></mat-icon>
+                            <div id="referral-inner">
+                                <span class="dash-black">Referral</span>
+                            </div>
+                        </div>
+                    </div> -->
+                    <button
+                        class="button-dash"
+                        mat-button
+                    >Logout</button>
+                </section>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <nav
+        *ngIf="iconArrow === 'ArrowUp'"
+        class="dash-verify"
+        class="bot-user-details"
+    >
+        <h3>User Details</h3>
+        <div class="dashboard">
+            <mat-icon
+                class="header-icon sun"
+                svgIcon="Vector"
+            ></mat-icon>
+            <div
+                class="box"
+                (click)="connect()"
+            >
+                <mat-icon
+                    class="header-icon fox"
+                    svgIcon="MetaMask_Fox"
+                ></mat-icon>
+                <p>0x7C28...B6Q0</p>
+            </div>
+            <div class="box2">
+                <div class="red-circle"></div>
+                <p>Get verified</p>
+            </div>
+            <mat-icon
+                class="header-icon bell"
+                svgIcon="bell-04"
+            ></mat-icon>
+            <img
+                class="images"
+                src="./assets/images/image.png"
+            />
+            <div class="dash-name">
+                <div>Mark Zuckerberg </div>
+                <span>Setting</span>
+                <button
+                    style="border: 0;background-color:transparent;"
+                    (click)="changeEarnIcon()"
+                >
+                    <mat-icon
+                        class="header-icon arrow"
+                        svgIcon={{iconArrow}}
+                    ></mat-icon>
+                </button>
+            </div>
+        </div>
+    </nav> -->
+</header>

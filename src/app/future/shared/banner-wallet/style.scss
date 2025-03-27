@@ -1,0 +1,91 @@
+.div-banner {
+    display: flex;
+    width: 1000px;
+    height: 114px;
+    border-radius: 20px;
+    left: 946px;
+    left: 60px;
+    top: 132px;
+    top: 360px;
+    margin: 0px auto;
+    background-color: rgba(92, 104, 255, 1);
+    align-items: center;
+}
+
+.p-banner-wallet {
+    color: var(--color-styles-primary-white, #FFF);
+    font-size: 20px;
+
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    width: 358px;
+    margin: 0px;
+}
+
+.fl-left {
+    padding-left: 32px;
+    float: left;
+}
+
+.images {
+    padding-left: 42px;
+}
+
+mat-icon.mat-icon-banner {
+    height: 166px;
+    width: 360px;
+    left: 671px;
+    top: 0px;
+    float: right;
+}
+
+.span-banner-filled {
+    background-color: white;
+    height: 4px;
+    width: 32px;
+}
+
+
+.span-banner-half {
+    background-color: white;
+    height: 4px;
+    width: 11px;
+}
+
+
+.span-banner-empty {
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 4px;
+    width: 32px;
+}
+
+
+a.button-banner {
+    height: 50px;
+    width: 170px;
+    border-radius: 100px;
+    background-color: white;
+    border-width: 0px;
+    color: var(--color-styles-light-version-black, #11121C) !important;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 53px;
+}
+
+
+a.button-banner2 {
+    height: 50px;
+    width: 170px;
+    border-radius: 100px;
+    background-color: white;
+    border-width: 0px;
+    color: var(--color-styles-light-version-black, #11121C) !important;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 16px;
+}

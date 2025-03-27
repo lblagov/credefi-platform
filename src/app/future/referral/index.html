@@ -1,0 +1,129 @@
+<div class="wrapper">
+    <div class="background-first-column">
+        
+    </div>
+    <div class="container">
+       
+      
+    <div class="container-dash">
+
+        <div class="box-dash">
+            <div class="contain-dash">   
+                <mat-icon class="mat-icon-size-48" svgIcon="partners"></mat-icon>    
+                <div class="contain-dash-inner">
+                    <h3 class="h3-referral">11.930</h3>
+                    <div class="contain-dash-last-inner">Partners</div>
+                </div>              
+            </div>
+        </div>  
+
+
+        <div class="box-dash">
+            <div class="contain-dash">   
+                <mat-icon class="mat-icon-size-48" svgIcon="recieved"></mat-icon>    
+                <div class="contain-dash-inner">
+                    <h3 class="h3-referral">$500</h3>
+                    <div class="contain-dash-last-inner">Received for all time</div>
+                </div>              
+            </div>
+        </div>  
+
+        <div class="box-dash">
+            <div class="contain-dash">   
+                <mat-icon class="mat-icon-size-48" svgIcon="recievedMonth"></mat-icon>    
+                <div class="contain-dash-inner">
+                    <h3 class="h3-referral">$2500</h3>
+                    <div class="contain-dash-last-inner">Received for month</div>
+                </div>              
+            </div>
+        </div>  
+
+        <div class="box-dash">
+            <div class="contain-dash">   
+                <mat-icon class="mat-icon-size-48" svgIcon="recievedMonth"></mat-icon>    
+                <div class="contain-dash-inner">
+                    <h3 class="h3-referral">$42.1</h3>
+                    <div class="contain-dash-last-inner">Received today</div>
+                </div>              
+            </div>
+        </div> 
+         
+            
+        </div>
+
+
+        <div class="container-dash-mobile">
+            <h3 class="h3-general">Referral program</h3>
+            <div class="box-dash">
+                <div class="contain-dash">   
+                    <mat-icon class="mat-icon-size-48" svgIcon="partners"></mat-icon>    
+                    <div class="contain-dash-inner">
+                        <h3 class="h3-referral">11.930</h3>
+                        <div class="contain-dash-last-inner">Partners</div>
+                    </div>              
+                </div>
+            </div>  
+    
+    
+            <div class="box-dash">
+                <div class="contain-dash">   
+                    <mat-icon class="mat-icon-size-48" svgIcon="recieved"></mat-icon>    
+                    <div class="contain-dash-inner">
+                        <h3 class="h3-referral">$500</h3>
+                        <div class="contain-dash-last-inner">Received for all time</div>
+                    </div>              
+                </div>
+            </div>  
+    
+            <div class="box-dash">
+                <div class="contain-dash">   
+                    <mat-icon class="mat-icon-size-48" svgIcon="recievedMonth"></mat-icon>    
+                    <div class="contain-dash-inner">
+                        <h3 class="h3-referral">$2500</h3>
+                        <div class="contain-dash-last-inner">Received for month</div>
+                    </div>              
+                </div>
+            </div>  
+    
+            <div class="box-dash">
+                <div class="contain-dash">   
+                    <mat-icon class="mat-icon-size-48" svgIcon="recievedMonth"></mat-icon>    
+                    <div class="contain-dash-inner">
+                        <h3 class="h3-referral">$42.1</h3>
+                        <div class="contain-dash-last-inner">Received today</div>
+                    </div>              
+                </div>
+            </div> 
+             
+        
+            </div>
+
+            <div class="referral-banner-mobile">
+                <app-banner-referral-mobile></app-banner-referral-mobile>
+            </div>
+            
+        
+
+
+        <div class="referral-banner">
+            <app-referral-banner>
+
+            </app-referral-banner>
+
+        </div>
+
+        <div class="trans-wrapper">
+            <app-transactions *ngIf="!isMobile"></app-transactions>
+        </div>
+    
+    
+        <div class="trans-wrapper-mobile">
+            <app-transactions-mobile
+                [iconArrow]="iconArrow1"
+                [slideTransactionsMobileTable]="slideTransactionsMobileTable3"
+                *ngIf="isMobile">
+            </app-transactions-mobile>
+        </div>
+      
+    </div>
+</div>

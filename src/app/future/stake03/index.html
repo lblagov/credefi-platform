@@ -1,0 +1,123 @@
+
+<div class="wrapper">
+    <div class="container">
+        <div class="portfolio-lending">
+            <h2 class="h2-general">Credi LP BSC</h2>
+        </div>
+
+        <!-- <div>
+            <div class="div-table">
+                <div class="app-type-of-steaking">
+                    <app-type-of-steaking [logoMobile]="logoMobile" [steakingTitle]="steakingTitle"></app-type-of-steaking>
+                    <app-type-of-steaking [logoMobile]="logoMobile2" [steakingTitle]="steakingTitle2"></app-type-of-steaking>
+                    <app-type-of-steaking [logoMobile]="logoMobile2" [steakingTitle]="steakingTitle2"></app-type-of-steaking>
+                    <app-type-of-steaking [logoMobile]="logoMobile2" [steakingTitle]="steakingTitle2"></app-type-of-steaking>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="module-x-wrapper">
+            <div class="module-x-down-wrapper">
+                <div class="module-x-down w289">
+                    <mat-icon matPrefix class="mat-icon-48" svgIcon="tvl"></mat-icon>
+                    <div class="module-x-down-inner">
+                        <h4 class="h4-stake">245 233 CREDI</h4>
+                        <p class="p-stake-bigger ml16">TVL</p>
+                    </div>
+                </div>
+
+                <div class="module-x-down w164">
+                    <mat-icon matPrefix class="mat-icon-48" svgIcon="stakePercent"></mat-icon>
+                    <div class="module-x-down-inner">
+                        <h4 class="h4-stake">22%</h4>
+                        <p class="p-stake-bigger ml16">APY</p>
+                    </div>
+                </div>
+                <div class="module-x-down w164">
+                    <mat-icon matPrefix class="mat-icon-48" svgIcon="stakePercent"></mat-icon>
+                    <div class="module-x-down-inner">
+                        <h4 class="h4-stake">22%</h4>
+                        <p class="p-stake-bigger ml16">APR</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="h3-style modx">What is LP Staking pools?</h3>
+        <div class="stake02-module-x">
+            <div class="stake02--module-wrap">
+                <app-stake02-module-x [moduleImage] = "moduleImage" [h5] ="h5" [p]="p"></app-stake02-module-x>
+            </div>
+            <div class="stake02--module-wrap">
+                <app-stake02-module-x [moduleImage] = "moduleImage2" [h5] ="h5" [p]="p"></app-stake02-module-x>
+            </div>
+            <div class="stake02--module-wrap">
+                <app-stake02-module-x [moduleImage] = "moduleImage3" [h5] ="h5" [p]="p"></app-stake02-module-x>
+            </div>
+
+
+
+        </div>
+
+
+
+        <div class="app-banner-module-x">
+            <app-banner-module-x
+            [bannerImage] = "bannerImage"
+            [bannerHeader] = "bannerHeader"
+            [bannerLinearGradient] = "bannerLinearGradient">
+            </app-banner-module-x>
+        </div>
+
+
+       <div class="stake-wrapper">
+
+            <div class="stake-unstake">
+                <div class="stake-unstake-inner">
+                    <button class="button--stake h6-style" mat-button (click)="this.stakeButton($event)">
+                        Stake
+                    </button>
+                    <button class="button--unstake h6-style" mat-button (click)="this.unstakeButton($event)">
+                        Unstake
+                    </button>
+                </div>
+            </div>
+
+            <div class="stake">
+
+                <mat-form-field subscriptSizing="dynamic">
+                    <mat-icon matPrefix class="mat-icon-size-50" svgIcon="enterAmount"></mat-icon>
+                    <input matInput placeholder="Enter the amount">
+                    <button class="logo h6-style" mat-button>
+                        MAX
+                    </button>
+                </mat-form-field>
+                <div class="stake-available">
+                    <span class="mr12">Available to stake: <span class="value">2,098,049 </span> <span class="credi">CREDI LP</span> </span>
+                    <span >Staked amount: <span class="value">123,322 </span> <span class="credi">CREDI LP</span> </span>
+                </div>
+                <div class="dropDown">
+                    <mat-select disableOptionCentering
+                    placeholder="Staking period"
+                    panelClass="myPanelClass"
+                    class="mySelectClass">
+                        <!-- <mat-option *ngFor="let item of list" [value]="item">{{item}}</mat-option> -->
+                    </mat-select>
+                    <mat-icon matPrefix class="mat-icon-size-50 mat-icon-calendar" svgIcon="calendar"></mat-icon>
+                </div>
+                <button class="button--stake-credi h6-style" mat-button>
+                    {{buttonStakeCrediLabel}}
+                </button>
+            </div>
+        </div>
+
+        <!-- <div id="dashboard-footer">
+            <footer>
+            <span>@2024 Credefi</span>
+            <span class="fl-right">
+                <span>Powered by &nbsp;<u>Experian</u></span>
+                <span>All rights reserved</span>
+            </span>
+            </footer>
+        </div> -->
+    </div>
+</div>

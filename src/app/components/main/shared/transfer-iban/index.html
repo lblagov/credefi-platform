@@ -1,0 +1,109 @@
+<div class="header">
+  Trasnfer
+  <button mat-icon-button (click)="ref.close()">
+    <mat-icon>close</mat-icon>
+  </button>
+</div>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <h3>Sender:</h3>
+  <div class="dropDown">
+    <mat-icon matPrefix class="prefix" svgIcon="currency-outline"> </mat-icon>
+
+    <mat-select
+      disableOptionCentering
+      placeholder="From"
+      class="credi-select"
+      formControlName="method"
+    >
+      <mat-option
+        *ngFor="let item of currencies; trackBy: track('type')"
+        [value]="item.type"
+        >{{item.name}}
+      </mat-option>
+    </mat-select>
+
+    <mat-select
+      disableOptionCentering
+      placeholder="Currency"
+      class="credi-select"
+      formControlName="currency"
+      *ngIf="form.get('method').value == 'bank'"
+    >
+      <mat-option
+        *ngFor="let item of currencynames; trackBy: track('type')"
+        [value]="item.name"
+        >{{item.name}}
+      </mat-option>
+    </mat-select>
+
+    <mat-select
+      disableOptionCentering
+      placeholder="Currency"
+      class="credi-select"
+      formControlName="currency"
+      *ngIf="form.get('method').value == 'crypto'"
+    >
+      <mat-option
+        *ngFor="let item of currencynamescrypto; trackBy: track('type')"
+        [value]="item.name"
+        >{{item.name}}
+      </mat-option>
+    </mat-select>
+  </div>
+  <h3>Transfer to:</h3>
+  <mat-form-field class="credi-outline">
+    <mat-icon matPrefix class="prefix" svgIcon="wallet"> </mat-icon>
+    <input
+      matInput
+      autocomplete
+      type="text"
+      placeholder="IBAN OR Wallet Address"
+      formControlName="wallet"
+
+    />
+    <mat-error *ngFor="let error of form.get('wallet') | error | slice:0:1">
+      {{ error }}
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="credi-outline">
+    <mat-icon matPrefix class="prefix" svgIcon="wallet"> </mat-icon>
+    <input
+      matInput
+      autocomplete
+      type="text"
+      placeholder="Receiver names"
+    />
+  </mat-form-field>
+  <mat-form-field class="credi-outline">
+    <mat-select
+      disableOptionCentering
+      placeholder="Reason"
+      class="credi-select"
+    >
+      <mat-option
+        *ngFor="let item of reasons; trackBy: track('type')"
+        [value]="item.type"
+        >{{item.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field class="credi-outline">
+    <mat-icon matPrefix class="prefix" svgIcon="currency"> </mat-icon>
+    <input
+      matInput
+      autocomplete
+      type="number"
+      placeholder="Amount"
+      formControlName="amount"
+    />
+    <mat-error *ngFor="let error of form.get('amount') | error | slice:0:1">
+      {{ error }}
+    </mat-error>
+  </mat-form-field>
+
+  <button class="button-login" mat-button [disabled]="isSubmit()">
+    {{ isSubmit() ? 'Loading...' : 'Submit'}}
+  </button>
+</form>

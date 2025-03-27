@@ -1,0 +1,65 @@
+<div class="heading">
+    <h3>All Transactions</h3>
+    <button
+        class="button-filter"
+        mat-button
+    >
+        <span>Filter</span> <mat-icon
+            class="mat-icon-button-filter"
+            svgIcon="buttonFilter"
+        ></mat-icon>
+    </button>
+</div>
+<div class="trans-wrapper">
+    <div class="trans-container">
+        <div class="table-head">
+            <span>Tx</span>
+            <span>Wallet</span>
+            <span>Status</span>
+            <span>Receiver</span>
+            <span>Block</span>
+            <span>Action</span>
+        </div>
+        <div
+            class="table-body"
+            *ngFor="let item of items(); trackBy: track"
+        >
+            <a
+                href="{{exporer}}/{{item.tx.hash}}"
+                target="_blank"
+            >
+                {{ item.tx.hash | address }}
+            </a>
+            <div class="wallet">
+                <mat-icon
+                    class="mat-icon-size-22-only"
+                    svgIcon="transactionsCircle"
+                ></mat-icon>
+                <span [copy]="item.tx.Account">
+                    {{ item.tx.Account | address }}
+                </span>
+            </div>
+            <span><button
+                    class="button-trans-confirm"
+                    mat-button
+                >
+                    Confirmed
+                </button>
+            </span>
+            <span [copy]="item.tx.to">{{ item.tx.Destination | address }}</span>
+            <span>{{ item.tx.date | hextodec }}</span>
+            <span class="action"><span>Tx</span> <mat-icon
+                    class="header-icon arrow-up-right"
+                    svgIcon="arrowUpRight"
+                ></mat-icon></span>
+        </div>
+        <button
+            *ngIf="!loaded()"
+            class="button-dash-300"
+            mat-button
+            (click)="wallet.address() ? loadTransactions() : connect()"
+        >
+            {{ wallet.address() ? "Show 10 more transactions" : "Connect wallet" }}
+        </button>
+    </div>
+</div>

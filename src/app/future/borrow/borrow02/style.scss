@@ -1,0 +1,214 @@
+.logo{
+    border: none;
+    background-color:  #F6F5F8;
+  }
+  
+  mat-icon.mat-icon-size-arrow {
+    /* height: 7px; */
+    width: 9px;
+    padding-left: 14.4px;
+    /* padding-bottom: 15px; */
+    /* padding-left: 5rem; */
+  }
+  input.mat-mdc-input-element.mat-mdc-form-field-input-control {
+    width: 412px;
+  }
+
+
+  .did-you-know .step1of3-lend {
+    height: 60px;
+    width: 60px;
+    /* position: absolute; */
+    bottom: 0px;
+    /* z-index: 300; */
+  }
+
+  .container-left-lend .h1-login {
+    margin-top: 64px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 140%;
+    text-align: left;
+    vertical-align: middle;
+    color: #11121C;
+    fill:#11121C;
+  }
+
+  input::placeholder {
+    color: #11121C;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    
+  }
+  input.fill-field::placeholder {
+    color: rgba(7,7,7,0.4);
+  }
+
+  span.span-back{
+    color: #11121C;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: bold;
+    display: inline-flex;
+    height: 60px;
+    align-items: center;
+  }
+  .div-bot{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 570px;
+  }
+
+  .did-you-know h1.lend-header span{
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .div-button-login{
+    margin: 0;
+    width: 312px;
+    height: 50px;
+  }
+
+@media (min-width: 701px) {
+
+
+  button.button-next-step {
+    height: 60px;
+    width: 226px !important;
+    border-radius: 100px;
+    background-color:  #5C68FF;
+    border-width: 0px;
+    color: white;
+    size: 16px;
+    line-height:  140%;
+    font-weight: bold;
+    text-align: middle;
+    margin-top: 32px;
+    margin-bottom: 12px;
+  }
+
+
+    mat-icon.mat-icon-logo-mobile {
+      display: none;
+    }
+
+    .mat-mdc-form-field{
+        width: 570px;
+      }
+    
+    
+  }
+
+  .go-back{
+    font-size: 16px;
+    color: #11121C;
+    display: flex;
+    font-weight: bold;
+    padding-left: 170px;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 700px) {
+
+    #container-lend {
+      width: 360px;
+      height: 800px;
+      grid-template-columns: 360px;
+      /* justify-items: center; */
+      /* margin-left: 29px; */
+    }
+
+    .container-left-lend {
+      margin-left: 24px;
+      /* grid-template-columns: 360px; */
+      grid-template-rows: 82px 510px 114px 68px;
+      grid-template-rows: 732px 68px;
+      grid-template-rows: 690px 114px;
+    }
+
+    .container-right-lend {
+      display: none;
+    }
+    
+    .button-login {
+      height: 50px;
+      width: 312px;
+      border-radius: 100px;
+      background-color:  #5C68FF;
+      border-width: 0px;
+      color: white;
+      size: 16px;
+      line-height:  140%;
+      font-weight: bold;
+      text-align: middle;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    .align-center {
+      transform: translateX(-12px);
+    }
+
+    .container-left-lend .h1-login{
+      display: flex;
+      justify-content: center;
+      margin: 0px;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 34px;
+      /* padding-right: 70px; */
+      /* text-align: center; */
+      /* vertical-align: middle; */
+      color: #11121C;
+      fill:#11121C;
+    }
+
+    .mat-mdc-form-field{
+      width: 312px;
+      /* height: 60px; */
+    }
+    span.span-back{
+      /* color: #11121C;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: bold;
+      display: inline-flex;
+      height: 60px;
+      align-items: center; */
+      justify-content: center;
+    }
+    .div-bot{
+      /* padding-bottom: 550px; */
+
+      display: flex;
+      flex-direction: column-reverse;
+      width: 312px;
+    }
+
+    input.mat-mdc-input-element.mat-mdc-form-field-input-control {
+      width: 184px;
+    }
+
+    footer {
+      width: auto;
+    }
+    
+    /* .icons {
+      display: flex;
+      justify-content: center;
+    } */
+
+    /* .go-back{
+        font-size: 16px;
+        color: #11121C;
+        display: flex;
+        font-weight: bold;
+        padding-left: 130px;
+        justify-content: start;
+      } */
+   
+  }
+

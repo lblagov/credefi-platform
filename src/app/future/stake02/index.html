@@ -1,0 +1,149 @@
+
+<div class="wrapper">
+    <div class="background-first-column">
+
+    </div>
+    <div class="app-sidebar">
+        <app-sidebar [height]="height"> </app-sidebar>
+    </div>
+    <div class="app-header">
+        <app-header [currentPage] ="currentPage"></app-header>
+    </div>
+
+    <div class="container">
+        <div class="portfolio-lending">
+            <h2 class="h2-general">Module X</h2>
+        </div>
+
+        <!-- <div>
+            <div class="div-table">
+                <div class="app-type-of-steaking">
+                    <app-type-of-steaking [logoMobile]="logoMobile" [steakingTitle]="steakingTitle"></app-type-of-steaking>
+                    <app-type-of-steaking [logoMobile]="logoMobile2" [steakingTitle]="steakingTitle2"></app-type-of-steaking>
+                    <app-type-of-steaking [logoMobile]="logoMobile2" [steakingTitle]="steakingTitle2"></app-type-of-steaking>
+                    <app-type-of-steaking [logoMobile]="logoMobile2" [steakingTitle]="steakingTitle2"></app-type-of-steaking>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="module-x-wrapper">
+            <div class="module-x">
+                <div class="module-x-inner">
+                    <mat-icon matPrefix class="mat-icon-56" svgIcon="amount"></mat-icon>
+                    <div class="module-x-wrap">
+                        <div class="top">
+                            <span class="h3-stake">${{fn(value)}}</span>
+                            <span class="span-stake">/</span>
+                            <span class="p-stake">CREDI</span>
+                        </div>
+                        <p class="p-stake-bigger">Staked amount</p>
+                    </div>
+
+                </div>
+
+                <div class="module-x-inner">
+                    <mat-icon matPrefix class="mat-icon-56" svgIcon="stake2"></mat-icon>
+                    <div class="module-x-wrap">
+                        <div class="top">
+                            <span class="h3-stake">2,098,049</span>
+                            <span class="span-stake">/</span>
+                            <span class="p-stake">CREDI</span>
+                        </div>
+                        <p class="p-stake-bigger">Available to stake</p>
+                    </div>
+                </div>
+
+                <mat-slider color="error" class="mat-slider" min="0" max="2098049" step="100" value="300000">
+                    <input matSliderThumb [(ngModel)]="value">
+                </mat-slider>
+
+            </div>
+            <div class="module-x-down-wrapper">
+                <div class="module-x-down">
+                    <mat-icon matPrefix class="mat-icon-48" svgIcon="tvl"></mat-icon>
+                    <div class="module-x-down-inner">
+                        <h4 class="h4-stake">245 233 CREDI</h4>
+                        <p class="p-stake-bigger ml16">X TVL</p>
+                    </div>
+                </div>
+
+                <div class="module-x-down w356">
+                    <mat-icon matPrefix class="mat-icon-48" svgIcon="rate"></mat-icon>
+                    <div class="module-x-down-inner">
+                        <h4 class="h4-stake">1 CREDI = 0.66 xCREDI</h4>
+                        <p class="p-stake-bigger ml16">Rate Stake</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="h3-style modx">What is Module X?</h3>
+        <div class="stake02-module-x">
+            <div class="stake02--module-wrap">
+                <app-stake02-module-x [moduleImage] = "moduleImage" [h5] ="h5" [p]="p"></app-stake02-module-x>
+            </div>
+            <div class="stake02--module-wrap">
+                <app-stake02-module-x [moduleImage] = "moduleImage2" [h5] ="h5" [p]="p"></app-stake02-module-x>
+            </div>
+            <div class="stake02--module-wrap">
+                <app-stake02-module-x [moduleImage] = "moduleImage3" [h5] ="h5" [p]="p"></app-stake02-module-x>
+            </div>
+
+
+
+        </div>
+
+
+
+        <div class="app-banner-module-x">
+            <app-banner-module-x
+            [bannerImage] = "bannerImage"
+            [bannerHeader] = "bannerHeader"
+            [bannerLinearGradient] = "bannerLinearGradient">
+            </app-banner-module-x>
+        </div>
+
+
+       <div class="stake-wrapper">
+
+            <div class="portfolio-lending">
+               <h2 class="h3-style black">Stake</h2>
+            </div>
+            <div class="stake">
+
+                <mat-form-field subscriptSizing="dynamic">
+                    <mat-icon matPrefix class="mat-icon-size-50" svgIcon="enterAmount"></mat-icon>
+                    <input matInput placeholder="Enter the amount">
+                    <button class="logo h6-style" mat-button>
+                        MAX
+                    </button>
+                </mat-form-field>
+                <div class="stake-available">
+                    <span class="mr12">Available to stake: <span class="value">2,098,049 </span> <span class="credi">CREDI</span> </span>
+                    <span >Staked amount: <span class="value">123,322 </span> <span class="credi">CREDI</span> </span>
+                </div>
+                <div class="dropDown">
+                    <mat-select disableOptionCentering
+                    placeholder="Staking period"
+                    panelClass="myPanelClass"
+                    class="mySelectClass">
+                        <!-- <mat-option *ngFor="let item of list" [value]="item">{{item}}</mat-option> -->
+                    </mat-select>
+                    <mat-icon matPrefix class="mat-icon-size-50 mat-icon-calendar" svgIcon="calendar"></mat-icon>
+                </div>
+                <button class="button--stake-credi h6-style" mat-button>
+                    Stake CREDI
+                </button>
+            </div>
+        </div>
+
+        <div id="dashboard-footer">
+            <footer>
+            <span>@2024 Credefi</span>
+            <span class="fl-right">
+                <span>Powered by &nbsp;<u>Experian</u></span>
+                <span>All rights reserved</span>
+            </span>
+            </footer>
+        </div>
+    </div>
+</div>

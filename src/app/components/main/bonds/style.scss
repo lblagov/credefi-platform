@@ -1,0 +1,263 @@
+:host {
+  max-width: 880px;
+  padding: 32px 0 0 32px;
+}
+
+div.banner-wrapper {
+  padding-top: 32px;
+}
+
+div.portfolio-lending {
+  display: flex;
+  justify-content: space-between;
+
+  &.margin {
+    margin: 18px 0 12px 0;
+  }
+}
+
+div.app-type-of-staking {
+  margin-top: 32px;
+}
+
+div.app-portfolio-staking {
+  margin-top: 24px;
+}
+
+div.banner {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 20px;
+  background: linear-gradient(154deg, #6facff 0%, #5c68ff 0.01%, #2984fe 100%);
+  padding: 36px;
+  position: relative;
+  margin: 32px 0;
+  overflow: hidden;
+
+  h3 {
+    color: #fcfdfd;
+    font-size: 24px;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0 0 12px 0;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 0;
+    position: relative;
+    z-index: 2;
+    color: rgba(252, 253, 253, 0.5);
+  }
+
+  mat-icon.mat-icon-button-filter {
+    width: 200px;
+  }
+
+  lazy-image {
+    position: absolute;
+    height: 265px;
+    top: -35%;
+    right: 6%;
+    transform: rotate(-41.919deg);
+    z-index: 1;
+  }
+}
+
+div.chart-table {
+  border: 1px solid #f2f2f2;
+  border-radius: 100px;
+  margin-top: 18px;
+  padding: 18px;
+  background-color: #fff;
+
+  .mat-icon-size-50-only {
+    width: 50px;
+    height: 50px;
+  }
+
+  div.box {
+    display: flex;
+    width: 100%;
+
+    div.product {
+      flex: 1.5;
+    }
+
+    div.table-buttons {
+      flex: 0.6;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      a {
+        max-width: 100px;
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+
+    div.cell {
+      &:not(:first-of-type) {
+        border-left: 1px solid #f2f2f2;
+      }
+
+      flex: 1;
+      padding: 0 12px;
+
+      div {
+        font-size: 16px;
+        font-weight: 700;
+        color: #11121c;
+        margin-bottom: 4px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(7, 7, 7, 0.4);
+      }
+    }
+  }
+}
+
+div.chart-table-expansion {
+  background-color: #fff;
+  width: 100%;
+
+  .mat-icon-size-50-only {
+    width: 50px;
+    height: 50px;
+  }
+
+  div.box {
+    display: flex;
+    width: 100%;
+
+    div.product {
+      flex: 1.5;
+    }
+
+    div.table-buttons {
+      flex: 0.6;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      a {
+        max-width: 100px;
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+
+    div.cell {
+      &:not(:first-of-type) {
+        border-left: 1px solid #f2f2f2;
+      }
+
+      flex: 1;
+      padding: 0 12px;
+
+      div {
+        font-size: 16px;
+        font-weight: 700;
+        color: #11121c;
+        margin-bottom: 4px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(7, 7, 7, 0.4);
+      }
+    }
+  }
+}
+
+button.button-trans-confirm {
+  padding: 6px 12px;
+  background-color: rgba(79, 166, 119, 0.1);
+  border: 1px solid #4fa677;
+  border-radius: 18px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #4fa677;
+  margin: 5px 20px;
+}
+.status {
+  margin-left: 26px;
+}
+
+button.button-overview {
+  color: rgba(17, 18, 28, 1);
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--color-styles-light-version-blue, #f3f4fa);
+  border-radius: 36px;
+  margin-right: 6px;
+  padding: 0 12px;
+  &.active {
+    color: #fff !important;
+    background-color: #5c68ff !important;
+  }
+}
+
+.expansion-container {
+  margin-top: 14px;
+  h4 {
+    margin: 4px 0;
+    font-size: 21px;
+    font-weight: 600;
+  }
+}
+
+.table-body {
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  align-items: center;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  mat-icon {
+    margin-right: 6px;
+  }
+
+  a,
+  div.wallet,
+  span {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 600;
+    color: #07070766;
+    display: flex;
+    align-items: center;
+  }
+
+  a.action {
+    flex: unset;
+    min-width: 50px;
+  }
+
+  button.button-trans-confirm {
+    padding: 6px 12px;
+    background-color: rgba(79, 166, 119, 0.1);
+    border: 1px solid #4fa677;
+    border-radius: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #4fa677;
+  }
+}
+
+@media (max-width: 870px) {
+  :host {
+    padding: 0 6px !important;
+  }
+}

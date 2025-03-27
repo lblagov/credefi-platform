@@ -1,0 +1,122 @@
+<div class="wrapper">
+    <div class="background-first-column">
+
+    </div>
+    <div class="app-sidebar">
+        <app-sidebar [height]="height"> </app-sidebar>
+    </div>
+    <div class="app-header">
+        <app-header [currentPage]="currentPage"></app-header>
+    </div>
+    <div class="container">
+        <div class="banner-wrapper">
+            <app-banner
+                [title]="title"
+                [titleColor]="titleColor"
+                [description]="description"
+                [descriptionColor]="descriptionColor"
+                [image]="image"
+                [imgProps]="imgProps"
+                [linearGradient]="linearGradient"
+            ></app-banner>
+        </div>
+
+
+        <div class="heading">
+            <div>
+                <a
+                    class="remove-underline-link"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}"
+                    routerLink="/earn/p2p"
+                >
+                    <button
+                        class="button-filter-catalogue"
+                        mat-button
+                    >Projects catalogue</button>
+                </a>
+                <a
+                    class="remove-underline-link"
+                    routerLinkActive="active"
+                    routerLink="/earn/p2p02"
+                >
+                    <button
+                        class="button-filter-project"
+                        mat-button
+                    >My projects </button>
+                </a>
+            </div>
+            <button
+                class="button-filter"
+                mat-button
+            >
+                <span class="h-16-style-bold">Filter</span> <mat-icon
+                    class="mat-icon-button-filter"
+                    svgIcon="buttonFilter"
+                ></mat-icon>
+            </button>
+        </div>
+
+
+        <app-bonds02-table
+            [iconArrow]="iconArrow1"
+            [bondsIcon]="bondsIcon1"
+            [bonds02Id]="bonds02Id1"
+            [slideBonds02Table]="slideBonds02Table1"
+        ></app-bonds02-table>
+        <app-bonds02-table
+            [iconArrow]="iconArrow2"
+            [bondsIcon]="bondsIcon2"
+            [bonds02Id]="bonds02Id2"
+            [slideBonds02Table]="slideBonds02Table2"
+        ></app-bonds02-table>
+        <app-bonds02-table
+            [iconArrow]="iconArrow3"
+            [bondsIcon]="bondsIcon3"
+            [bonds02Id]="bonds02Id3"
+            [slideBonds02Table]="slideBonds02Table3"
+        ></app-bonds02-table>
+        <app-bonds02-table
+            [iconArrow]="iconArrow4"
+            [bondsIcon]="bondsIcon4"
+            [bonds02Id]="bonds02Id4"
+            [slideBonds02Table]="slideBonds02Table4"
+        ></app-bonds02-table>
+        <app-bonds02-table
+            [iconArrow]="iconArrow5"
+            [bondsIcon]="bondsIcon5"
+            [bonds02Id]="bonds02Id5"
+            [slideBonds02Table]="slideBonds02Table5"
+        ></app-bonds02-table>
+        <app-bonds02-table
+            [iconArrow]="iconArrow6"
+            [bondsIcon]="bondsIcon6"
+            [bonds02Id]="bonds02Id6"
+            [slideBonds02Table]="slideBonds02Table6"
+        ></app-bonds02-table>
+        <app-bonds02-table
+            [iconArrow]="iconArrow7"
+            [bondsIcon]="bondsIcon7"
+            [bonds02Id]="bonds02Id7"
+            [slideBonds02Table]="slideBonds02Table7"
+        ></app-bonds02-table>
+        <app-bonds02-table
+            [iconArrow]="iconArrow8"
+            [bondsIcon]="bondsIcon8"
+            [bonds02Id]="bonds02Id8"
+            [slideBonds02Table]="slideBonds02Table8"
+        ></app-bonds02-table>
+
+
+        <div id="dashboard-footer">
+            <footer>
+                <span>@2024 Credefi</span>
+                <span class="fl-right">
+                    <span>Powered by &nbsp;<u>Experian</u></span>
+                    <span>All rights reserved</span>
+                </span>
+            </footer>
+        </div>
+
+    </div>
+</div>

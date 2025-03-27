@@ -1,0 +1,206 @@
+<div class="header-user">
+    <mat-icon
+        class="header--icon-user header--element"
+        svgIcon="userMobile"
+    ></mat-icon>
+
+    <div class="header--element">Mark Zuckerberg</div>
+    <mat-icon
+        (click)="changeEarnIcon()"
+        class="header-icon arrow header--element"
+        svgIcon={{iconArrow}}
+    ></mat-icon>
+
+    <section
+        *ngIf="iconArrow === 'ArrowUp'"
+        class="dash-verify"
+    >
+        <div class="dash-top">
+            <div class="add-img">
+                <div class="add-img-circle">
+                    <mat-icon
+                        class="header-icon plus"
+                        svgIcon="plus"
+                    ></mat-icon>
+                </div>
+            </div>
+            <div class="name-email">
+                <h6>Hello {{ "user" }}</h6>
+                <p>{{ "email" }}</p>
+            </div>
+        </div>
+        <div id="take-five">
+            <div id="five-back">
+                <div class="five-back-inner">
+                    <mat-icon
+                    class="header-icon mobile-icon-header"
+                    svgIcon="Whitelist"
+                    ></mat-icon>
+                    <div>
+                        Whitelist
+                    </div>
+                </div>
+                <div class="five-back-inner">
+                    <mat-icon
+                    class="header-icon mobile-icon-header"
+                    svgIcon="Profile"
+                    ></mat-icon>
+                    <div>
+                        Profile
+                    </div>
+                </div>
+                <div class="five-back-inner">
+                    <mat-icon
+                    class="header-icon mobile-icon-header"
+                    svgIcon="Referral"
+                    ></mat-icon>
+                    <div>
+                        Referral
+                    </div>
+                </div>
+            </div>
+            <div id="five-front">
+                <span>Verify your identity</span>
+                <div>
+                    It will take no more than 5 minutes
+                </div>
+                <mat-icon
+                    class="header-icon arrowUpRight"
+                    svgIcon="arrowUpRightMobile"
+                ></mat-icon>
+            </div>
+        </div>
+        <button
+            class="button-dash"
+            mat-button
+        >Logout</button>
+    </section>
+</div>
+
+<div class="header-section">
+    <mat-icon
+        class="mat-icon-size-menu header--element"
+        svgIcon="dashboard"
+    ></mat-icon>
+    <div class="header--element">Dashboard</div>
+</div>
+
+<div class="header-section">
+    <mat-icon
+        class="mat-icon-size-menu header--element"
+        svgIcon="lend"
+    ></mat-icon>
+    <div class="header--element">Lend</div>
+</div>
+
+<div class="header-section">
+    <mat-icon
+        class="mat-icon-size-menu header--element"
+        svgIcon="borrow"
+    ></mat-icon>
+    <div class="header--element">Borrow</div>
+</div>
+
+<div class="header-section header-user">
+    <mat-icon
+        class="mat-icon-size-menu header--element"
+        svgIcon="earn"
+    ></mat-icon>
+    <div class="header--element">Earn</div>
+    <mat-icon
+        class="header-icon arrow header--element"
+        svgIcon="arrow"
+    ></mat-icon>
+</div>
+
+<div class="header-section">
+    <mat-icon
+        class="mat-icon-size-menu header--element"
+        svgIcon="stake"
+    ></mat-icon>
+    <div class="header--element">Stake</div>
+</div>
+
+<div class="header-section">
+    <mat-icon
+        class="mat-icon-size-menu header--element"
+        svgIcon="wallet"
+    ></mat-icon>
+    <div class="header--element">Wallet</div>
+</div>
+
+<div class="header-section">
+    <mat-icon
+        class="mat-icon-size-menu header--element"
+        svgIcon="allTransactions"
+    ></mat-icon>
+    <div class="header--element">All transactions</div>
+</div>
+
+<div class="header-section">
+    <mat-icon
+        class="mat-icon-size-menu header--element"
+        svgIcon="goBack"
+    ></mat-icon>
+    <div class="header--element goBack">Go back to main page</div>
+</div>
+
+<div class="header-section darklight">
+    <div class="header--element">Dark</div>
+    <mat-icon
+        class="mat-icon-size-menu header--element icon-darklight"
+        svgIcon="darkLight"
+    ></mat-icon>
+    <div class="header--element goBack">Light</div>
+</div>
+
+
+
+    <!-- <nav
+        *ngIf="iconArrow === 'ArrowUp'"
+        class="dash-verify"
+        class="bot-user-details"
+    >
+        <h3>User Details</h3>
+        <div class="dashboard">
+            <mat-icon
+                class="header-icon sun"
+                svgIcon="Vector"
+            ></mat-icon>
+            <div
+                class="box"
+                (click)="connect()"
+            >
+                <mat-icon
+                    class="header-icon fox"
+                    svgIcon="MetaMask_Fox"
+                ></mat-icon>
+                <p>0x7C28...B6Q0</p>
+            </div>
+            <div class="box2">
+                <div class="red-circle"></div>
+                <p>Get verified</p>
+            </div>
+            <mat-icon
+                class="header-icon bell"
+                svgIcon="bell-04"
+            ></mat-icon>
+            <img
+                class="images"
+                src="./assets/images/image.png"
+            />
+            <div class="dash-name">
+                <div>Mark Zuckerberg </div>
+                <span>Setting</span>
+                <button
+                    style="border: 0;background-color:transparent;"
+                    (click)="changeEarnIcon()"
+                >
+                    <mat-icon
+                        class="header-icon arrow"
+                        svgIcon={{iconArrow}}
+                    ></mat-icon>
+                </button>
+            </div>
+        </div>
+    </nav> -->

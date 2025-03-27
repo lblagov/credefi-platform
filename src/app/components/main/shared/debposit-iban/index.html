@@ -1,0 +1,21 @@
+<div class="header">
+    Deposit
+    <button
+        mat-icon-button
+        (click)="ref.close()"
+    >
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<div class="deposit">
+
+    <div class="address" *ngFor="let d of data | keyvalue">
+        <div class="text">
+            <p [copy]="d.value">{{ d.key.toUpperCase() }}: {{ d.value }}</p>
+            <mat-icon svgIcon="iconCopy" [copy]="d.value" mat-ripple></mat-icon>
+        </div>
+    </div>
+
+
+</div>

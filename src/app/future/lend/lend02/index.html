@@ -1,0 +1,84 @@
+<div id="container-lend">
+
+    <div class="split left">
+      <div class="container-left-lend">
+        <form class="login-form">
+          <mat-icon class="mat-icon-logo-mobile" svgIcon="logoMobile"></mat-icon>
+          <hr/>
+          <div class="align-center">
+            <h1 class="h1-login">Select details</h1>
+          </div>
+
+          <mat-form-field>
+            <mat-icon matPrefix class="mat-icon-size-50" svgIcon="wallet50px"></mat-icon>
+            <input matInput placeholder="Select wallet">
+            <button class="logo" (click)="selectWallet()">
+                <mat-icon class="mat-icon-size-arrow" svgIcon="arrow"></mat-icon>
+           </button>
+          </mat-form-field>
+
+
+          <mat-form-field>
+            <mat-icon matPrefix class="mat-icon-size-50" svgIcon="currency50px"></mat-icon>
+            <input matInput placeholder="Select currency">
+            <button class="logo" (click)="selectWallet()">
+                <mat-icon class="mat-icon-size-arrow" svgIcon="arrow"></mat-icon>
+           </button>
+          </mat-form-field>
+
+
+
+          <mat-form-field>
+            <mat-icon matPrefix class="mat-icon-size-50" svgIcon="fill50px"></mat-icon>
+            <input  class="fill-field" matInput placeholder="Fill in the field">
+          </mat-form-field>
+
+
+
+          <mat-form-field>
+            <mat-icon matPrefix class="mat-icon-size-50" svgIcon="month50px"></mat-icon>
+            <input matInput placeholder="Choose month">
+            <button class="logo" (click)="selectWallet()">
+                <mat-icon class="mat-icon-size-arrow" svgIcon="arrow"></mat-icon>
+           </button>
+          </mat-form-field>
+
+          <div class="div-bot">
+            <span class="span-back">Back</span>
+            <button class="button-next-step div-button-login" mat-button>Next step</button>
+          </div>
+        </form>
+
+        <div *ngIf = "screenWidth <= 700">
+          <hr />
+          <footer>
+            <span>@2024 Credefi</span>
+            <span>All rights reserved</span>
+          </footer>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="split right-lend">
+        <div class="container-right-lend">
+
+
+          <mat-icon class="mat-icon-ellipse"  svgIcon="ellipse01"></mat-icon>
+          <mat-icon class="mat-icon-ellipse-2"  svgIcon="ellipse02"></mat-icon>
+          <mat-icon class="mat-icon-ellipse-3"  svgIcon="ellipse03"></mat-icon>
+
+          <div class="did-you-know">
+            <h1 class="lend-header">
+                <span>Get higher APY</span> and Insurance on your lending activity by staking $CREDI in a simple step.
+            </h1>
+
+
+            <mat-icon class="step1of3-lend" svgIcon="step"></mat-icon>
+
+            <img class="images" src="./assets/images/StepsSmaller.png"/>
+          </div>
+
+        </div>
+    </div>
+  </div>

@@ -1,0 +1,106 @@
+.h3{
+    /* padding-left: 70px; */
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 140%;
+    /* identical to box height, or 34px */
+    
+    text-align: center;
+    
+    /* Color styles/Light version/Black */
+    
+    color: #11121C;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+
+.p{
+    /* Text style/16px/Regular */
+
+font-family: 'Mulish';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 140%;
+/* or 22px */
+
+text-align: center;
+
+/* Color styles/Light version/Body */
+
+color: rgba(7, 7, 7, 0.4);
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+
+button.button-warning-confirm{
+    height: 60px ;
+    width: 164.98px;
+    border-radius: 100px;
+    background-color:  #5C68FF;
+    border-width: 0px;
+    color: white !important;
+    font-size: 16px;
+    line-height:  140%;
+    font-weight: bold;
+  }
+
+  button.button-warning-cancel{
+    height: 60px ;
+    width: 164.98px;
+    border-radius: 100px;
+    background-color:  #F6F5F8;
+    border: 1px solid rgba(7,7,7,0.1);
+    color: #11121C !important;
+    font-size: 16px;
+    line-height:  140%;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .div-buttons{
+    display: flex;
+    width: 342px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-self: end;
+  }
+
+  .image-style{
+    padding-left: 139px;
+    padding-top: 37px;
+  }
+
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    padding-top: 37px !important;
+    width:  398px;
+    height: 415px;
+  }
+
+  .outer {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 388px;
+  }
+
+  .inner {
+    border: none;
+    width: 378px;
+    margin: 0 auto;
+    margin-top: 5px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+  }

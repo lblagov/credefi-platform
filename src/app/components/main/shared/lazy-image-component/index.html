@@ -1,0 +1,22 @@
+<div
+    #container
+    [style.width]="width"
+    [style.height]="height"
+>
+    <div
+        class="ng-loader-image"
+        #loader
+    >
+
+    </div>
+    <img
+        #img
+        [style.object-fit]="objectFit"
+        [style.vertical-align]="verticalAlign"
+        [style.height]="height"
+        [style.width]="width"
+        [style.border-radius]="borderRadius"
+        alt=""
+        decoding="async"
+    />
+</div>

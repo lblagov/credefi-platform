@@ -1,0 +1,24 @@
+<div class="header">
+    Alert
+    <button
+        mat-icon-button
+        (click)="ref.close()"
+    >
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<div class="deposit">
+    <p class="text">
+        {{ data.message }}
+    </p>
+
+</div>
+
+<button
+    class="button-login"
+    mat-button
+    (click)="ref.close()"
+>
+    Submit
+</button>

@@ -1,0 +1,23 @@
+<div class="graph">
+    <div class="content">
+        <div class="bars" *ngFor="let item of List">
+            
+            <span   class="span-name">{{item.name}}</span>
+
+            <mat-icon class="bar-image" svgIcon="chartClose"></mat-icon>
+            <div class="div-wrapper">           
+            <p class="span-value">{{item.Value}} %</p>
+
+
+        </div>
+            <div class="bar" 
+            [style.background-image]="item.Color" 
+            [style.height]='item.Size'></div>
+    
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="legends">
+        <span *ngFor="let item of List">{{item.Legend}}</span>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="dialog">
+    <p
+        class="text"
+        [innerHTML]="translations['description']"
+    >
+    </p>
+</div>
+
+<form
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+>
+
+    <div class="flex">
+        <div class="item">
+            <mat-form-field class="credi-outline">
+                <mat-icon
+                    matPrefix
+                    class="prefix"
+                    svgIcon="password"
+                >
+                </mat-icon>
+                <input
+                    matInput
+                    autocomplete
+                    type="text"
+                    placeholder="One-time code"
+                    formControlName="code"
+                >
+                <mat-error *ngFor="let error of form.get('code') | error | slice:0:1">
+                    {{ error }}
+                </mat-error>
+            </mat-form-field>
+            <mat-checkbox
+                class="wrap"
+                formControlName="read"
+                [class.error]="submitted && form.get('read')?.hasError('required')"
+            >{{ translations['read'] }}</mat-checkbox>
+            <button
+                class="button-primary"
+                mat-ripple
+                type="button"
+                (click)="copy()"
+            >
+                {{ translations['copy'] }}
+            </button>
+        </div>
+    </div>
+    <button
+        class="button-primary"
+        mat-ripple
+    >
+        {{ translations['continue'] }}
+    </button>
+</form>

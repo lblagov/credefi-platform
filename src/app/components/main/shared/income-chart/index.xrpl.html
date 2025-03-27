@@ -1,0 +1,123 @@
+<div class="income">
+    <div>
+        <div class="btn-wrapper">
+            <h4>Monthly income</h4>
+            <!-- <button
+                class="button-accent"
+                matRipple
+            >
+                <span>Monthly</span>
+                <mat-icon
+                    class="mat-icon-size-arrow"
+                    svgIcon="arrow"
+                ></mat-icon>
+            </button> -->
+        </div>
+        <canvas #barChar>
+        </canvas>
+    </div>
+    <div class="chart-buttons">
+        <button
+            class="button-primary"
+            matRipple
+        >
+            Autonomous earning
+        </button>
+        <button
+            class="button-accent"
+            matRipple
+            disabled
+        >
+            Portfolio lend
+        </button>
+
+        <button
+            class="button-accent"
+            matRipple
+            disabled
+        >
+            Corporate bonds
+        </button>
+
+        <button
+            class="button-accent"
+            matRipple
+            disabled
+        >
+            P2P lending
+        </button>
+    </div>
+
+    <div class="chart-table first-row">
+        <div class="box">
+            <div class="product flex">
+                <mat-icon
+                    class="mat-icon-size-50-only"
+                    svgIcon="transactionsCircle"
+                >
+                </mat-icon>
+                <div class="cell">
+                    <div>Product</div>
+                    <span>Autonomous earning</span>
+                </div>
+            </div>
+            <div class="cell">
+                <div>{{ amount() | number:'1.2-2' }}% USD</div>
+                <span>APY</span>
+            </div>
+            <div class="cell">
+                <div>{{ start() ? ( start() | date ) : '-' }}</div>
+                <span>Start date</span>
+            </div>
+            <div class="cell">
+                <div>{{ end() ? ( end() | date ) : '-' }}</div>
+                <span>Until the end</span>
+            </div>
+            <div class="table-buttons">
+                <a
+                    routerLink="/earn/autonomous-earning"
+                    class="button-primary"
+                    matRipple
+                >
+                    {{ start() ? 'Detail' : 'Invest' }}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="chart-table first-row">
+        <div class="box">
+            <div class="product flex">
+                <mat-icon
+                    class="mat-icon-size-50-only"
+                    svgIcon="transactionsCircle"
+                >
+                </mat-icon>
+                <div class="cell">
+                    <div>Product</div>
+                    <span>Autonomous earning</span>
+                </div>
+            </div>
+            <div class="cell">
+                <div>{{ amount() | number:'1.2-2' }}% EUR</div>
+                <span>APY</span>
+            </div>
+            <div class="cell">
+                <div>{{ start() ? ( start() | date ) : '-' }}</div>
+                <span>Start date</span>
+            </div>
+            <div class="cell">
+                <div>{{ end() ? ( end() | date ) : '-' }}</div>
+                <span>Until the end</span>
+            </div>
+            <div class="table-buttons">
+                <a
+                    routerLink="/earn/autonomous-earning"
+                    class="button-primary"
+                    matRipple
+                >
+                    {{ start() ? 'Detail' : 'Invest' }}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

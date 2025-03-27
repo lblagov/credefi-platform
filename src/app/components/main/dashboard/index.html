@@ -1,0 +1,108 @@
+<div class="container-dash">
+    <div class="box-dash">
+        <div class="contain-dash">
+            <div>
+                <div class="status">
+                    <div class="status-light green"></div>
+                    <span>Active</span>
+                </div>
+                <h4>Autonomous earning</h4>
+                <div>Unlock the power of your stablecoins now!</div>
+            </div>
+            <a
+                routerLink="/earn/autonomous-earning"
+                class="button-dash top50"
+                mat-button
+            >
+                Invest
+            </a>
+        </div>
+        <lazy-image
+            src="/assets/autonomous_image.svg"
+            width="125px"
+            height="125px"
+            objectFit="contain"
+        />
+    </div>
+    <div class="box-dash">
+        <div class="contain-dash">
+            <div>
+                <div class="status">
+                  <div class="status-light blue"></div>
+                  <span>Coming soon</span>
+                </div>
+                <h4>Corporate bonds</h4>
+                <div>Expected release in Q2 2025</div>
+            </div>
+            <button
+            class="button-dash top50 disabled"
+            mat-button
+            disabled
+        >
+            Invest
+        </button>
+        </div>
+        <lazy-image
+            src="/assets/bonds_image.svg"
+            width="125px"
+            height="125px"
+            objectFit="contain"
+        />
+    </div>
+    <div class="box-dash">
+        <div class="contain-dash">
+            <div>
+                <div class="status">
+                    <div class="status-light blue"></div>
+                    <span>Coming soon</span>
+                </div>
+                <h4>P2P lending</h4>
+                <div>Expected release in Q1 2025</div>
+            </div>
+            <button
+                class="button-dash top50 disabled"
+                mat-button
+                disabled
+            >
+                Invest
+            </button>
+        </div>
+        <lazy-image
+            src="/assets/p2p_image.svg"
+            width="125px"
+            height="125px"
+            objectFit="contain"
+        />
+
+    </div>
+</div>
+
+<div class="banner">
+
+    <div>
+        <h3>
+            Autonomous Earning is live!
+        </h3>
+        <p>
+            Unlock the power of your stablecoins and earn interest on autopilot!
+        </p>
+        <!-- <mat-icon
+            class="mat-icon-button-filter"
+            svgIcon="slider"
+        >
+        </mat-icon> -->
+    </div>
+    <lazy-image
+        height="100%"
+        objectFit="contain"
+        src="/assets/banner.png"
+    />
+</div>
+
+<div class="chart-wrapper">
+    <app-income-chart></app-income-chart>
+</div>
+
+<div class="trans-wrapper">
+    <app-transactions></app-transactions>
+</div>

@@ -1,0 +1,26 @@
+<div class="header">
+    {{ data.title ?? 'Alert' }}
+    <button
+        mat-icon-button
+        (click)="ref.close()"
+    >
+        <mat-icon>close</mat-icon>
+    </button>
+</div>
+
+<div class="dialog">
+    <p class="text">
+        {{ data.message }}
+    </p>
+
+</div>
+
+<div class="footer">
+    <button
+        class="button-primary"
+        *ngFor="let button of data.buttons; let i = index"
+        (click)="handler(i)"
+    >
+        {{ button.label }}
+    </button>
+</div>

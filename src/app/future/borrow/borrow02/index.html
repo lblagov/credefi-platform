@@ -1,0 +1,95 @@
+<div
+ id="container-lend">
+ <!-- [ngStyle]="{'opacity': isOpacity === true ? '0.4' : (  isOpacity === false ? '1' : null) }" -->
+  <div class="split left">
+      <div class="container-left-lend">
+        <form class="login-form">
+          <mat-icon class="mat-icon-logo-mobile" svgIcon="logoMobile"></mat-icon>
+          <hr/>
+          <div class="align-center">
+            <h1 class="h1-login">Borrow details</h1>
+          </div>
+
+          <mat-form-field>
+            <mat-icon matPrefix class="mat-icon-size-50" svgIcon="wallet50px"></mat-icon>
+            <input matInput placeholder="Investment loan">
+            <button class="logo" (click)="selectWallet()">
+                <mat-icon class="mat-icon-size-arrow" svgIcon="arrow"></mat-icon>
+           </button>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-icon matPrefix class="mat-icon-size-50" svgIcon="currency50px"></mat-icon>
+            <input matInput placeholder="Loan amount">
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-icon matPrefix class="mat-icon-size-50" svgIcon="month50px"></mat-icon>
+            <input matInput placeholder="Loan maturity">
+            <button class="logo" (click)="selectWallet()">
+                <mat-icon class="mat-icon-size-arrow" svgIcon="arrow"></mat-icon>
+           </button>
+          </mat-form-field>
+
+          <div >
+            <p class="p-collateral">Collateral</p>
+            <mat-radio-group aria-label="Select an option">
+                <mat-radio-button value="1">Yes</mat-radio-button>
+                <mat-radio-button value="0">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+          <mat-form-field style="padding-top: 1rem;">
+            <mat-icon matPrefix class="mat-icon-size-50" svgIcon="typeOfCollateral50px"></mat-icon>
+            <input matInput placeholder="Type of collateral">
+          </mat-form-field>
+
+            <div class="div-bot">
+              <span style="color: rgba(7, 7, 7, 0.4); padding-top: 30px;" class="span-back">Back</span>
+              <button  (click) = "openDialog()"
+               class="button-next-step" mat-button>Next step</button>
+            </div>
+
+
+
+        </form>
+
+        <div *ngIf = "screenWidth <= 700">
+          <hr />
+          <footer>
+            <span>@2024 Credefi</span>
+            <span>All rights reserved</span>
+          </footer>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="split right-lend">
+        <div class="container-right-lend">
+
+
+          <mat-icon class="mat-icon-ellipse"  svgIcon="ellipse01"></mat-icon>
+          <mat-icon class="mat-icon-ellipse-2"  svgIcon="ellipse02"></mat-icon>
+          <mat-icon class="mat-icon-ellipse-3"  svgIcon="ellipse03"></mat-icon>
+
+          <div class="did-you-know">
+            <h1 class="lend-header">
+                Get +1%  <span>
+                                <br> of your income by performing
+                                <br> a simple action
+                         </span>
+
+            </h1>
+            <button class="button-steaking" mat-button>Steaking</button>
+
+
+
+            <mat-icon class="step1of3-lend" svgIcon="step"></mat-icon>
+
+            <img class="images" src="./assets/images/StepsSmaller.png"/>
+          </div>
+
+        </div>
+    </div>
+</div>

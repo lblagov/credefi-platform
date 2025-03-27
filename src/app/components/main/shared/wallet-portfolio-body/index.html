@@ -1,0 +1,19 @@
+<div class="wallet-body">
+    <div class="align">
+        <div class="coin">
+            <mat-icon
+                class="mat-icon-size-50 large"
+                [svgIcon]="walletBodyCoin"
+            >
+            </mat-icon>
+            <div>
+                <span class="h5-style">{{ walletBodyCrypto }}</span>
+                <div class="h5-style-light">{{ walletBodyLong }}</div>
+            </div>
+        </div>
+        <div class="values">
+            <span class="h5-style">{{walletBodyValue | number:'1.6-6'}} {{ walletBodyCrypto }}</span>
+            <div class="h5-style-light">{{ walletBodyCurrency }}</div>
+        </div>
+    </div>
+</div>

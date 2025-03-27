@@ -1,0 +1,40 @@
+.wallet-body {
+    margin-left: 20px;
+    margin-top: 24px;
+    height: 82px;
+    width: 272px;
+    border-radius: 20px;
+    background-color: #F3F4FA;
+}
+
+.coin {
+    display: grid;
+    grid-template-columns: 50px 45px;
+    column-gap: 32px;
+    align-items: center;
+}
+
+.align {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.values {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.values div {
+    text-align: right;
+}
+
+.large {
+    margin-left: 20px;
+    // margin-right: 20px;
+
+    grid-row-end: span 2;
+}

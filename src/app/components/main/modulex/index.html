@@ -1,0 +1,138 @@
+<div class="portfolio-lending">
+    <h2 class="h2-general">Module X</h2>
+</div>
+
+<div class="container-box">
+    <div class="module-x-wrapper">
+        <div class="module-x-down-wrapper">
+            <div class="module-x-down">
+                <mat-icon
+                    matPrefix
+                    class="mat-icon-48"
+                    svgIcon="tvl"
+                >
+                </mat-icon>
+                <div class="module-x-down-inner">
+                    <h4 class="h4-stake">{{ totalStaked() | number:'1.2-6'}}</h4>
+                    <p class="p-stake-bigger ml16">Total staked</p>
+                </div>
+            </div>
+
+            <div class="module-x-down">
+                <mat-icon
+                    matPrefix
+                    class="mat-icon-48"
+                    svgIcon="stakePercent"
+                >
+                </mat-icon>
+                <div class="module-x-down-inner">
+                    <h4 class="h4-stake">{{quo()}} : 1</h4>
+                    <p class="p-stake-bigger ml16">$CREDI : $xCREDI </p>
+                </div>
+            </div>
+        </div>
+
+        <form
+            [formGroup]="form"
+            (ngSubmit)="onSubmit()"
+        >
+            <div class="stake-wrapper">
+
+                <div class="stake-unstake-inner">
+                    <button
+                        class="button-stake"
+                        mat-button
+                    >
+                        Stake
+                    </button>
+                    <button
+                        class="button-unstake"
+                        mat-button
+                        type="button"
+                        (click)="onClaim()"
+                    >
+                        Get Rewards
+                    </button>
+                </div>
+
+
+                <mat-form-field class="credi-outline white">
+                    <mat-icon
+                        matPrefix
+                        class="prefix gray"
+                        svgIcon="currency-outline"
+                    >
+                    </mat-icon>
+                    <input
+                        matInput
+                        autocomplete
+                        type="number"
+                        formControlName="amount"
+                        placeholder="Enter the amount"
+                    >
+                    <button
+                        class="max image-button"
+                        matRipple
+                        type="button"
+                        (click)="setMax()"
+                    >
+                        MAX
+                    </button>
+                    <mat-error *ngFor="let error of form.get('amount') | error | slice:0:1">
+                        {{ error }}
+                    </mat-error>
+                </mat-form-field>
+                <div class="stake-available">
+                    <span class="mr12">
+                        Available to swap:
+                        <span class="value">{{ balance() | number:'1.6-6' }} </span>
+                        <span class="credi">$CREDI</span>
+                    </span>
+                    <span>
+                    Amount to receive:
+                    <span class="value">
+                      {{ xCREDI() | number:'1.6-6' }}
+                    </span>
+                    <span class="credi">
+                        $xCREDI
+                    </span>
+                </span>
+                </div>
+                <button
+                    class="button-primary"
+                    matRipple
+                    [disabled]="isSubmit()"
+                >
+                    Stake $CREDI
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+    <div class="info">
+        <div class="module-x-down">
+            <mat-icon
+                matPrefix
+                class="large"
+                svgIcon="moduleGreen"
+            >
+            </mat-icon>
+            <div class="module-x-down-inner">
+                <h4 class="h4-stake">Module X is live!
+                </h4>
+                <p class="p-stake-bigger ml16">Stake $CREDI to receive $xCREDI and unlock additional benefits and rewards.
+                </p>
+            </div>
+        </div>
+        <div class="info-box">
+            By staking <strong>$CREDI</strong> in Module X, you not only bolster the protocol's security but also gain access to various tiers of platform benefits
+            <lazy-image
+                class="background"
+                src="/assets/images/staking.png"
+            >
+
+            </lazy-image>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="row income">
+    <div class="col-lg-6">
+        <div class="btn-wrapper">
+            <h4 class="h4-chart">Income Graph</h4>
+           
+        </div>
+        <button class="button-monthly-mobile"
+                (click)="changeBarData()"
+                mat-button>
+            <span>Monthly</span> <mat-icon class="mat-icon-size-arrow"
+                    svgIcon="arrow"></mat-icon>
+        </button>
+        <div>
+            <canvas id="barchart"></canvas>
+        </div>
+    </div>
+    <div class="chart-buttons">
+        <button class="button-chart-4"
+                (click)="changeBarData()">
+            Corporate bonds
+        </button>
+
+    
+    </div>
+
+    <div class="chart-table first-row">
+        <div class="first-column">
+            <mat-icon class="mat-icon-size-42-only"
+                      svgIcon="chartTableG"></mat-icon>
+            <div class="cell">
+                <div>Bond name...</div>
+                <span>1000$ (10 pieces)</span>
+            </div>
+            
+            <div>
+                <mat-icon class="mat-icon-size-42-only"
+                          svgIcon="chartTableArrowDown"></mat-icon>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-table">
+        <div class="first-column">
+            <mat-icon class="mat-icon-size-42-only"
+                      svgIcon="chartTableG"></mat-icon>
+            <div class="cell">
+                <div>Bond name...</div>
+                <span>1000$ (10 pieces)</span>
+            </div>
+            
+            <div>               
+                <mat-icon class="mat-icon-size-42-only"
+                          svgIcon="chartTableArrowDown"></mat-icon>
+            </div>
+        </div>
+    </div>
+
+    <div class="chart-table">
+        <div class="first-column">
+            <mat-icon class="mat-icon-size-42-only"
+                      svgIcon="chartTableG"></mat-icon>
+            <div class="cell">
+                <div>Bond name...</div>
+                <span>1000$ (10 pieces)</span>
+            </div>
+            
+            <div>
+                <mat-icon class="mat-icon-size-42-only"
+                          svgIcon="chartTableArrowDown"></mat-icon>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-chart-5">
+        <button class="button-chart-5"
+                (click)="changeBarData()">
+            See more
+        </button>
+    </div>
+</div>

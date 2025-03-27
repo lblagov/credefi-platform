@@ -1,0 +1,312 @@
+<div 
+id="dashboard-wrapper-id"
+class="wrapper">
+    <div class="background-first-column">
+        
+    </div>    
+    <div class="container">
+        
+        <div class="upload-photo-wrapper">
+            <div class="photo-wrapper">
+                <mat-icon class="mat-icon-user-details" svgIcon="photoPlus"></mat-icon>
+                <div class="h-12-style box">Upload your photo
+                    <span class="light">(max 10MB)</span>
+                </div>
+            </div>
+            <div class="name-wrapper">
+                <div class="h-18-style">
+                    Mark Zuckerberg 
+                </div>
+                <div class="h-16-style">
+                    Johnsmith@gmail.com
+                </div>
+                <div class="verify h-16-style"><span>Not verified</span></div>
+            </div>
+            <div class="dots-vertical">
+                <mat-icon class="mat-icon-user-details" svgIcon="dotsVertical"></mat-icon>
+            </div>
+        </div>
+
+
+        <div class="upload-photo-wrapper-mobile">
+            <div class="inner-div">
+            <div class="photo-wrapper">
+                <mat-icon class="mat-icon-user-details" svgIcon="photoPlus"></mat-icon>
+                <div class="h-12-style box">Upload your photo
+                    <span class="light">(max 10MB)</span>
+                </div>
+            </div>
+            <div class="name-wrapper">
+                <div class="h-18-style">
+                    Mark Zuckerberg 
+                </div>
+                <div class="h-16-style">
+                    Johnsmith@gmail.com
+                </div>
+                <div class="div-outer">
+                    <div class="verify h-16-style">
+                        <span>Not verified</span>
+
+                    </div>
+                    <mat-icon class="mat-icon-user-details2" svgIcon="dotsVertical"></mat-icon>
+                </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="password-wrapper">
+            <h4 class="h4-password">Password</h4>
+
+            <div class="input-style">
+
+              
+                <mat-form-field class="div-wrapper" subscriptSizing="dynamic">
+                  <mat-icon matPrefix class="mat-icon-size-50" svgIcon="blankCircle">
+                    <mat-icon class="mat-icon-password" svgIcon="password"></mat-icon>
+                  </mat-icon>
+                  <mat-icon matSuffix class="mat-icon-size-22" svgIcon="hideBlack"></mat-icon>
+                  <input matInput placeholder="Old password">
+                </mat-form-field>
+           
+      
+
+              <mat-form-field class="div-wrapper" subscriptSizing="dynamic">
+                <mat-icon matPrefix class="mat-icon-size-50" svgIcon="blankCircle">
+                  <mat-icon class="mat-icon-password" svgIcon="password"></mat-icon>
+                </mat-icon>
+                <mat-icon matSuffix class="mat-icon-size-22" svgIcon="hideBlack"></mat-icon>
+                <input matInput placeholder="New password">
+              </mat-form-field>
+
+
+              <mat-form-field class="div-wrapper" subscriptSizing="dynamic">
+                <mat-icon matPrefix class="mat-icon-size-50" svgIcon="blankCircle">
+                  <mat-icon class="mat-icon-password" svgIcon="password"></mat-icon>
+                </mat-icon>
+                <mat-icon matSuffix class="mat-icon-size-22" svgIcon="hideBlack"></mat-icon>
+                <input matInput placeholder="Re-enter the new password">
+              </mat-form-field>
+
+              <button class="button-submit" mat-button>Submit</button>
+            </div>
+
+
+        </div>
+
+
+        <div class="password-wrapper-mobile">
+            <h4 class="h4-password">Password</h4>
+
+            <div class="input-style">
+                <mat-form-field class="div-wrapper" subscriptSizing="dynamic">
+                  <mat-icon matPrefix class="mat-icon-size-50" svgIcon="blankCircle">
+                    <mat-icon class="mat-icon-password" svgIcon="password"></mat-icon>
+                  </mat-icon>
+                  <mat-icon matSuffix class="mat-icon-size-22" svgIcon="hideBlack"></mat-icon>
+                  <input matInput class="input" placeholder="Old password">
+                </mat-form-field>
+           
+      
+
+              <mat-form-field class="div-wrapper" subscriptSizing="dynamic">
+                <mat-icon matPrefix class="mat-icon-size-50" svgIcon="blankCircle">
+                  <mat-icon class="mat-icon-password" svgIcon="password"></mat-icon>
+                </mat-icon>
+                <mat-icon matSuffix class="mat-icon-size-22" svgIcon="hideBlack"></mat-icon>
+                <input matInput  class="input" placeholder="New password">
+              </mat-form-field>
+
+
+              <mat-form-field class="div-wrapper" subscriptSizing="dynamic">
+                <mat-icon matPrefix class="mat-icon-size-50" svgIcon="blankCircle">
+                  <mat-icon class="mat-icon-password" svgIcon="password"></mat-icon>
+                </mat-icon>
+                <mat-icon matSuffix class="mat-icon-size-22" svgIcon="hideBlack"></mat-icon>
+                <input matInput  class="input" placeholder="Re-enter">
+              </mat-form-field>
+
+              <button class="button-submit" mat-button>Submit</button>
+            </div>
+
+
+        </div>
+
+        <div class="active-sessions-wrapper">
+            <h2 class="h3-style bl">Active sessions</h2>
+            <div class="current-sessions">
+                <div class="pding">
+                    <div class="h6-style session">Current sessions</div>
+                    <app-active-sessions 
+                        [svgIcon]="svgIcon" 
+                        [sessionName]="sessionName" 
+                        [sessionLocation]="sessionLocation"
+                        [showxClose]="showxClose">
+                    </app-active-sessions>  
+                    <button class="button-get-out h5-style" mat-button>
+                        Get out of everywhere
+                        <mat-icon class="mat-icon-close" svgIcon="xClose"></mat-icon>
+                    </button>
+                </div>
+            </div>
+            
+            
+            <div class="active-sessions">
+                <div class="pding">
+                    <div class="h6-style session"> Active sessions</div>
+                    <div class="app-active-sessions first">
+                        <app-active-sessions
+                        [svgIcon]="svgIcon2" 
+                        [sessionName]="sessionName2" 
+                        [sessionLocation]="sessionLocation2"
+                        [showxClose]="showxClose2">
+                    </app-active-sessions>
+                    </div>
+                    <div class="app-active-sessions">
+                        <app-active-sessions
+                        [svgIcon]="svgIcon3" 
+                        [sessionName]="sessionName3" 
+                        [sessionLocation]="sessionLocation3"
+                        [showxClose]="showxClose3">></app-active-sessions>
+                    </div>
+                    <div class="app-active-sessions">
+                        <app-active-sessions
+                            [svgIcon]="svgIcon4" 
+                            [sessionName]="sessionName4" 
+                            [sessionLocation]="sessionLocation4"
+                            [showxClose]="showxClose4">
+                        </app-active-sessions>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+      
+        
+        
+        <div class="two-factor-wrapper">
+          <h3 class="h3-two-factor">
+            Two-factor authentication
+          </h3>
+          <p class="p-two-factor">
+            Two-factor authentication <span class="span-two-factor">(2FA)</span> adds an extra layer of <br> 
+            protection on your Credefi account. By enabling this security <br>
+             feature, you protect your account by requiring more than just a <br>
+              password to perform actions like logging in and withdrawing<br> funds.
+          </p>
+          <button class="button-enable-2fa">Enable 2FA</button>
+        </div>
+
+
+        <div class="two-factor-wrapper-mobile">
+            <h4 class="h4-two-factor">
+              Two-factor authentication
+            </h4>
+            <p class="p-two-factor">
+              Two-factor authentication <span class="span-two-factor">(2FA)</span> adds an extra layer of 
+              protection on your Credefi account. By enabling this security 
+               feature, you protect your account by requiring more than just a 
+                password to perform actions like logging in and withdrawing funds.
+            </p>
+            <button class="button-enable-2fa">Enable 2FA</button>
+          </div>
+  
+
+        <div class="address-wrapper">
+            <h3 class="h3-two-factor">Address book and Whitelist</h3>
+
+            <p class="p-two-factor">
+                Manage your crypto addresses and improve the security of your <br>
+                account even further by enabling Address Whitelist
+            </p>
+            <div class="address">
+                <button class="button-open-book">Open Address Book</button>
+                <div class="off">
+                    <span class="h5-style-light whitelist-wrapper">
+                        Whitelist    
+                        <mat-icon class="mat-icon-whitelist" svgIcon="whitelist"></mat-icon>
+                    </span>
+                    <mat-icon class="mat-icon-off" svgIcon="off"></mat-icon>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="address-wrapper-mobile">
+            <h4 class="h4-two-factor">Address book and Whitelist</h4>
+
+            <p class="p-two-factor">
+                Manage your crypto addresses and improve the security of your
+                account even further by enabling Address Whitelist
+            </p>
+            <div class="address">
+                <button class="button-open-book">Open Address Book</button>
+
+                <div class="off">
+
+                    <span class="h5-style-light whitelist-wrapper">
+                        Whitelist    
+                        <mat-icon class="mat-icon-whitelist" svgIcon="whitelist"></mat-icon>
+                    </span>
+
+                    <mat-icon class="mat-icon-off" svgIcon="off"></mat-icon>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="active-sessions-wrapper-mobile">
+            <h2 class="h3-style bl">Active sessions</h2>
+            <div class="current-sessions">
+                <div class="pding">
+                    <div class="h6-style session">Current sessions</div>
+                    <app-active-sessions-mobile 
+                        [svgIcon]="svgIcon" 
+                        [sessionName]="sessionName" 
+                        [sessionLocation]="sessionLocation"
+                        [showxClose]="showxClose">
+                    </app-active-sessions-mobile>  
+                    <button class="button-get-out h5-style" mat-button>
+                        Get out of everywhere
+                        <mat-icon class="mat-icon-close" svgIcon="xClose"></mat-icon>
+                    </button>
+                </div>
+            </div>
+            
+            
+            <div class="active-sessions">
+                <div class="pding">
+                    <div class="h6-style session"> Active sessions</div>
+                    <div class="app-active-sessions first">
+                        <app-active-sessions-mobile
+                        [svgIcon]="svgIcon2" 
+                        [sessionName]="sessionName2" 
+                        [sessionLocation]="sessionLocation2"
+                        [showxClose]="showxClose2">
+                    </app-active-sessions-mobile>
+                    </div>
+                    <div class="app-active-sessions">
+                        <app-active-sessions-mobile
+                        [svgIcon]="svgIcon3" 
+                        [sessionName]="sessionName3" 
+                        [sessionLocation]="sessionLocation3"
+                        [showxClose]="showxClose3">></app-active-sessions-mobile>
+                    </div>
+                    <div class="app-active-sessions">
+                        <app-active-sessions-mobile
+                            [svgIcon]="svgIcon4" 
+                            [sessionName]="sessionName4" 
+                            [sessionLocation]="sessionLocation4"
+                            [showxClose]="showxClose4">
+                        </app-active-sessions-mobile>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

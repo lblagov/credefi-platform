@@ -1,0 +1,45 @@
+<svg width="86" height="16" viewBox="0 0 86 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="86" height="16" fill="#1E1E1E"/>
+<g id="Group 48099136">
+<g id="Group 48099133">
+<g id="Module X" clip-path="url(#clip0_0_1)">
+<rect width="1366" height="1127" transform="translate(-340 -333)" fill="#F6F5F8"/>
+<path id="Rectangle 1333" d="M-34 -95C-34 -106.046 -25.0457 -115 -14 -115H570C581.046 -115 590 -106.046 590 -95V30C590 41.0457 581.046 50 570 50H-14C-25.0457 50 -34 41.0457 -34 30V-95Z" fill="#FCFDFD"/>
+<g id="Group 48097033">
+<rect id="Rectangle 1449" x="-2" y="-2" width="560" height="20" rx="10" fill="#F6F5F8"/>
+<g id="Group 48097032">
+<rect id="Rectangle 1448" width="86" height="16" rx="8" fill="#77CE9F"/>
+<g id="Mask group">
+<mask id="mask0_0_1" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="86" height="16">
+<rect id="Rectangle 1450" width="86" height="16" rx="8" fill="white"/>
+</mask>
+<g mask="url(#mask0_0_1)">
+<rect id="Rectangle 4496" x="-0.0625" y="-10.7061" width="5" height="40" transform="rotate(-15 -0.0625 -10.7061)" fill="#2F2F2F" fill-opacity="0.1"/>
+<rect id="Rectangle 4497" x="9" y="-10.7061" width="5" height="40" transform="rotate(-15 9 -10.7061)" fill="#2F2F2F" fill-opacity="0.1"/>
+<rect id="Rectangle 4498" x="18.0625" y="-10.7061" width="5" height="40" transform="rotate(-15 18.0625 -10.7061)" fill="#2F2F2F" fill-opacity="0.1"/>
+<rect id="Rectangle 4499" x="27.125" y="-10.7061" width="5" height="40" transform="rotate(-15 27.125 -10.7061)" fill="#2F2F2F" fill-opacity="0.1"/>
+<rect id="Rectangle 4500" x="36.1875" y="-10.7061" width="5" height="40" transform="rotate(-15 36.1875 -10.7061)" fill="#2F2F2F" fill-opacity="0.1"/>
+<rect id="Rectangle 4501" x="45.25" y="-10.7061" width="5" height="40" transform="rotate(-15 45.25 -10.7061)" fill="#2F2F2F" fill-opacity="0.1"/>
+<rect id="Rectangle 4502" x="54.3125" y="-10.7061" width="5" height="40" transform="rotate(-15 54.3125 -10.7061)" fill="#2F2F2F" fill-opacity="0.1"/>
+<rect id="Rectangle 4503" x="63.375" y="-10.7061" width="5" height="40" transform="rotate(-15 63.375 -10.7061)" fill="#2F2F2F" fill-opacity="0.1"/>
+<rect id="Rectangle 4504" x="72.4375" y="-10.7061" width="5" height="40" transform="rotate(-15 72.4375 -10.7061)" fill="#2F2F2F" fill-opacity="0.1"/>
+</g>
+</g>
+</g>
+</g>
+<g id="Sidebars">
+<mask id="path-14-inside-1_0_1" fill="white">
+<path d="M-340 -333H-94V794H-340V-333Z"/>
+</mask>
+<path d="M-340 -333H-94V794H-340V-333Z" fill="#FCFDFD"/>
+<path d="M-95 -333V794H-93V-333H-95Z" fill="#F2F2F2" mask="url(#path-14-inside-1_0_1)"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_0_1">
+<rect width="1366" height="1127" fill="white" transform="translate(-340 -333)"/>
+</clipPath>
+</defs>
+</svg>
